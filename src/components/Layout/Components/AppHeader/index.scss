@@ -1,0 +1,112 @@
+@import '../../../../constants/common.scss';
+
+.header {
+  height: 110px !important;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  background: transparent !important;
+  @include mobile {
+    height: initial !important;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0 10px !important;
+    line-height: initial;
+    height: 67px !important;
+    width: 100%;
+    background-color: #f2f2f2 !important;
+    background: linear-gradient(to right, #5881d0, #b8cbea, #9fc4f5) !important;
+  }
+  &.scrolled {
+    background-color: #f2f2f2 !important;
+    background: linear-gradient(to right, #5881d0, #b8cbea, #9fc4f5) !important;
+  }
+
+  .right {
+    display: flex;
+    align-items: center;
+    @include mobile {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+    .search-bar-preview {
+      height: 72px;
+      border: none;
+      width: 400px;
+      line-height: 75px;
+      margin-top: 15px;
+      outline-style: none;
+      box-shadow: none;
+      border-color: transparent;
+      transition: padding 0.3s;
+      cursor: pointer;
+      line-height: 75px;
+      font-size: 21px;
+      font-weight: 100;
+      color: #8d8d8d;
+      padding-right: 15px;
+      @include mobile {
+        height: initial;
+        margin: initial;
+        width: 50px;
+        color: #fff;
+        margin-left: 20px;
+      }
+      .fa {
+        padding-right: 7px;
+      }
+
+      &:focus {
+        border-color: transparent;
+      }
+      &:hover {
+        padding-right: 0;
+        color: #333;
+      }
+    }
+  }
+
+  .logo {
+    height: 55px;
+    padding-top: 15px;
+    margin-left: 20px;
+    @include mobile {
+      height: 30px;
+      margin: initial;
+      padding: initial;
+    }
+  }
+
+  .store-icons {
+    display: none !important;
+    display: flex;
+    align-items: center;
+    @include mobile {
+      display: none;
+    }
+    float: right;
+    padding-top: 12px;
+    .google {
+      height: 50px;
+      margin-right: 30px;
+    }
+    .appstore {
+      height: 50px;
+    }
+  }
+}
+.ReactModalPortal {
+  z-index: 1;
+  .ReactModal__Overlay {
+    z-index: 999;
+    .ReactModal__Content {
+      right: 0 !important;
+      top: 0 !important;
+      left: 0 !important;
+    }
+  }
+}

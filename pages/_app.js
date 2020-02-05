@@ -4,10 +4,10 @@ import { createStore, applyMiddleware, compose } from "redux";
 import { Provider } from "react-redux";
 import App from "next/app";
 import withRedux from "next-redux-wrapper";
-import createRootReducer from "../reducers";
+import createRootReducer from "../src/reducers";
 import thunk from "redux-thunk";
 const composeEnhancer = compose;
-
+import Layout from '../src/components/Layout'
 /**
  * @param {object} initialState
  * @param {boolean} options.isServer indicates whether it is a server side or client side
@@ -40,7 +40,9 @@ class MyApp extends App {
     const { Component, pageProps, store } = this.props;
     return (
       <Provider store={store}>
+        <Layout>
         <Component {...pageProps} />
+        </Layout>
       </Provider>
     );
   }

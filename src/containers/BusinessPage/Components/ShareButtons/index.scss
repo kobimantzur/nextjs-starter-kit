@@ -1,0 +1,32 @@
+@import '../../../../constants/common.scss';
+
+.share-buttons {
+  @include mobile {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 8px;
+    margin-left: 5px;
+  }
+  .fab {
+    font-size: 24px;
+    margin-right: 15px;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.8);
+    &:hover {
+      opacity: 0.9;
+    }
+    &.fb:hover {
+      color: #3b5998;
+    }
+    &.ig:hover {
+      color: #3f729b;
+    }
+    &.wa:hover {
+      color: #25d366;
+    }
+    &.tw:hover {
+      color: #00acee;
+    }
+  }
+}

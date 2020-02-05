@@ -1,0 +1,58 @@
+@import '../../constants/common.scss';
+
+.user-info {
+  display: flex;
+  @include mobile {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .avatar-wrapper {
+    // transform: translateX(-50%) translateY(-50%);
+    .avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 55px;
+      border: 2px solid rgba(0, 0, 0, 0.4);
+      user-select: none;
+      @include mobile {
+        width: 30px;
+        height: 30px;
+        border: none;
+      }
+    }
+  }
+  .user-details {
+    text-align: right;
+    font-size: 20px;
+    color: #333;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-right: 7px;
+
+    p {
+      margin: 0;
+      padding: 0;
+    }
+    .name {
+      color: rgba(0, 0, 0, 0.84);
+      font-size: 16px;
+      font-weight: 300;
+      font-style: normal;
+      @include mobile {
+        font-size: 14px;
+      }
+    }
+
+    .headline {
+      font-size: 16px;
+      font-weight: 100;
+      color: rgba(0, 0, 0, 0.54);
+      line-height: 20px;
+      fill: rgba(0, 0, 0, 0.54);
+      letter-spacing: 0px;
+    }
+  }
+}

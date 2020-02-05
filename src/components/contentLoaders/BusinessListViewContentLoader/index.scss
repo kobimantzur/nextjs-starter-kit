@@ -1,0 +1,9 @@
+@import '../../../constants/common.scss';
+.business-list-view-content-loader {
+  @include mobile {
+    margin-right: 30px;
+  }
+  svg {
+    margin-bottom: 30px;
+  }
+}

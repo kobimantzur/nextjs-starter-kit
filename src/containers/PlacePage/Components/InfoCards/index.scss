@@ -1,0 +1,29 @@
+@import '../../../../constants/common.scss';
+
+.info-cards {
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
+  grid-column-gap: 15px;
+  grid-row-gap: 20px;
+  margin: 20px 0 10px 0;
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+  }
+  .info-card {
+    border: 1px solid #e8e8e8;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: right;
+    padding: 10px 10px;
+    margin: initial;
+
+    h3 {
+      font-size: 22px;
+      color: #333;
+    }
+  }
+}
