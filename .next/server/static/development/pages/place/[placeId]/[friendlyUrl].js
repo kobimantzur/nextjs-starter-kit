@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -3211,14 +3211,14 @@ const getRequest = (relativeUrl, params = {}, headers = {}) => {
 /*!*******************************************!*\
   !*** ./src/services/urlBuilderService.js ***!
   \*******************************************/
-/*! exports provided: buildPlaceUrl, buildSearchUrl, buildBusinesUrl */
+/*! exports provided: buildPlaceUrl, buildSearchUrl, buildBusinessUrl */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "buildPlaceUrl", function() { return buildPlaceUrl; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "buildSearchUrl", function() { return buildSearchUrl; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "buildBusinesUrl", function() { return buildBusinesUrl; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "buildBusinessUrl", function() { return buildBusinessUrl; });
 const buildPlaceUrl = place => {
   const {
     _id,
@@ -3240,7 +3240,7 @@ const buildSearchUrl = searchConfig => {
   } = searchConfig;
   return `/search/${placeId}/${subCategoryId}`;
 };
-const buildBusinesUrl = business => {
+const buildBusinessUrl = business => {
   const {
     friendlyUrl,
     _id,
@@ -3251,7 +3251,7 @@ const buildBusinesUrl = business => {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!******************************************************!*\
   !*** multi ./pages/place/[placeId]/[friendlyUrl].js ***!
   \******************************************************/

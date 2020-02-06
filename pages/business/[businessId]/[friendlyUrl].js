@@ -25,13 +25,38 @@ class Business extends Component {
       // TODO: report analytics
       return DEFAULT_PAGE_TITLE;
     }
-    return `Mapo | ${business.englishName}`;
+    return `Mapo | המלצה על ${business.subCategories[0].title} ב${business.placements[0].heName}`;
+  }
+  getMetaImage() {
+    const { business } = this.props;
+    if (!business) return '';
+
+    return business.logoUrl;
+  }
+  getMetaDescription() {
+    const { business } = this.props;
+    if (!business) return null;
+
+    try {
+      return `${business.description.slice(0, 130)}`;
+    } catch (e) {
+      return '';
+    }
   }
   render() {
     return (
       <div>
         <Head>
           <title key="title">{this.getPageTitle()}</title>
+          <meta property="description" key="description" content={this.getMetaDescription()} />
+          <meta property="og:title" key="og:title" content={this.getPageTitle()} />
+          <meta property="og:image" key="og:image" content={this.getMetaImage()} />
+          <meta property="og:image:alt" key="og:image:alt" content={this.getPageTitle()} />
+          <meta
+            property="og:description"
+            key="og:description"
+            content={this.getMetaDescription()}
+          />
         </Head>
         <BusinessPage {...this.props} />
       </div>

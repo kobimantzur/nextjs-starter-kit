@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './index.scss';
 import { buildPlaceUrl } from '../../../../../services/urlBuilderService';
-
+import Link from 'next/link';
 export default class AutocompleteOptions extends Component {
   getBoldedText(pattern, text) {
     if (!text) return '';
@@ -12,11 +12,11 @@ export default class AutocompleteOptions extends Component {
     return updatedText;
   }
 
-  onPlaceClick = (place) => {
-    const targetUrl = buildPlaceUrl(place);
+  onPlaceClick = place => {
+    // const targetUrl = buildPlaceUrl(place);
 
     this.props.setSearchModalState(false);
-    this.props.push(targetUrl);
+    // this.props.push(targetUrl);
   };
 
   renderPlacements(placementsList) {
@@ -25,22 +25,20 @@ export default class AutocompleteOptions extends Component {
     return (
       <div className="placements-list">
         {/* <h3>מקומות</h3> */}
-        {placementsList.map((placement) => {
+        {placementsList.map(placement => {
           const placementText = `${placement.heName} ${
             placement.country ? `, ${placement.country.heName}` : ''
           }`;
           return (
-            <div
-              className="placement"
-              key={placement._id}
-              onClick={() => this.onPlaceClick(placement)}
-            >
-              <i className="fas fa-map-marker-alt" />
-              <span
-                className="name"
-                dangerouslySetInnerHTML={{ __html: this.getBoldedText(query, placementText) }}
-              />
-            </div>
+            <Link key={placement._id} href={buildPlaceUrl(placement)}>
+              <a className="placement" onClick={() => this.onPlaceClick(placement)}>
+                <i className="fas fa-map-marker-alt" />
+                <span
+                  className="name"
+                  dangerouslySetInnerHTML={{ __html: this.getBoldedText(query, placementText) }}
+                />
+              </a>
+            </Link>
           );
         })}
       </div>

@@ -13,7 +13,7 @@ export const buildSearchUrl = searchConfig => {
   return `/search/${placeId}/${subCategoryId}`;
 };
 
-export const buildBusinesUrl = business => {
+export const buildBusinessUrl = business => {
   const { friendlyUrl, _id, englishName } = business;
 
   return `/business/${_id}/${friendlyUrl || englishName || ''}`;

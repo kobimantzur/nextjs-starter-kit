@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './index.scss';
 // import { Link } from 'react-router-dom';
 import Link from 'next/link';
-import { buildBusinesUrl } from '../../services/urlBuilderService';
+import { buildBusinessUrl } from '../../services/urlBuilderService';
 import UserInfo from '../UserInfo';
 import { getFriendlyTime } from '../../services/commonService';
 import BusinessListViewContentLoader from '../contentLoaders/BusinessListViewContentLoader';
@@ -11,7 +11,7 @@ export default class BusinessListView extends Component {
   renderBusiness(business) {
     const { logoUrl, englishName, _id } = business;
     return (
-      <Link key={_id} href={buildBusinesUrl(business)}>
+      <Link key={_id} href={buildBusinessUrl(business)}>
         <a className="business">
           <div className="right">
             {logoUrl && <div className="logo-img" style={{ backgroundImage: `url(${logoUrl})` }} />}

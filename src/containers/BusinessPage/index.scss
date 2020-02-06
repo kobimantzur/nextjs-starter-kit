@@ -108,6 +108,9 @@
         margin-bottom: 10px;
         @include mobile {
           padding-left: initial;
+          text-align: right;
+          letter-spacing: 0.2px;
+          font-size: 16px;
         }
       }
 

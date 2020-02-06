@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import './index.scss';
-
+import { buildBusinessUrl } from '../../../../services/urlBuilderService';
 export default class ShareButtons extends Component {
-  onClick = (type) => {
+  onClick = type => {
     const { business } = this.props;
-    const { friendlyUrl } = business;
+    // const { friendlyUrl } = business;
     const shareTitle = 'המלצה על אטרקציות בברלין - אלכסנדרפלץ';
-    const sharableUrl = `https://app.mymapo.com/business/${friendlyUrl}`;
+    const sharableUrl = `https://app.mymapo.com${buildBusinessUrl(business)}`;
+
     switch (type) {
       case 'facebook':
         window.open(`https://www.facebook.com/sharer.php?u=${sharableUrl}`);
