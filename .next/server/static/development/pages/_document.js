@@ -1119,16 +1119,7 @@ class CustomDocument extends next_document__WEBPACK_IMPORTED_MODULE_1___default.
       __self: this
     }), __jsx("script", {
       async: true,
-      dangerouslySetInnerHTML: {
-        __html: `window.ga =
-        window.ga ||
-        function() {
-          (ga.q = ga.q || []).push(arguments);
-        };
-      ga.l = +new Date();
-      ga('create', 'UA-129440192-1', 'auto');
-      ga('send', 'pageview');`
-      },
+      src: "https://www.googletagmanager.com/gtag/js?id=UA-157971736-1",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 18
@@ -1136,17 +1127,23 @@ class CustomDocument extends next_document__WEBPACK_IMPORTED_MODULE_1___default.
       __self: this
     }), __jsx("script", {
       async: true,
-      src: "https://www.google-analytics.com/analytics.js",
+      dangerouslySetInnerHTML: {
+        __html: `window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+            
+              gtag('config', 'UA-157971736-1');`
+      },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 32
+        lineNumber: 19
       },
       __self: this
     }), __jsx("script", {
       src: "https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 33
+        lineNumber: 31
       },
       __self: this
     }), __jsx("script", {
@@ -1160,7 +1157,7 @@ class CustomDocument extends next_document__WEBPACK_IMPORTED_MODULE_1___default.
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 34
+        lineNumber: 32
       },
       __self: this
     })));

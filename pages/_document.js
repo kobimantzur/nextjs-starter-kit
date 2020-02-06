@@ -15,21 +15,19 @@ export default class CustomDocument extends Document {
         <body>
           <Main />
           <NextScript />
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157971736-1"></script>
           <script
             async
             dangerouslySetInnerHTML={{
-              __html: `window.ga =
-        window.ga ||
-        function() {
-          (ga.q = ga.q || []).push(arguments);
-        };
-      ga.l = +new Date();
-      ga('create', 'UA-129440192-1', 'auto');
-      ga('send', 'pageview');`
+              __html: `window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+            
+              gtag('config', 'UA-157971736-1');`
             }}
           />
 
-          <script async src="https://www.google-analytics.com/analytics.js"></script>
+          {/* <script async src="https://www.google-analytics.com/analytics.js"></script> */}
           <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
           <script
             dangerouslySetInnerHTML={{
