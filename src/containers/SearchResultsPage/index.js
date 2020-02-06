@@ -9,9 +9,9 @@ import FancyTitle from '../../components/FancyTitle';
 import SubCategoryPicker from '../../components/SubCategoryPicker';
 
 class SearchResultsPage extends Component {
-  componentDidMount() {
-    this.loadResults();
-  }
+  // componentDidMount() {
+  //   this.loadResults();
+  // }
 
   componentDidUpdate(prevProps) {
     if (this.props.location !== prevProps.location) {
@@ -57,17 +57,17 @@ const mapStateToProps = ({ SearchReducer }) => {
     selectedPlace,
     businessList,
     selectedSubCategory,
-    subCategoriesList,
+    subCategoriesList
   } = SearchReducer;
   return {
     isLoading,
     selectedPlace,
     businessList,
     selectedSubCategory,
-    subCategoriesList,
+    subCategoriesList
   };
 };
 const mapDispatchToProps = {
-  searchBySubCategory,
+  searchBySubCategory
 };
 export default connect(mapStateToProps, mapDispatchToProps)(SearchResultsPage);

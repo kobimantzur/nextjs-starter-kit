@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import './index.scss';
 import { Menu, Dropdown, Button } from 'antd';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { buildSearchUrl } from '../../services/urlBuilderService';
 
 export default class SubCategoryPicker extends Component {
-  onClick = (subCategory) => {
+  onClick = subCategory => {
     const { selectedPlace } = this.props;
 
     this.props.navigateSearchBySubCategory(selectedPlace, subCategory);
@@ -17,13 +18,12 @@ export default class SubCategoryPicker extends Component {
     return (
       <Link
         key={subCategory._id}
-        className="sub-category"
-        to={buildSearchUrl({
+        href={buildSearchUrl({
           placeId: selectedPlace._id,
-          subCategoryId: subCategory._id,
+          subCategoryId: subCategory._id
         })}
       >
-        {subCategory.title}
+        <a className="sub-category">{subCategory.title}</a>
       </Link>
     );
   }
@@ -36,13 +36,12 @@ export default class SubCategoryPicker extends Component {
         {hiddenCategories.map(category => (
           <Menu.Item key={category._id}>
             <Link
-              rel="noopener noreferrer"
-              to={buildSearchUrl({
+              href={buildSearchUrl({
                 placeId: selectedPlace._id,
-                subCategoryId: category._id,
+                subCategoryId: category._id
               })}
             >
-              {category.title}
+              <a className="sub-category">{category.title}</a>
             </Link>
           </Menu.Item>
         ))}
@@ -55,9 +54,9 @@ export default class SubCategoryPicker extends Component {
         </Button>
       </Dropdown>
 
-    // <Dropdown overlay={MenuComponent} placement="bottomLeft" className="hidden-categories">
-    //   Hidden Button
-    // </Dropdown>
+      // <Dropdown overlay={MenuComponent} placement="bottomLeft" className="hidden-categories">
+      //   Hidden Button
+      // </Dropdown>
     );
   }
 

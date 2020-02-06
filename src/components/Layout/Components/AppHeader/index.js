@@ -1,7 +1,6 @@
 import { Layout as AntLayout } from 'antd';
 import { connect } from 'react-redux';
 import React, { Component } from 'react';
-import HeaderLogo from '../../../../img/logo-white.png';
 import AppstoreLogo from '../../../../img/apple-app.png';
 import GooglestoreLogo from '../../../../img/google-app.png';
 import SearchBar from '../../../../containers/SearchPage/Components/SearchBar';
@@ -16,7 +15,7 @@ class AppHeader extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isFocused: false,
+      isFocused: false
     };
   }
 
@@ -38,14 +37,15 @@ class AppHeader extends Component {
   render() {
     const { isFocused, activeClass } = this.state;
     const { isLoading, selectedPlace, selectedSubCategory } = this.props;
-    const searchTerm = selectedPlace && selectedSubCategory
-      ? `${selectedSubCategory.title} ב${selectedPlace.heName}`
-      : '';
+    const searchTerm =
+      selectedPlace && selectedSubCategory
+        ? `${selectedSubCategory.title} ב${selectedPlace.heName}`
+        : '';
     return (
       <Header className={`header ${isFocused ? 'on-focus' : ''} ${activeClass}`}>
         <div className="right">
           <a href="/">
-            <img alt="Mapo" className="logo" src={HeaderLogo} />
+            <img alt="Mapo" className="logo" src={'/static/img/logo-white.png'} />
           </a>
           {!isLoading && (
             <div
@@ -80,10 +80,10 @@ const mapStateToProps = ({ SearchReducer }) => {
   return {
     isLoading,
     selectedPlace,
-    selectedSubCategory,
+    selectedSubCategory
   };
 };
 const mapDispatchToProps = {
-  setSearchModalState,
+  setSearchModalState
 };
 export default connect(mapStateToProps, mapDispatchToProps)(AppHeader);

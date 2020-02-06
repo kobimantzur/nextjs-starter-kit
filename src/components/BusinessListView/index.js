@@ -1,24 +1,26 @@
 import React, { Component } from 'react';
 import './index.scss';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { buildBusinesUrl } from '../../services/urlBuilderService';
 import UserInfo from '../UserInfo';
 import { getFriendlyTime } from '../../services/commonService';
 import BusinessListViewContentLoader from '../contentLoaders/BusinessListViewContentLoader';
-import noResultsSvg from '../../img/noresults.svg';
 
 export default class BusinessListView extends Component {
   renderBusiness(business) {
     const { logoUrl, englishName, _id } = business;
     return (
-      <Link key={_id} to={buildBusinesUrl(business)} className="business">
-        <div className="right">
-          {logoUrl && <div className="logo-img" style={{ backgroundImage: `url(${logoUrl})` }} />}
-        </div>
-        <div className="center">
-          <div className="business-title">{englishName}</div>
-          <UserInfo userDetails={business.userId} />
-        </div>
+      <Link key={_id} href={buildBusinesUrl(business)}>
+        <a className="business">
+          <div className="right">
+            {logoUrl && <div className="logo-img" style={{ backgroundImage: `url(${logoUrl})` }} />}
+          </div>
+          <div className="center">
+            <div className="business-title">{englishName}</div>
+            <UserInfo userDetails={business.userId} />
+          </div>
+        </a>
       </Link>
     );
   }
@@ -36,7 +38,7 @@ export default class BusinessListView extends Component {
       <div className="business-list-view no-results">
         <h2>לא נמצאו תוצאות</h2>
 
-        <img src={noResultsSvg} alt="לא נמצאו תוצאות" />
+        <img src="/static/img/noresults.svg" alt="לא נמצאו תוצאות" />
         {/* No Results */}
         {/* sdlkasld */}
       </div>

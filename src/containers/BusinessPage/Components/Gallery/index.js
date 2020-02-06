@@ -12,9 +12,9 @@ export default class BusinessGallery extends Component {
       photos.push({
         src: business.logoUrl,
         thumbnail: business.logoUrl,
-        // thumbnailWidth: 320,
+        // thumbnailWidth: 'auto',
         thumbnailHeight: '300',
-        isSelected: true,
+        isSelected: true
         // caption: 'After Rain (Jeshu John - designerspics.com)',
       });
     }

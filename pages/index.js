@@ -1,16 +1,20 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import SeachPageContainer from '../src/containers/SearchPage';
+import { getCountries } from '../src/reducers/Search/actions';
+import Head from 'next/head';
 class Page extends Component {
-  static getInitialProps({ store, isServer, pathname, query }) {
-    store.dispatch({ type: "FOO", payload: "foo" }); // component will be able to read from store's state when rendered
-    return { custom: "custom" }; // you can pass some custom props to component from here
+  static async getInitialProps({ store, isServer, pathname, query }) {
+    const res = await store.dispatch(getCountries());
+    return { ...res }; // you can pass some custom props to component from here
   }
   render() {
     return (
       <div>
-        <div>Prop from Redux {this.props.foo}</div>
-        <div>Prop from getInitialProps {this.props.custom}</div>
+        <Head>
+          <title key="title">Mapo | ישראלים מטיילים בחו״ל</title>
+        </Head>
+        <SeachPageContainer {...this.props} />
       </div>
     );
   }

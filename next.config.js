@@ -1,10 +1,10 @@
-const withCSS = require('@zeit/next-css')
+const withCSS = require('@zeit/next-css');
 const withSass = require('@zeit/next-sass');
 const withImages = require('next-images');
-module.exports = 
+const withPlugins = require('next-compose-plugins');
 
-withImages(withCSS(withSass({
-  webpack (config, options) {
+const sassConfig = {
+  webpack(config, options) {
     config.module.rules.push({
       test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
       use: {
@@ -13,8 +13,10 @@ withImages(withCSS(withSass({
           limit: 100000
         }
       }
-    })
+    });
 
-    return config
+    return config;
   }
-})));
+};
+
+module.exports = withPlugins([[withSass, sassConfig], [withCSS], [withImages]]);

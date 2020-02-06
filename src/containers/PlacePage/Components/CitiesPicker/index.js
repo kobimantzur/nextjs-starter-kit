@@ -1,19 +1,16 @@
 import React, { Component } from 'react';
 import './index.scss';
 import { buildPlaceUrl } from '../../../../services/urlBuilderService';
+import Link from 'next/link';
 
 export default class CitiesPicker extends Component {
-  onCityClick = (city) => {
-    const targetUrl = buildPlaceUrl(city);
-    this.props.push(targetUrl);
-  };
-
   renderCity(city) {
     return (
-      <div className="city" key={city._id} onClick={() => this.onCityClick(city)}>
-        <div className="city-title">{city.heName}</div>
-        <div className="b-image" style={{ backgroundImage: `url(${city.headerImage})` }} />
-      </div>
+      <Link key={city._id} href={buildPlaceUrl(city)}>
+        <a className="city">
+          <div className="b-image" style={{ backgroundImage: `url(${city.headerImage})` }} />
+        </a>
+      </Link>
     );
   }
 

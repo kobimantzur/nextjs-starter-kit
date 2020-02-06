@@ -4,14 +4,12 @@ import { connect } from 'react-redux';
 import { push } from 'connected-react-router';
 import { getCountries } from '../../reducers/Search/actions';
 import { CountryPicker } from './Components';
-import {
-  FancyTitle, Content, Page, AppSpinner,
-} from '../../components';
+import { FancyTitle, Content, Page, AppSpinner } from '../../components';
 
 class SearchPage extends Component {
-  componentDidMount() {
-    this.props.getCountries();
-  }
+  // componentDidMount() {
+  //   this.props.getCountries();
+  // }
 
   render() {
     const { isLoading } = this.props;
@@ -35,11 +33,11 @@ const mapStateToProps = ({ SearchReducer }) => {
   const { isLoading, countriesList } = SearchReducer;
   return {
     isLoading,
-    countriesList,
+    countriesList
   };
 };
 const mapDispatchToProps = {
   getCountries,
-  push,
+  push
 };
 export default connect(mapStateToProps, mapDispatchToProps)(SearchPage);

@@ -2,9 +2,9 @@ import * as types from './constants';
 
 const INITIAL_STATE = {
   business: undefined,
-  isLoading: true,
+  isLoading: false,
   isReviewLoading: false,
-  isReviewModalOpen: false,
+  isReviewModalOpen: false
 };
 
 export default (state = INITIAL_STATE, action = {}) => {
@@ -24,13 +24,13 @@ export default (state = INITIAL_STATE, action = {}) => {
         business: {
           ...state.business,
           reviewsList: payload.reviewsList,
-          userReview: payload.userReview,
-        },
+          userReview: payload.userReview
+        }
       };
     case types.SET_REVIEW_LOADING_STATE:
       return {
         ...state,
-        isReviewLoading: payload.isReviewLoading,
+        isReviewLoading: payload.isReviewLoading
       };
     default:
       return state;

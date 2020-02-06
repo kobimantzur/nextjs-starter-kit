@@ -1,19 +1,21 @@
 import React, { Component } from 'react';
 import './index.scss';
 import { buildPlaceUrl } from '../../../../services/urlBuilderService';
-
+import Link from 'next/link';
 export default class CountryPicker extends Component {
-  onCountryClick = (country) => {
+  onCountryClick = country => {
     const targetUrl = buildPlaceUrl(country);
     this.props.push(targetUrl);
   };
 
   renderCountry(country) {
     return (
-      <div className="country" key={country._id} onClick={() => this.onCountryClick(country)}>
-        <div className="country-title">{country.heName}</div>
-        <div className="b-image" style={{ backgroundImage: `url(${country.headerImage})` }} />
-      </div>
+      <Link href={buildPlaceUrl(country)} key={country._id}>
+        <a className="country">
+          <div className="country-title">{country.heName}</div>
+          <div className="b-image" style={{ backgroundImage: `url(${country.headerImage})` }} />
+        </a>
+      </Link>
     );
   }
 

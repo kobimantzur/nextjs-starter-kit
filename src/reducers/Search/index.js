@@ -1,11 +1,11 @@
 import * as types from './types';
 
 const INITIAL_STATE = {
-  isLoading: true,
+  isLoading: false,
   isSearchOpen: false,
   isSearchLoading: false,
   selectedPlace: undefined,
-  subCategoriesList: [],
+  subCategoriesList: []
 };
 
 export default (state = INITIAL_STATE, action = {}) => {
@@ -18,7 +18,7 @@ export default (state = INITIAL_STATE, action = {}) => {
     case types.SEARCH_SUB_CATEGORY:
       return {
         ...state,
-        ...payload,
+        ...payload
       };
     default:
       return state;

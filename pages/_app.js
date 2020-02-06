@@ -1,13 +1,18 @@
 // pages/_app.js
-import React from "react";
-import { createStore, applyMiddleware, compose } from "redux";
-import { Provider } from "react-redux";
-import App from "next/app";
-import withRedux from "next-redux-wrapper";
-import createRootReducer from "../src/reducers";
-import thunk from "redux-thunk";
+import React from 'react';
+import { createStore, applyMiddleware, compose } from 'redux';
+import { Provider } from 'react-redux';
+import App from 'next/app';
+import withRedux from 'next-redux-wrapper';
+import createRootReducer from '../src/reducers';
+import thunk from 'redux-thunk';
+
 const composeEnhancer = compose;
-import Layout from '../src/components/Layout'
+import Layout from '../src/components/Layout';
+import { ConnectedRouter } from 'connected-react-router';
+// import { createBrowserHistory } from 'history';
+// const history = createBrowserHistory();
+
 /**
  * @param {object} initialState
  * @param {boolean} options.isServer indicates whether it is a server side or client side
@@ -17,21 +22,15 @@ import Layout from '../src/components/Layout'
  * @param {string} options.storeKey This key will be used to preserve store in global namespace for safe HMR
  */
 const makeStore = (initialState, options) => {
-  return createStore(
-    createRootReducer(),
-    initialState,
-    composeEnhancer(applyMiddleware(thunk))
-  );
+  return createStore(createRootReducer(), initialState, composeEnhancer(applyMiddleware(thunk)));
 };
 
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
     // we can dispatch from here too
-    ctx.store.dispatch({ type: "FOO", payload: "foo" });
+    ctx.store.dispatch({ type: 'FOO', payload: 'foo' });
 
-    const pageProps = Component.getInitialProps
-      ? await Component.getInitialProps(ctx)
-      : {};
+    const pageProps = Component.getInitialProps ? await Component.getInitialProps(ctx) : {};
 
     return { pageProps };
   }
@@ -40,9 +39,11 @@ class MyApp extends App {
     const { Component, pageProps, store } = this.props;
     return (
       <Provider store={store}>
+        {/* <ConnectedRouter history={history}> */}
         <Layout>
-        <Component {...pageProps} />
+          <Component {...pageProps} />
         </Layout>
+        {/* </ConnectedRouter> */}
       </Provider>
     );
   }

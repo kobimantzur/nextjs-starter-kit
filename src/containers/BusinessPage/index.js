@@ -3,9 +3,7 @@ import _ from 'underscore';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Button from 'antd/lib/button';
-import {
-  Row, Col, Rate, Layout, Card, Icon,
-} from 'antd';
+import { Row, Col, Rate, Layout, Card, Icon } from 'antd';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapPin, faMapMarker } from '@fortawesome/free-solid-svg-icons';
 import { getFriendlyTime, isMobile } from '../../services/commonService';
@@ -15,11 +13,10 @@ import {
   setEmptyState,
   submitBusinessReview,
   setReviewModalState,
-  cleanBusinessPage,
+  cleanBusinessPage
 } from '../../reducers/BusinessPage/actions';
 import './index.scss';
-import facebookIcon from '../../img/facebook-icon.png';
-import instagramIcon from '../../img/instagram-icon.png';
+
 import mailIcon from '../../img/mail-icon.png';
 import { ShareButtons } from './Components';
 
@@ -27,9 +24,7 @@ import Map, { DEF_PROPS } from './Components/Map';
 import Gallery from './Components/Gallery';
 
 import { reportScreen, reportEvent } from '../../services/analyticsService';
-import {
-  AppSpinner, CardWrap, UserInfo, FancyTitle,
-} from '../../components';
+import { AppSpinner, CardWrap, UserInfo, FancyTitle } from '../../components';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import Tags from './Components/Tags';
 import Page from '../../components/Page';
@@ -40,20 +35,20 @@ const daysList = ['ראשון', 'שני', 'שלישי', 'רביעי', 'חמיש�
 const propTypes = {
   business: PropTypes.object,
   getBusinessByFriendlyUrl: PropTypes.func,
-  isLoading: PropTypes.bool,
+  isLoading: PropTypes.bool
 };
 
 const defaultProps = {
   business: undefined,
   getBusinessByFriendlyUrl: _.noop,
-  isLoading: true,
+  isLoading: true
 };
 
 class BusinessPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isMobile: false,
+      isMobile: false
     };
   }
 
@@ -74,7 +69,7 @@ class BusinessPage extends React.Component {
     reportScreen(location.pathname);
   }
 
-  onModalStateChange = (s) => {
+  onModalStateChange = s => {
     this.props.setReviewModalState(s);
   };
 
@@ -99,27 +94,25 @@ class BusinessPage extends React.Component {
 
     return (
       <div className="address">
-        <b>
-          {locationName}
-,
-          {' '}
-        </b>
+        <b>{locationName}, </b>
         {business.placements[0].country && business.placements[0].country.heName}
       </div>
     );
   }
 
-  formatPhoneNumber = (s) => {
+  formatPhoneNumber = s => {
     const s2 = `${s}`.replace(/\D/g, '');
     const m = s2.match(/^(\d{3})(\d{3})(\d{4})$/);
     return !m ? null : `(${m[1]}) ${m[2]}-${m[3]}`;
   };
 
-  formatTime = (time) => {
+  formatTime = time => {
     const parsedTime = new Date(JSON.parse(JSON.stringify(new Date(time))));
     if (parsedTime) {
-      const hours = parsedTime.getHours() < 10 ? `0${parsedTime.getHours()}` : parsedTime.getHours();
-      const minutes = parsedTime.getMinutes() < 10 ? `0${parsedTime.getMinutes()}` : parsedTime.getMinutes();
+      const hours =
+        parsedTime.getHours() < 10 ? `0${parsedTime.getHours()}` : parsedTime.getHours();
+      const minutes =
+        parsedTime.getMinutes() < 10 ? `0${parsedTime.getMinutes()}` : parsedTime.getMinutes();
       return `${hours}:${minutes}`;
     }
     return '';
@@ -159,8 +152,8 @@ class BusinessPage extends React.Component {
         websiteUrl,
         email,
         scale1,
-        location,
-      },
+        location
+      }
     } = this.props;
     return (
       <div className="business-body">
@@ -184,7 +177,7 @@ class BusinessPage extends React.Component {
                   href={`https://facebook.com/${facebookName}`}
                 >
                   {/* <img src={facebookIcon} /> */}
-                  <img src={facebookIcon} alt={facebookName} />
+                  <img src="/static/img/facebook-icon.png" alt={facebookName} />
                 </a>
               )}
               {instagramName && (
@@ -193,7 +186,7 @@ class BusinessPage extends React.Component {
                   className="instagram"
                   href={`https://instagram.com/${instagramName}`}
                 >
-                  <img src={instagramIcon} alt={instagramName} />
+                  <img src="/static/img/instagram-icon.png" alt={instagramName} />
                 </a>
               )}
               {email && (
@@ -217,7 +210,7 @@ class BusinessPage extends React.Component {
 
   renderBusinessHours() {
     const {
-      business: { businessHours },
+      business: { businessHours }
     } = this.props;
     if (!businessHours) return null;
     const businessHoursObj = JSON.parse(businessHours);
@@ -226,11 +219,11 @@ class BusinessPage extends React.Component {
         <h1>שעות פעילות</h1>
         {businessHoursObj.map((day, i) => (
           <Row key={`day${i}`} className="hour-row">
-            {day.length > 0
-              && day.map((hour, i = j) => (
+            {day.length > 0 &&
+              day.map((hour, i = j) => (
                 <span key={`day${i}-hour${hour}`} className="hour">
                   {`${(i > 0 ? ', ' : '') + this.formatTime(hour.start)}-${this.formatTime(
-                    hour.end,
+                    hour.end
                   )}`}
                 </span>
               ))}
@@ -298,7 +291,6 @@ class BusinessPage extends React.Component {
 
   render() {
     const { isLoading, business, isReviewModalOpen } = this.props;
-
     if (isLoading) return this.renderLoader();
     if (!isLoading && !business) return this.renderEmptyState();
     return (
@@ -313,24 +305,24 @@ class BusinessPage extends React.Component {
               {
                 link: '',
                 title: business.placements[0].country.heName,
-                placeObject: business.placements[0].country,
+                placeObject: business.placements[0].country
               },
               {
                 link: '',
                 title: business.placements[0].heName,
-                placeObject: business.placements[0],
+                placeObject: business.placements[0]
               },
               {
                 link: '',
                 title: business.subCategories[0].title,
                 subCategoryObject: business.subCategories[0],
-                placeObject: business.placements[0],
+                placeObject: business.placements[0]
               },
               {
                 link: '',
                 title: business.englishName,
-                isHighlighted: true,
-              },
+                isHighlighted: true
+              }
             ]}
           />
           <Tags {...this.props} />
@@ -376,14 +368,12 @@ BusinessPage.propTypes = propTypes;
 BusinessPage.defaultProps = defaultProps;
 
 const mapStateToProps = ({ BusinessPageReducer }) => {
-  const {
-    business, isLoading, isReviewModalOpen, isReviewLoading,
-  } = BusinessPageReducer;
+  const { business, isLoading, isReviewModalOpen, isReviewLoading } = BusinessPageReducer;
   return {
     business,
     isLoading,
     isReviewModalOpen,
-    isReviewLoading,
+    isReviewLoading
   };
 };
 const mapDispatchToProps = {
@@ -392,7 +382,7 @@ const mapDispatchToProps = {
   submitBusinessReview,
   setReviewModalState,
   setReviewLoadingState,
-  cleanBusinessPage,
+  cleanBusinessPage
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(BusinessPage);

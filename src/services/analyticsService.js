@@ -5,16 +5,11 @@ export const initAnalytics = () => {
   // console.log('init')
   // ReactGA.initialize('UA-129440192-1')
   // history.listen(location => ReactGA.pageview(location.pathname));
-
   // Crashlytics.crash();
-
 };
 
-export const reportEvent = (params) => {
-  // console.log('report')
+export const reportEvent = params => {
   // if (env !== 'prod') return;
-  // TODO report to firebase
-  // const fixedName = name.replace(/\ /g,'').replace(/-/g,'_');
   ReactGA.event(params);
 };
 

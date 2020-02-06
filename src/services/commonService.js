@@ -1,9 +1,14 @@
 import moment from 'moment';
 
 export const isMobile = () => {
-  return false;
-  if (!navigator) return false;
-  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+  try {
+    if (!navigator) return false;
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    );
+  } catch (e) {
+    return false;
+  }
 };
 
 export const setCookie = (name, value, days) => {
@@ -16,7 +21,7 @@ export const setCookie = (name, value, days) => {
   document.cookie = `${name}=${value || ''}${expires}; path=/`;
 };
 
-export const getCookie = (name) => {
+export const getCookie = name => {
   const nameEQ = `${name}=`;
   const ca = document.cookie.split(';');
   for (let i = 0; i < ca.length; i++) {
@@ -27,7 +32,7 @@ export const getCookie = (name) => {
   return null;
 };
 
-export const getFriendlyTime = (date) => {
+export const getFriendlyTime = date => {
   if (!date) {
     return '';
   }

@@ -5,7 +5,7 @@ const path = require('path');
 const axios = require('axios');
 
 const mixpanel = MixPanel.init('f87910ae4849de1b774bc3d092a0cf9d');
-module.exports = (server) => {
+module.exports = server => {
   server.get('/.well-known/apple-app-site-association', (req, res) => {
     res.setHeader('Content-Type', 'application/pkcs7-mime');
 
@@ -24,10 +24,10 @@ module.exports = (server) => {
     axios
       .get(
         `https://api.mymapo.com/api/businesses/getByFriendlyUrl?friendlyUrl=${encodeURI(
-          friendlyUrl,
-        )}`,
+          friendlyUrl
+        )}`
       )
-      .then((response) => {
+      .then(response => {
         if (!response.data) return res.redirect(301, 'https://www.mymapo.com');
 
         const title = `${response.data.subCategories[0].title} ב${response.data.placements[0].heName} - ${response.data.englishName}`;
@@ -39,9 +39,9 @@ module.exports = (server) => {
             '</head>',
             `
           <script type='text/javascript'>var business=${JSON.stringify(
-    response.data,
-  )};</script></head>
-          `,
+            response.data
+          )};</script></head>
+          `
           );
           resultHtml = resultHtml.replace(/\{{title}}/g, `${title}`);
           resultHtml = resultHtml.replace(/\{{og_description}}/g, `'${response.data.description}'`);
@@ -52,18 +52,19 @@ module.exports = (server) => {
               response.data.logoUrl
                 ? response.data.logoUrl
                 : 'https://res.cloudinary.com/avartii/image/upload/v1542131557/social/mapo-logo.png'
-            }'`,
+            }'`
           );
           resultHtml = resultHtml.replace(
             /\{{og_url}}/g,
-            `'https://app.mymapo.com/business/${friendlyUrl}'`,
+            `'https://app.mymapo.com/business/${friendlyUrl}'`
           );
 
           return res.send(resultHtml);
         });
       })
-      .catch((e) => {
+      .catch(e => {
         console.log(e);
+        console.log('ERROR');
         const metaTitle = 'Mapo | מטיילים ישראלים בחו״ל';
         const description = 'מטיילים ישראלים בחו״ל';
 
@@ -74,7 +75,7 @@ module.exports = (server) => {
           htmlData = htmlData.replace(/\{{description}}/g, `'${description}'`);
           htmlData = htmlData.replace(
             /\{{og_image}}/g,
-            'https://res.cloudinary.com/avartii/image/upload/v1542131557/social/mapo-logo.png',
+            'https://res.cloudinary.com/avartii/image/upload/v1542131557/social/mapo-logo.png'
           );
           htmlData = htmlData.replace(/\{{og_url}}/g, 'https://app.mymapo.com/download');
 
@@ -94,7 +95,7 @@ module.exports = (server) => {
         htmlData = htmlData.replace(/\{{description}}/g, `'${description}'`);
         htmlData = htmlData.replace(
           /\{{og_image}}/g,
-          'https://res.cloudinary.com/avartii/image/upload/v1542131557/social/mapo-logo.png',
+          'https://res.cloudinary.com/avartii/image/upload/v1542131557/social/mapo-logo.png'
         );
         htmlData = htmlData.replace(/\{{og_url}}/g, 'https://app.mymapo.com/download');
 

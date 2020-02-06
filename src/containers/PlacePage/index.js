@@ -11,12 +11,12 @@ import Content from '../../components/Content';
 import FancyTitle from '../../components/FancyTitle';
 
 class PlacePage extends Component {
-  componentDidMount() {
-    const { match } = this.props;
-    const { placeId } = match.params;
-    if (!placeId) return this.props.push('/');
-    this.props.getPlaceDetails(placeId);
-  }
+  // componentDidMount() {
+  //   const { match } = this.props;
+  //   const { placeId } = match.params;
+  //   if (!placeId) return this.props.push('/');
+  //   this.props.getPlaceDetails(placeId);
+  // }
 
   componentDidUpdate(prevProps) {
     if (this.props.location !== prevProps.location) {
@@ -58,19 +58,17 @@ class PlacePage extends Component {
   }
 }
 const mapStateToProps = ({ SearchReducer }) => {
-  const {
-    isLoading, selectedPlace, citiesList, subCategoriesList,
-  } = SearchReducer;
+  const { isLoading, selectedPlace, citiesList, subCategoriesList } = SearchReducer;
   return {
     isLoading,
     selectedPlace,
     citiesList,
-    subCategoriesList,
+    subCategoriesList
   };
 };
 const mapDispatchToProps = {
   getPlaceDetails,
   push,
-  navigateSearchBySubCategory,
+  navigateSearchBySubCategory
 };
 export default connect(mapStateToProps, mapDispatchToProps)(PlacePage);

@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import './index.scss';
 import { Breadcrumb, Icon } from 'antd';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { buildPlaceUrl, buildSearchUrl } from '../../services/urlBuilderService';
 
 export default class Breadcrumbs extends Component {
-  onClick = (link) => {
+  onClick = link => {
     link && this.props.push(link);
   };
 
@@ -18,7 +19,7 @@ export default class Breadcrumbs extends Component {
           <Icon type="home" />
           <span>ראשי</span>
         </Breadcrumb.Item>
-        {items.map((item) => {
+        {items.map((item, index) => {
           const additionalProps = {};
           if (item.link) {
             additionalProps.onClick = () => {
@@ -33,19 +34,23 @@ export default class Breadcrumbs extends Component {
               : 'highlighted';
           }
           return (
-            <Breadcrumb.Item {...additionalProps} onClick={() => this.onClick(item.link)}>
+            <Breadcrumb.Item
+              {...additionalProps}
+              onClick={() => this.onClick(item.link)}
+              key={index}
+            >
               {!item.isHighlighted && item.placeObject && item.subCategoryObject && (
                 <Link
-                  to={buildSearchUrl({
+                  href={buildSearchUrl({
                     placeId: item.placeObject._id,
-                    subCategoryId: item.subCategoryObject._id,
+                    subCategoryId: item.subCategoryObject._id
                   })}
                 >
-                  {item.title}
+                  <a>{item.title}</a>
                 </Link>
               )}
               {!item.isHighlighted && item.placeObject && !item.subCategoryObject && (
-                <Link to={buildPlaceUrl(item.placeObject)}>{item.title}</Link>
+                <Link href={buildPlaceUrl(item.placeObject)}>{item.title}</Link>
               )}
               {(item.isHighlighted || (!item.placeObject && !item.subCategoryObject)) && (
                 <span>{item.title}</span>

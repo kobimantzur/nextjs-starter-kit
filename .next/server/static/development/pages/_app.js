@@ -435,7 +435,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! redux-thunk */ "redux-thunk");
 /* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(redux_thunk__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _src_components_Layout__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../src/components/Layout */ "./src/components/Layout/index.js");
-var _jsxFileName = "/Users/kobi.mantzur/m/n/pages/_app.js";
+/* harmony import */ var connected_react_router__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! connected-react-router */ "connected-react-router");
+/* harmony import */ var connected_react_router__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(connected_react_router__WEBPACK_IMPORTED_MODULE_8__);
+var _jsxFileName = "/Users/kobimantzur/mapo/hello-next/pages/_app.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
@@ -449,6 +451,9 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 
 const composeEnhancer = redux__WEBPACK_IMPORTED_MODULE_1__["compose"];
+
+ // import { createBrowserHistory } from 'history';
+// const history = createBrowserHistory();
 
 /**
  * @param {object} initialState
@@ -470,8 +475,8 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_3___default.a {
   }) {
     // we can dispatch from here too
     ctx.store.dispatch({
-      type: "FOO",
-      payload: "foo"
+      type: 'FOO',
+      payload: 'foo'
     });
     const pageProps = Component.getInitialProps ? await Component.getInitialProps(ctx) : {};
     return {
@@ -489,7 +494,7 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_3___default.a {
       store: store,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 42
+        lineNumber: 41
       },
       __self: this
     }, __jsx(_src_components_Layout__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -531,7 +536,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(antd__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _styles_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles.scss */ "./src/components/Layout/Components/AppFooter/styles.scss");
 /* harmony import */ var _styles_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_styles_scss__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "/Users/kobi.mantzur/m/n/src/components/Layout/Components/AppFooter/index.js";
+var _jsxFileName = "/Users/kobimantzur/mapo/hello-next/src/components/Layout/Components/AppFooter/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -605,20 +610,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _img_logo_white_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../img/logo-white.png */ "./src/img/logo-white.png");
-/* harmony import */ var _img_logo_white_png__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_img_logo_white_png__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _img_apple_app_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../img/apple-app.png */ "./src/img/apple-app.png");
-/* harmony import */ var _img_apple_app_png__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_img_apple_app_png__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _img_google_app_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../img/google-app.png */ "./src/img/google-app.png");
-/* harmony import */ var _img_google_app_png__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_img_google_app_png__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _containers_SearchPage_Components_SearchBar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../containers/SearchPage/Components/SearchBar */ "./src/containers/SearchPage/Components/SearchBar/index.js");
-/* harmony import */ var _reducers_Search_actions__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../reducers/Search/actions */ "./src/reducers/Search/actions.js");
-/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./index.scss */ "./src/components/Layout/Components/AppHeader/index.scss");
-/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _services_commonService__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../../services/commonService */ "./src/services/commonService.js");
-var _jsxFileName = "/Users/kobi.mantzur/m/n/src/components/Layout/Components/AppHeader/index.js";
+/* harmony import */ var _img_apple_app_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../img/apple-app.png */ "./src/img/apple-app.png");
+/* harmony import */ var _img_apple_app_png__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_img_apple_app_png__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _img_google_app_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../img/google-app.png */ "./src/img/google-app.png");
+/* harmony import */ var _img_google_app_png__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_img_google_app_png__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _containers_SearchPage_Components_SearchBar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../containers/SearchPage/Components/SearchBar */ "./src/containers/SearchPage/Components/SearchBar/index.js");
+/* harmony import */ var _reducers_Search_actions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../reducers/Search/actions */ "./src/reducers/Search/actions.js");
+/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./index.scss */ "./src/components/Layout/Components/AppHeader/index.scss");
+/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _services_commonService__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../services/commonService */ "./src/services/commonService.js");
+var _jsxFileName = "/Users/kobimantzur/mapo/hello-next/src/components/Layout/Components/AppHeader/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
-
 
 
 
@@ -695,7 +697,7 @@ class AppHeader extends react__WEBPACK_IMPORTED_MODULE_2__["Component"] {
     }, __jsx("img", {
       alt: "Mapo",
       className: "logo",
-      src: _img_logo_white_png__WEBPACK_IMPORTED_MODULE_3___default.a,
+      src: '/static/img/logo-white.png',
       __source: {
         fileName: _jsxFileName,
         lineNumber: 48
@@ -709,7 +711,7 @@ class AppHeader extends react__WEBPACK_IMPORTED_MODULE_2__["Component"] {
         lineNumber: 51
       },
       __self: this
-    }, !Object(_services_commonService__WEBPACK_IMPORTED_MODULE_9__["isMobile"])() && __jsx("span", {
+    }, !Object(_services_commonService__WEBPACK_IMPORTED_MODULE_8__["isMobile"])() && __jsx("span", {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 55
@@ -722,7 +724,7 @@ class AppHeader extends react__WEBPACK_IMPORTED_MODULE_2__["Component"] {
         lineNumber: 56
       },
       __self: this
-    }))), Object(_services_commonService__WEBPACK_IMPORTED_MODULE_9__["isMobile"])() && __jsx("div", {
+    }))), Object(_services_commonService__WEBPACK_IMPORTED_MODULE_8__["isMobile"])() && __jsx("div", {
       className: "store-icons",
       __source: {
         fileName: _jsxFileName,
@@ -741,7 +743,7 @@ class AppHeader extends react__WEBPACK_IMPORTED_MODULE_2__["Component"] {
     }, __jsx("img", {
       className: "appstore",
       alt: "AppStore",
-      src: _img_apple_app_png__WEBPACK_IMPORTED_MODULE_4___default.a,
+      src: _img_apple_app_png__WEBPACK_IMPORTED_MODULE_3___default.a,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 67
@@ -758,7 +760,7 @@ class AppHeader extends react__WEBPACK_IMPORTED_MODULE_2__["Component"] {
     }, __jsx("img", {
       className: "google",
       alt: "Google Play Store",
-      src: _img_google_app_png__WEBPACK_IMPORTED_MODULE_5___default.a,
+      src: _img_google_app_png__WEBPACK_IMPORTED_MODULE_4___default.a,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 70
@@ -785,7 +787,7 @@ const mapStateToProps = ({
 };
 
 const mapDispatchToProps = {
-  setSearchModalState: _reducers_Search_actions__WEBPACK_IMPORTED_MODULE_7__["setSearchModalState"]
+  setSearchModalState: _reducers_Search_actions__WEBPACK_IMPORTED_MODULE_6__["setSearchModalState"]
 };
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(AppHeader));
 
@@ -822,14 +824,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./index.scss */ "./src/components/Layout/index.scss");
 /* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _services_analyticsService__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../services/analyticsService */ "./src/services/analyticsService.js");
-/* harmony import */ var antd_dist_antd_min_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! antd/dist/antd.min.css */ "./node_modules/antd/dist/antd.min.css");
-/* harmony import */ var antd_dist_antd_min_css__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(antd_dist_antd_min_css__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _fortawesome_fontawesome_free_css_all_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @fortawesome/fontawesome-free/css/all.css */ "./node_modules/@fortawesome/fontawesome-free/css/all.css");
-/* harmony import */ var _fortawesome_fontawesome_free_css_all_css__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_css_all_css__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _fortawesome_fontawesome_free_css_all_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @fortawesome/fontawesome-free/css/all.css */ "./node_modules/@fortawesome/fontawesome-free/css/all.css");
+/* harmony import */ var _fortawesome_fontawesome_free_css_all_css__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_css_all_css__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var antd_dist_antd_min_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! antd/dist/antd.min.css */ "./node_modules/antd/dist/antd.min.css");
+/* harmony import */ var antd_dist_antd_min_css__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(antd_dist_antd_min_css__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var _containers_SearchPage_Components_SearchBar__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../containers/SearchPage/Components/SearchBar */ "./src/containers/SearchPage/Components/SearchBar/index.js");
 /* harmony import */ var _reducers_Search_actions__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../reducers/Search/actions */ "./src/reducers/Search/actions.js");
 /* harmony import */ var _containers_shared_SearchModal__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../containers/shared/SearchModal */ "./src/containers/shared/SearchModal/index.js");
-var _jsxFileName = "/Users/kobi.mantzur/m/n/src/components/Layout/index.js";
+var _jsxFileName = "/Users/kobimantzur/mapo/hello-next/src/components/Layout/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
@@ -863,25 +865,43 @@ class Layout extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
     return __jsx(antd__WEBPACK_IMPORTED_MODULE_1__["Layout"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 29
-      },
-      __self: this
-    }, __jsx(_Components_AppHeader__WEBPACK_IMPORTED_MODULE_3__["default"], _extends({}, this.props, {
-      __source: {
-        fileName: _jsxFileName,
         lineNumber: 30
       },
       __self: this
-    })), this.props.children, __jsx(_Components_AppFooter__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    }, __jsx("style", {
+      dangerouslySetInnerHTML: {
+        __html: antd_dist_antd_min_css__WEBPACK_IMPORTED_MODULE_8___default.a
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 31
+      },
+      __self: this
+    }), __jsx("style", {
+      dangerouslySetInnerHTML: {
+        __html: _fortawesome_fontawesome_free_css_all_css__WEBPACK_IMPORTED_MODULE_7___default.a
+      },
       __source: {
         fileName: _jsxFileName,
         lineNumber: 32
       },
       __self: this
-    }), __jsx(_containers_shared_SearchModal__WEBPACK_IMPORTED_MODULE_11__["default"], _extends({}, this.props, {
+    }), __jsx(_Components_AppHeader__WEBPACK_IMPORTED_MODULE_3__["default"], _extends({}, this.props, {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 33
+      },
+      __self: this
+    })), this.props.children, __jsx(_Components_AppFooter__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 35
+      },
+      __self: this
+    }), __jsx(_containers_shared_SearchModal__WEBPACK_IMPORTED_MODULE_11__["default"], _extends({}, this.props, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 36
       },
       __self: this
     })));
@@ -910,7 +930,7 @@ Layout.defaultProps = defaultProps;
 /*!**************************!*\
   !*** ./src/constants.js ***!
   \**************************/
-/*! exports provided: BASE_API, PALETTE_GRAY, PALETTE_PRIMARY, GOOGLE_API_KEY */
+/*! exports provided: BASE_API, PALETTE_GRAY, PALETTE_PRIMARY, GOOGLE_API_KEY, DEFAULT_PAGE_TITLE */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -919,11 +939,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PALETTE_GRAY", function() { return PALETTE_GRAY; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PALETTE_PRIMARY", function() { return PALETTE_PRIMARY; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GOOGLE_API_KEY", function() { return GOOGLE_API_KEY; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DEFAULT_PAGE_TITLE", function() { return DEFAULT_PAGE_TITLE; });
 const BASE_API = false ? undefined : 'http://localhost:2000/api/'; // export const BASE_API = 'http://localhost:2000/api/';
 
 const PALETTE_GRAY = '#424242';
 const PALETTE_PRIMARY = '#5e97c7';
 const GOOGLE_API_KEY = 'AIzaSyAmkvMrCjGlSfdJppOEl4f5tyAqpmsmNv0';
+const DEFAULT_PAGE_TITLE = 'Mapo | ישראלים מטיילים בחו״ל';
 
 /***/ }),
 
@@ -976,7 +998,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.scss */ "./src/containers/shared/SearchModal/Components/AutocompleteOptions/index.scss");
 /* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _services_urlBuilderService__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../services/urlBuilderService */ "./src/services/urlBuilderService.js");
-var _jsxFileName = "/Users/kobi.mantzur/m/n/src/containers/shared/SearchModal/Components/AutocompleteOptions/index.js";
+var _jsxFileName = "/Users/kobimantzur/mapo/hello-next/src/containers/shared/SearchModal/Components/AutocompleteOptions/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -1095,7 +1117,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index.scss */ "./src/containers/shared/SearchModal/Components/SearchBar/index.scss");
 /* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/kobi.mantzur/m/n/src/containers/shared/SearchModal/Components/SearchBar/index.js";
+var _jsxFileName = "/Users/kobimantzur/mapo/hello-next/src/containers/shared/SearchModal/Components/SearchBar/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -1210,7 +1232,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./index.scss */ "./src/containers/shared/SearchModal/index.scss");
 /* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _Components_AutocompleteOptions__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Components/AutocompleteOptions */ "./src/containers/shared/SearchModal/Components/AutocompleteOptions/index.js");
-var _jsxFileName = "/Users/kobi.mantzur/m/n/src/containers/shared/SearchModal/index.js";
+var _jsxFileName = "/Users/kobimantzur/mapo/hello-next/src/containers/shared/SearchModal/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
@@ -1317,17 +1339,6 @@ module.exports = "/_next/static/images/google-app-e85f96de3c6d1dca5358c9f068b58d
 
 /***/ }),
 
-/***/ "./src/img/logo-white.png":
-/*!********************************!*\
-  !*** ./src/img/logo-white.png ***!
-  \********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/logo-white-239d234e0d0382ad61a8634bd5baa832.png";
-
-/***/ }),
-
 /***/ "./src/reducers/BusinessPage/constants.js":
 /*!************************************************!*\
   !*** ./src/reducers/BusinessPage/constants.js ***!
@@ -1375,7 +1386,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 const INITIAL_STATE = {
   business: undefined,
-  isLoading: true,
+  isLoading: false,
   isReviewLoading: false,
   isReviewModalOpen: false
 };
@@ -1454,12 +1465,16 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 const getCountries = () => async dispatch => {
   const res = await Object(_services_requestService__WEBPACK_IMPORTED_MODULE_1__["getRequest"])('/placements/getPlacementsData');
+
+  const payload = _objectSpread({
+    isLoading: false
+  }, res.data);
+
   dispatch({
     type: _types__WEBPACK_IMPORTED_MODULE_2__["SET_COUNTRIES"],
-    payload: _objectSpread({
-      isLoading: false
-    }, res.data)
+    payload
   });
+  return payload;
 };
 const getPlaceDetails = placeId => async dispatch => {
   const res = await Object(_services_requestService__WEBPACK_IMPORTED_MODULE_1__["getRequest"])(`/placements/getPlaceDetails?placeId=${placeId}`);
@@ -1527,12 +1542,16 @@ const searchBySubCategory = (placeId, subCategoryId) => async dispatch => {
     }
   });
   const res = await Object(_services_requestService__WEBPACK_IMPORTED_MODULE_1__["getRequest"])(`webSearch/searchBySubCategory?placeId=${placeId}&subCategoryId=${subCategoryId}`);
+
+  const payload = _objectSpread({
+    isLoading: false
+  }, res.data);
+
   dispatch({
     type: _types__WEBPACK_IMPORTED_MODULE_2__["SEARCH_SUB_CATEGORY"],
-    payload: _objectSpread({
-      isLoading: false
-    }, res.data)
+    payload
   });
+  return payload;
 };
 
 /***/ }),
@@ -1555,7 +1574,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 const INITIAL_STATE = {
-  isLoading: true,
+  isLoading: false,
   isSearchOpen: false,
   isSearchLoading: false,
   selectedPlace: undefined,
@@ -1651,10 +1670,7 @@ const initAnalytics = () => {// console.log('init')
   // Crashlytics.crash();
 };
 const reportEvent = params => {
-  // console.log('report')
   // if (env !== 'prod') return;
-  // TODO report to firebase
-  // const fixedName = name.replace(/\ /g,'').replace(/-/g,'_');
   react_ga__WEBPACK_IMPORTED_MODULE_0___default.a.event(params);
 };
 const reportScreen = screenName => {
@@ -1681,9 +1697,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_0__);
 
 const isMobile = () => {
-  return false;
-  if (!navigator) return false;
-  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  try {
+    if (!navigator) return false;
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  } catch (e) {
+    return false;
+  }
 };
 const setCookie = (name, value, days) => {
   let expires = '';
@@ -1846,7 +1865,7 @@ const buildSearchUrl = searchConfig => {
     placeId,
     subCategoryId
   } = searchConfig;
-  return `/search?placeId=${placeId}&subCategoryId=${subCategoryId}`;
+  return `/search/${placeId}/${subCategoryId}`;
 };
 const buildBusinesUrl = business => {
   const {

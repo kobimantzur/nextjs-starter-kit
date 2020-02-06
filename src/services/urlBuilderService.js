@@ -1,7 +1,5 @@
-export const buildPlaceUrl = (place) => {
-  const {
-    _id, friendlyUrl, heName, enName,
-  } = place;
+export const buildPlaceUrl = place => {
+  const { _id, friendlyUrl, heName, enName } = place;
 
   return `/place/${_id}/${friendlyUrl || heName || enName}`;
 };
@@ -9,13 +7,13 @@ export const buildPlaceUrl = (place) => {
  *
  * @param {placeId: string, subCategoryId: string} searchConfig
  */
-export const buildSearchUrl = (searchConfig) => {
+export const buildSearchUrl = searchConfig => {
   const { placeId, subCategoryId } = searchConfig;
 
-  return `/search?placeId=${placeId}&subCategoryId=${subCategoryId}`;
+  return `/search/${placeId}/${subCategoryId}`;
 };
 
-export const buildBusinesUrl = (business) => {
+export const buildBusinesUrl = business => {
   const { friendlyUrl, _id, englishName } = business;
 
   return `/business/${_id}/${friendlyUrl || englishName || ''}`;

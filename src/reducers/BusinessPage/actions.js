@@ -5,58 +5,54 @@ import { reportEvent } from '../../services/analyticsService';
 export function cleanBusinessPage() {
   return {
     type: types.SET_BUSINESS,
-    payload: { isLoading: false, business: undefined },
+    payload: { isLoading: false, business: undefined }
   };
 }
 
 export const setEmptyState = () => ({
-  type: types.SET_EMPTY_STATE,
+  type: types.SET_EMPTY_STATE
 });
 
-export const fetchBusinessByFriendlyUrl = (friendlyUrl) => {
-  return axios
-  .get(types.GET_BY_FRIENDLY_URL, {
+export const fetchBusinessByFriendlyUrl = friendlyUrl => {
+  return axios.get(types.GET_BY_FRIENDLY_URL, {
     params: {
-      friendlyUrl,
-    },
+      friendlyUrl
+    }
   });
-}
-
-export const getBusinessByFriendlyUrl = friendlyUrl => async (dispatch) => {
-  // if (window.business) {
-  //   return dispatch({
-  //     type: types.SET_BUSINESS,
-  //     payload: { business: window.business },
-  //   });
-  // }
-  
-    const response = await fetchBusinessByFriendlyUrl(friendlyUrl);
-      if (!response || !response.data) {
-        // TODO: notify error
-      }
-      // document.title = `Avartii | ${response.data.englishName}`;
-      dispatch({
-        type: types.SET_BUSINESS,
-        payload: { business: response.data },
-      });
 };
 
-export const submitBusinessReview = data => (dispatch) => {
+export const getBusinessByFriendlyUrl = friendlyUrl => async dispatch => {
+  const response = await fetchBusinessByFriendlyUrl(friendlyUrl);
+  if (!response || !response.data) {
+    // TODO: notify error
+    // TODO: redirect
+  }
+  dispatch({
+    type: types.SET_BUSINESS,
+    payload: { business: response.data }
+  });
+
+  return {
+    business: response.data
+  };
+};
+
+export const submitBusinessReview = data => dispatch => {
   axios
     .post(types.SUBMIT_BUSINESS_REVIEW_URL, data)
-    .then((response) => {
+    .then(response => {
       reportEvent({
         category: 'ReviewModal',
-        action: 'Complete',
+        action: 'Complete'
       });
       dispatch({
         type: types.SET_REVIEWS,
-        payload: { reviewsList: response.data.reviewsList, userReview: response.data.userReview },
+        payload: { reviewsList: response.data.reviewsList, userReview: response.data.userReview }
       });
       // TODO: show success message
       // TODO: append the comment on top of all comments
     })
-    .catch((e) => {
+    .catch(e => {
       console.log(e);
     });
 };
@@ -64,17 +60,17 @@ export const submitBusinessReview = data => (dispatch) => {
 export function setReviewModalState(isReviewModalOpen) {
   reportEvent({
     category: 'ReviewModal',
-    action: isReviewModalOpen ? 'ModalOpen' : 'ModalClose',
+    action: isReviewModalOpen ? 'ModalOpen' : 'ModalClose'
   });
   return {
     type: types.SET_REVIEW_MODAL_STATE,
-    payload: { isReviewModalOpen },
+    payload: { isReviewModalOpen }
   };
 }
 
 export function setReviewLoadingState(isReviewLoading) {
   return {
     type: types.SET_REVIEW_LOADING_STATE,
-    payload: { isReviewLoading },
+    payload: { isReviewLoading }
   };
 }
