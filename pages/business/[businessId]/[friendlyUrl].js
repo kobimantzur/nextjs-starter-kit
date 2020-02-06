@@ -21,11 +21,11 @@ class Business extends Component {
   }
   getPageTitle() {
     const { business } = this.props;
-    if (!business.title) {
+    if (!business.englishName) {
       // TODO: report analytics
       return DEFAULT_PAGE_TITLE;
     }
-    return `Mapo | המלצה על ${business.subCategories[0].title} ב${business.placements[0].heName}`;
+    return `Mapo | המלצה על ${business.subCategories[0].title} ב${business.placements[0].heName} - ${business.englishName}`;
   }
   getMetaImage() {
     const { business } = this.props;
