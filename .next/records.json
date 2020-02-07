@@ -67,23 +67,6 @@
       }
     }
   ],
-  "mini-css-extract-plugin node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--7-1!node_modules/sass-loader/dist/cjs.js??ref--7-2!src/containers/SearchResultsPage/index.scss": [
-    {
-      "modules": {
-        "byIdentifier": {},
-        "usedIds": {}
-      },
-      "chunks": {
-        "byName": {
-          "mini-css-extract-plugin": 0
-        },
-        "bySource": {},
-        "usedIds": [
-          0
-        ]
-      }
-    }
-  ],
   "mini-css-extract-plugin node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--7-1!node_modules/sass-loader/dist/cjs.js??ref--7-2!src/containers/PlacePage/index.scss": [
     {
       "modules": {
@@ -101,143 +84,24 @@
       }
     }
   ],
+  "mini-css-extract-plugin node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--7-1!node_modules/sass-loader/dist/cjs.js??ref--7-2!src/containers/SearchResultsPage/index.scss": [
+    {
+      "modules": {
+        "byIdentifier": {},
+        "usedIds": {}
+      },
+      "chunks": {
+        "byName": {
+          "mini-css-extract-plugin": 0
+        },
+        "bySource": {},
+        "usedIds": [
+          0
+        ]
+      }
+    }
+  ],
   "mini-css-extract-plugin node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--7-1!node_modules/sass-loader/dist/cjs.js??ref--7-2!src/containers/BusinessPage/index.scss": [
-    {
-      "modules": {
-        "byIdentifier": {},
-        "usedIds": {}
-      },
-      "chunks": {
-        "byName": {
-          "mini-css-extract-plugin": 0
-        },
-        "bySource": {},
-        "usedIds": [
-          0
-        ]
-      }
-    }
-  ],
-  "mini-css-extract-plugin node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--7-1!node_modules/sass-loader/dist/cjs.js??ref--7-2!src/containers/shared/SearchModal/index.scss": [
-    {
-      "modules": {
-        "byIdentifier": {},
-        "usedIds": {}
-      },
-      "chunks": {
-        "byName": {
-          "mini-css-extract-plugin": 0
-        },
-        "bySource": {},
-        "usedIds": [
-          0
-        ]
-      }
-    }
-  ],
-  "mini-css-extract-plugin node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--7-1!node_modules/sass-loader/dist/cjs.js??ref--7-2!src/components/Layout/Components/AppHeader/index.scss": [
-    {
-      "modules": {
-        "byIdentifier": {},
-        "usedIds": {}
-      },
-      "chunks": {
-        "byName": {
-          "mini-css-extract-plugin": 0
-        },
-        "bySource": {},
-        "usedIds": [
-          0
-        ]
-      }
-    }
-  ],
-  "mini-css-extract-plugin node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--7-1!node_modules/sass-loader/dist/cjs.js??ref--7-2!src/components/Layout/Components/AppFooter/styles.scss": [
-    {
-      "modules": {
-        "byIdentifier": {},
-        "usedIds": {}
-      },
-      "chunks": {
-        "byName": {
-          "mini-css-extract-plugin": 0
-        },
-        "bySource": {},
-        "usedIds": [
-          0
-        ]
-      }
-    }
-  ],
-  "mini-css-extract-plugin node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--7-1!node_modules/sass-loader/dist/cjs.js??ref--7-2!src/components/Page/index.scss": [
-    {
-      "modules": {
-        "byIdentifier": {},
-        "usedIds": {}
-      },
-      "chunks": {
-        "byName": {
-          "mini-css-extract-plugin": 0
-        },
-        "bySource": {},
-        "usedIds": [
-          0
-        ]
-      }
-    }
-  ],
-  "mini-css-extract-plugin node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--7-1!node_modules/sass-loader/dist/cjs.js??ref--7-2!src/components/Content/index.scss": [
-    {
-      "modules": {
-        "byIdentifier": {},
-        "usedIds": {}
-      },
-      "chunks": {
-        "byName": {
-          "mini-css-extract-plugin": 0
-        },
-        "bySource": {},
-        "usedIds": [
-          0
-        ]
-      }
-    }
-  ],
-  "mini-css-extract-plugin node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--7-1!node_modules/sass-loader/dist/cjs.js??ref--7-2!src/components/FancyTitle/index.scss": [
-    {
-      "modules": {
-        "byIdentifier": {},
-        "usedIds": {}
-      },
-      "chunks": {
-        "byName": {
-          "mini-css-extract-plugin": 0
-        },
-        "bySource": {},
-        "usedIds": [
-          0
-        ]
-      }
-    }
-  ],
-  "mini-css-extract-plugin node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--7-1!node_modules/sass-loader/dist/cjs.js??ref--7-2!src/components/SubCategoryPicker/index.scss": [
-    {
-      "modules": {
-        "byIdentifier": {},
-        "usedIds": {}
-      },
-      "chunks": {
-        "byName": {
-          "mini-css-extract-plugin": 0
-        },
-        "bySource": {},
-        "usedIds": [
-          0
-        ]
-      }
-    }
-  ],
-  "mini-css-extract-plugin node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--7-1!node_modules/sass-loader/dist/cjs.js??ref--7-2!src/containers/BusinessPage/Components/Tags/index.scss": [
     {
       "modules": {
         "byIdentifier": {},
@@ -288,7 +152,143 @@
       }
     }
   ],
+  "mini-css-extract-plugin node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--7-1!node_modules/sass-loader/dist/cjs.js??ref--7-2!src/containers/BusinessPage/Components/Tags/index.scss": [
+    {
+      "modules": {
+        "byIdentifier": {},
+        "usedIds": {}
+      },
+      "chunks": {
+        "byName": {
+          "mini-css-extract-plugin": 0
+        },
+        "bySource": {},
+        "usedIds": [
+          0
+        ]
+      }
+    }
+  ],
+  "mini-css-extract-plugin node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--7-1!node_modules/sass-loader/dist/cjs.js??ref--7-2!src/components/Page/index.scss": [
+    {
+      "modules": {
+        "byIdentifier": {},
+        "usedIds": {}
+      },
+      "chunks": {
+        "byName": {
+          "mini-css-extract-plugin": 0
+        },
+        "bySource": {},
+        "usedIds": [
+          0
+        ]
+      }
+    }
+  ],
   "mini-css-extract-plugin node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--7-1!node_modules/sass-loader/dist/cjs.js??ref--7-2!src/components/BusinessListView/index.scss": [
+    {
+      "modules": {
+        "byIdentifier": {},
+        "usedIds": {}
+      },
+      "chunks": {
+        "byName": {
+          "mini-css-extract-plugin": 0
+        },
+        "bySource": {},
+        "usedIds": [
+          0
+        ]
+      }
+    }
+  ],
+  "mini-css-extract-plugin node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--7-1!node_modules/sass-loader/dist/cjs.js??ref--7-2!src/containers/shared/SearchModal/index.scss": [
+    {
+      "modules": {
+        "byIdentifier": {},
+        "usedIds": {}
+      },
+      "chunks": {
+        "byName": {
+          "mini-css-extract-plugin": 0
+        },
+        "bySource": {},
+        "usedIds": [
+          0
+        ]
+      }
+    }
+  ],
+  "mini-css-extract-plugin node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--7-1!node_modules/sass-loader/dist/cjs.js??ref--7-2!src/components/Layout/Components/AppFooter/styles.scss": [
+    {
+      "modules": {
+        "byIdentifier": {},
+        "usedIds": {}
+      },
+      "chunks": {
+        "byName": {
+          "mini-css-extract-plugin": 0
+        },
+        "bySource": {},
+        "usedIds": [
+          0
+        ]
+      }
+    }
+  ],
+  "mini-css-extract-plugin node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--7-1!node_modules/sass-loader/dist/cjs.js??ref--7-2!src/components/Layout/Components/AppHeader/index.scss": [
+    {
+      "modules": {
+        "byIdentifier": {},
+        "usedIds": {}
+      },
+      "chunks": {
+        "byName": {
+          "mini-css-extract-plugin": 0
+        },
+        "bySource": {},
+        "usedIds": [
+          0
+        ]
+      }
+    }
+  ],
+  "mini-css-extract-plugin node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--7-1!node_modules/sass-loader/dist/cjs.js??ref--7-2!src/components/Content/index.scss": [
+    {
+      "modules": {
+        "byIdentifier": {},
+        "usedIds": {}
+      },
+      "chunks": {
+        "byName": {
+          "mini-css-extract-plugin": 0
+        },
+        "bySource": {},
+        "usedIds": [
+          0
+        ]
+      }
+    }
+  ],
+  "mini-css-extract-plugin node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--7-1!node_modules/sass-loader/dist/cjs.js??ref--7-2!src/components/SubCategoryPicker/index.scss": [
+    {
+      "modules": {
+        "byIdentifier": {},
+        "usedIds": {}
+      },
+      "chunks": {
+        "byName": {
+          "mini-css-extract-plugin": 0
+        },
+        "bySource": {},
+        "usedIds": [
+          0
+        ]
+      }
+    }
+  ],
+  "mini-css-extract-plugin node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--7-1!node_modules/sass-loader/dist/cjs.js??ref--7-2!src/components/FancyTitle/index.scss": [
     {
       "modules": {
         "byIdentifier": {},
@@ -322,6 +322,23 @@
       }
     }
   ],
+  "mini-css-extract-plugin node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--7-1!node_modules/sass-loader/dist/cjs.js??ref--7-2!src/components/CardWrap/index.scss": [
+    {
+      "modules": {
+        "byIdentifier": {},
+        "usedIds": {}
+      },
+      "chunks": {
+        "byName": {
+          "mini-css-extract-plugin": 0
+        },
+        "bySource": {},
+        "usedIds": [
+          0
+        ]
+      }
+    }
+  ],
   "mini-css-extract-plugin node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--7-1!node_modules/sass-loader/dist/cjs.js??ref--7-2!src/containers/SearchPage/Components/CountryPicker/index.scss": [
     {
       "modules": {
@@ -339,7 +356,7 @@
       }
     }
   ],
-  "mini-css-extract-plugin node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--7-1!node_modules/sass-loader/dist/cjs.js??ref--7-2!src/containers/PlacePage/Components/CitiesPicker/index.scss": [
+  "mini-css-extract-plugin node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--7-1!node_modules/sass-loader/dist/cjs.js??ref--7-2!src/containers/PlacePage/Components/CountryHeader/index.scss": [
     {
       "modules": {
         "byIdentifier": {},
@@ -356,7 +373,24 @@
       }
     }
   ],
-  "mini-css-extract-plugin node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--7-1!node_modules/sass-loader/dist/cjs.js??ref--7-2!src/containers/PlacePage/Components/InfoCards/index.scss": [
+  "mini-css-extract-plugin node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--7-1!node_modules/sass-loader/dist/cjs.js??ref--7-2!src/containers/BusinessPage/Components/ShareButtons/index.scss": [
+    {
+      "modules": {
+        "byIdentifier": {},
+        "usedIds": {}
+      },
+      "chunks": {
+        "byName": {
+          "mini-css-extract-plugin": 0
+        },
+        "bySource": {},
+        "usedIds": [
+          0
+        ]
+      }
+    }
+  ],
+  "mini-css-extract-plugin node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--7-1!node_modules/sass-loader/dist/cjs.js??ref--7-2!src/containers/shared/SearchModal/Components/AutocompleteOptions/index.scss": [
     {
       "modules": {
         "byIdentifier": {},
@@ -407,7 +441,7 @@
       }
     }
   ],
-  "mini-css-extract-plugin node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--7-1!node_modules/sass-loader/dist/cjs.js??ref--7-2!src/components/CardWrap/index.scss": [
+  "mini-css-extract-plugin node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--7-1!node_modules/sass-loader/dist/cjs.js??ref--7-2!src/containers/PlacePage/Components/CitiesPicker/index.scss": [
     {
       "modules": {
         "byIdentifier": {},
@@ -424,41 +458,7 @@
       }
     }
   ],
-  "mini-css-extract-plugin node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--7-1!node_modules/sass-loader/dist/cjs.js??ref--7-2!src/containers/shared/SearchModal/Components/AutocompleteOptions/index.scss": [
-    {
-      "modules": {
-        "byIdentifier": {},
-        "usedIds": {}
-      },
-      "chunks": {
-        "byName": {
-          "mini-css-extract-plugin": 0
-        },
-        "bySource": {},
-        "usedIds": [
-          0
-        ]
-      }
-    }
-  ],
-  "mini-css-extract-plugin node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--7-1!node_modules/sass-loader/dist/cjs.js??ref--7-2!src/containers/BusinessPage/Components/ShareButtons/index.scss": [
-    {
-      "modules": {
-        "byIdentifier": {},
-        "usedIds": {}
-      },
-      "chunks": {
-        "byName": {
-          "mini-css-extract-plugin": 0
-        },
-        "bySource": {},
-        "usedIds": [
-          0
-        ]
-      }
-    }
-  ],
-  "mini-css-extract-plugin node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--7-1!node_modules/sass-loader/dist/cjs.js??ref--7-2!src/containers/PlacePage/Components/CountryHeader/index.scss": [
+  "mini-css-extract-plugin node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--7-1!node_modules/sass-loader/dist/cjs.js??ref--7-2!src/containers/PlacePage/Components/InfoCards/index.scss": [
     {
       "modules": {
         "byIdentifier": {},
@@ -563,23 +563,24 @@
       "commons": 0,
       "static/runtime/webpack.js": 1,
       "framework": 2,
-      "0671b210b7eb0ffed5b221c4f488a659e8298c07": 3,
-      "aec7d165": 4,
+      "aec7d165": 3,
+      "fbd32ade66ad08918061c7be7d04f2814700d77e": 4,
       "styles": 5,
-      "ab15cb72442c4f6b4ca38a2630f92b64334af61c": 6,
-      "d07210c52b21fc0575626ea8331bff2a2e6ceb6f": 7,
-      "65ce5c3f5e170dd3f059533e8c3eba03ec2acf6d": 8,
-      "6b212a29b4716b13a0a4e813fe0295288969ad65": 9,
+      "f81e61f9691ab778a88ebecb4783ab990f29cd79": 6,
+      "94b244cfad2800bfd6a1a860103b585b2a90357e": 7,
+      "1d12c1d36320a9a75476320edc0036afe89bb608": 8,
+      "2b64aa66600a78bf28ffa4084a1b14d54e745902": 9,
       "6d872e38": 10,
       "cb1608f2": 11,
-      "static/ITz48dUoN2kZrvDZfgeLw/pages/_app.js": 12,
-      "static/ITz48dUoN2kZrvDZfgeLw/pages/_error.js": 13,
-      "static/ITz48dUoN2kZrvDZfgeLw/pages/business/[businessId]/[friendlyUrl].js": 14,
-      "static/ITz48dUoN2kZrvDZfgeLw/pages/index.js": 15,
-      "static/ITz48dUoN2kZrvDZfgeLw/pages/place/[placeId]/[friendlyUrl].js": 16,
-      "static/ITz48dUoN2kZrvDZfgeLw/pages/search/[placeId]/[subCategoryId].js": 17,
-      "static/runtime/main.js": 18,
-      "static/runtime/polyfills.js": 19
+      "static/E_usPO215fBjmLxK7nTgl/pages/_app.js": 12,
+      "static/E_usPO215fBjmLxK7nTgl/pages/_error.js": 13,
+      "static/E_usPO215fBjmLxK7nTgl/pages/business/[businessId]/[friendlyUrl].js": 14,
+      "static/E_usPO215fBjmLxK7nTgl/pages/download.js": 15,
+      "static/E_usPO215fBjmLxK7nTgl/pages/index.js": 16,
+      "static/E_usPO215fBjmLxK7nTgl/pages/place/[placeId]/[friendlyUrl].js": 17,
+      "static/E_usPO215fBjmLxK7nTgl/pages/search/[placeId]/[subCategoryId].js": 18,
+      "static/runtime/main.js": 19,
+      "static/runtime/polyfills.js": 20
     },
     "bySource": {},
     "usedIds": [
@@ -596,6 +597,7 @@
       18,
       19,
       2,
+      20,
       3,
       4,
       5,
