@@ -5099,7 +5099,8 @@ body {
     padding: 0 12%; }
   .get-the-app-section .app-store, .get-the-app-section .play-store {
     width: 60%;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    max-width: 286px; }
 
 
 /*# sourceMappingURL=styles.chunk.css.map*/

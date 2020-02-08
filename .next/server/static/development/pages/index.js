@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1943,12 +1943,12 @@ class GetTheAppSection extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     }, __jsx("h2", null, "\u05D4\u05E6\u05D8\u05E8\u05E4\u05D5 \u05E2\u05DB\u05E9\u05D9\u05D5"), __jsx("p", null, "\u05D2\u05DC\u05D5 \u05D0\u05EA \u05D4\u05D4\u05DE\u05DC\u05E6\u05D5\u05EA \u05E9\u05D9\u05D4\u05E4\u05DB\u05D5 \u05D0\u05EA \u05D4\u05D8\u05D9\u05D5\u05DC \u05D4\u05D1\u05D0 \u05E9\u05DC\u05DB\u05DD \u05DC\u05D1\u05DC\u05EA\u05D9 \u05E0\u05E9\u05DB\u05D7")), __jsx("div", {
       className: "left"
     }, __jsx("a", {
-      href: ""
+      href: "https://itunes.apple.com/us/app/avartii-%D7%99%D7%A9%D7%A8%D7%90%D7%9C%D7%99%D7%9D-%D7%91%D7%9C%D7%95%D7%A1-%D7%90%D7%A0%D7%92-%D7%9C%D7%A1/id1329505993?mt=8"
     }, __jsx("img", {
       className: "app-store",
       src: "/static/img/download/app-store-download.svg"
     })), __jsx("a", {
-      href: ""
+      href: "https://play.google.com/store/apps/details?id=com.avartii.app"
     }, __jsx("img", {
       className: "play-store",
       src: "/static/img/download/google-play-download.svg"
@@ -3157,7 +3157,7 @@ const buildBusinessUrl = business => {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
