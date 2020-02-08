@@ -1,0 +1,51 @@
+{
+  "modules": {
+    "byIdentifier": {
+      "multi private-next-pages/_app.js": 0,
+      "multi private-next-pages/_document.js": 1,
+      "multi private-next-pages/business/[businessId]/[friendlyUrl].js": 2,
+      "multi private-next-pages/download/index.js": 3,
+      "multi private-next-pages/index.js": 4,
+      "multi private-next-pages/place/[placeId]/[friendlyUrl].js": 5,
+      "multi private-next-pages/search/[placeId]/[subCategoryId].js": 6,
+      "multi next/dist/pages/_error": 7
+    },
+    "usedIds": {
+      "0": 0,
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5,
+      "6": 6,
+      "7": 7
+    }
+  },
+  "chunks": {
+    "byName": {
+      "init-server.js": 0,
+      "on-error-server.js": 1,
+      "static/8_aPgkAR08TbZ2bD_oFK9/pages/_app.js": 2,
+      "static/8_aPgkAR08TbZ2bD_oFK9/pages/_document.js": 3,
+      "static/8_aPgkAR08TbZ2bD_oFK9/pages/_error.js": 4,
+      "static/8_aPgkAR08TbZ2bD_oFK9/pages/business/[businessId]/[friendlyUrl].js": 5,
+      "static/8_aPgkAR08TbZ2bD_oFK9/pages/download.js": 6,
+      "static/8_aPgkAR08TbZ2bD_oFK9/pages/index.js": 7,
+      "static/8_aPgkAR08TbZ2bD_oFK9/pages/place/[placeId]/[friendlyUrl].js": 8,
+      "static/8_aPgkAR08TbZ2bD_oFK9/pages/search/[placeId]/[subCategoryId].js": 9
+    },
+    "bySource": {},
+    "usedIds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  }
+}
