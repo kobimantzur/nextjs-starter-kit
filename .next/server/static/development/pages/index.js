@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2474,10 +2474,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_urlBuilderService__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../services/urlBuilderService */ "./src/services/urlBuilderService.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_lazyload__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-lazyload */ "react-lazyload");
+/* harmony import */ var react_lazyload__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_lazyload__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _services_commonService__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../services/commonService */ "./src/services/commonService.js");
 var _jsxFileName = "/Users/kobimantzur/mapo/hello-next/src/containers/SearchPage/Components/CountryPicker/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
 
 
 
@@ -2499,34 +2504,41 @@ class CountryPicker extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       key: country._id,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 13
+        lineNumber: 16
       },
       __self: this
     }, __jsx("a", {
       className: "country",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 14
+        lineNumber: 17
       },
       __self: this
     }, __jsx("div", {
       className: "country-title",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 15
+        lineNumber: 18
       },
       __self: this
-    }, country.heName), __jsx("div", {
+    }, country.heName), __jsx(react_lazyload__WEBPACK_IMPORTED_MODULE_4___default.a, {
+      height: Object(_services_commonService__WEBPACK_IMPORTED_MODULE_5__["isMobile"])() ? 150 : 300,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 19
+      },
+      __self: this
+    }, __jsx("div", {
       className: "b-image",
       style: {
         backgroundImage: `url(${country.headerImage})`
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 16
+        lineNumber: 20
       },
       __self: this
-    })));
+    }))));
   }
 
   render() {
@@ -2538,7 +2550,7 @@ class CountryPicker extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       className: "country-picker",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 26
+        lineNumber: 31
       },
       __self: this
     }, countriesList.map(country => this.renderCountry(country)));
@@ -3086,7 +3098,7 @@ const buildBusinessUrl = business => {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
@@ -3249,6 +3261,17 @@ module.exports = require("react");
 /***/ (function(module, exports) {
 
 module.exports = require("react-is");
+
+/***/ }),
+
+/***/ "react-lazyload":
+/*!*********************************!*\
+  !*** external "react-lazyload" ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-lazyload");
 
 /***/ }),
 

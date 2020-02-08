@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import './index.scss';
 import { buildPlaceUrl } from '../../../../services/urlBuilderService';
 import Link from 'next/link';
+import LazyLoad from 'react-lazyload';
+import { isMobile } from '../../../../services/commonService';
+
 export default class CountryPicker extends Component {
   onCountryClick = country => {
     const targetUrl = buildPlaceUrl(country);
@@ -13,7 +16,9 @@ export default class CountryPicker extends Component {
       <Link href={buildPlaceUrl(country)} key={country._id}>
         <a className="country">
           <div className="country-title">{country.heName}</div>
-          <div className="b-image" style={{ backgroundImage: `url(${country.headerImage})` }} />
+          <LazyLoad height={isMobile() ? 150 : 300}>
+            <div className="b-image" style={{ backgroundImage: `url(${country.headerImage})` }} />
+          </LazyLoad>
         </a>
       </Link>
     );
