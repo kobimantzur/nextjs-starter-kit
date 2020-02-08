@@ -31,13 +31,7 @@
       "static/chunks/styles.js",
       "static/runtime/main.js"
     ],
-    "/place/[placeId]/[friendlyUrl]": [
-      "static/runtime/webpack.js",
-      "static/css/styles.chunk.css",
-      "static/chunks/styles.js",
-      "static/runtime/main.js"
-    ],
-    "/search": [
+    "/search/[placeId]/[subCategoryId]": [
       "static/runtime/webpack.js",
       "static/css/styles.chunk.css",
       "static/chunks/styles.js",
