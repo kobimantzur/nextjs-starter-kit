@@ -5,9 +5,9 @@ import Page from '../../components/Page';
 import Content from '../../components/Content';
 import { searchBySubCategory } from '../../reducers/Search/actions';
 import BusinessListView from '../../components/BusinessListView';
-import FancyTitle from '../../components/FancyTitle';
 import SubCategoryPicker from '../../components/SubCategoryPicker';
-
+import { buildPlaceUrl } from '../../services/urlBuilderService';
+import { Breadcrumbs, FancyTitle } from '../../components';
 class SearchResultsPage extends Component {
   // componentDidMount() {
   //   this.loadResults();
@@ -36,6 +36,34 @@ class SearchResultsPage extends Component {
 
     return resultTitle;
   }
+  getBreadcrumbsData() {
+    const { selectedPlace, selectedSubCategory } = this.props;
+    let items = [];
+
+    if (!selectedSubCategory || !selectedPlace) return items;
+    console.log(selectedPlace);
+    if (selectedPlace.country && typeof selectedPlace.country === 'object') {
+      items.push({
+        title: selectedPlace.country.heName,
+        link: buildPlaceUrl(selectedPlace.country),
+        placeObject: selectedPlace.country
+      });
+    }
+    items.push({
+      title: selectedPlace.heName,
+      link: buildPlaceUrl(selectedPlace),
+      placeObject: selectedPlace
+    });
+
+    items.push({
+      title: selectedSubCategory.title,
+      isHighlighted: true
+    });
+
+    console.log(items);
+    // return [];
+    return items;
+  }
 
   render() {
     const pageTitle = this.getPageTitle() || '';
@@ -43,6 +71,7 @@ class SearchResultsPage extends Component {
       <Page className="search-results-page">
         <Content>
           {pageTitle && <FancyTitle highlightedTitle={pageTitle} />}
+          <Breadcrumbs items={this.getBreadcrumbsData()} />
           <SubCategoryPicker {...this.props} />
           <div className="spacer" />
           <BusinessListView {...this.props} />

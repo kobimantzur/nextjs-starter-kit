@@ -7,7 +7,8 @@ import { buildPlaceUrl, buildSearchUrl } from '../../services/urlBuilderService'
 
 export default class Breadcrumbs extends Component {
   onClick = link => {
-    link && this.props.push(link);
+    // link && this.props.push(link);
+    // TODO: report GA
   };
 
   render() {
@@ -23,7 +24,8 @@ export default class Breadcrumbs extends Component {
           const additionalProps = {};
           if (item.link) {
             additionalProps.onClick = () => {
-              this.props.push(item.link);
+              // this.props.push(item.link);
+              // TODO: report GA
             };
           } else {
             additionalProps.className = 'disabled';

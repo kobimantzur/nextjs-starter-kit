@@ -8,6 +8,7 @@ export default class CitiesPicker extends Component {
     return (
       <Link key={city._id} href={buildPlaceUrl(city)}>
         <a className="city">
+          <div className="city-title">{city.heName}</div>
           <div className="b-image" style={{ backgroundImage: `url(${city.headerImage})` }} />
         </a>
       </Link>

@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1908,6 +1908,149 @@ class AppSpinner extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
 /***/ }),
 
+/***/ "./src/components/Breadcrumbs/index.js":
+/*!*********************************************!*\
+  !*** ./src/components/Breadcrumbs/index.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Breadcrumbs; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.scss */ "./src/components/Breadcrumbs/index.scss");
+/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! antd */ "antd");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(antd__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _services_urlBuilderService__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../services/urlBuilderService */ "./src/services/urlBuilderService.js");
+var _jsxFileName = "/Users/kobimantzur/mapo/hello-next/src/components/Breadcrumbs/index.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+ // import { Link } from 'react-router-dom';
+
+
+
+class Breadcrumbs extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  constructor(...args) {
+    super(...args);
+
+    _defineProperty(this, "onClick", link => {// link && this.props.push(link);
+      // TODO: report GA
+    });
+  }
+
+  render() {
+    const {
+      items
+    } = this.props;
+    return __jsx(antd__WEBPACK_IMPORTED_MODULE_2__["Breadcrumb"], {
+      className: "breadcrumbs",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 18
+      },
+      __self: this
+    }, __jsx(antd__WEBPACK_IMPORTED_MODULE_2__["Breadcrumb"].Item, {
+      href: "/",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 19
+      },
+      __self: this
+    }, __jsx(antd__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
+      type: "home",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 20
+      },
+      __self: this
+    }), __jsx("span", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 21
+      },
+      __self: this
+    }, "\u05E8\u05D0\u05E9\u05D9")), items.map((item, index) => {
+      const additionalProps = {};
+
+      if (item.link) {
+        additionalProps.onClick = () => {// this.props.push(item.link);
+          // TODO: report GA
+        };
+      } else {
+        additionalProps.className = 'disabled';
+      }
+
+      if (item.isHighlighted) {
+        additionalProps.className = additionalProps.className ? `${additionalProps.className} highlighted` : 'highlighted';
+      }
+
+      return __jsx(antd__WEBPACK_IMPORTED_MODULE_2__["Breadcrumb"].Item, _extends({}, additionalProps, {
+        onClick: () => this.onClick(item.link),
+        key: index,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 39
+        },
+        __self: this
+      }), !item.isHighlighted && item.placeObject && item.subCategoryObject && __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
+        href: Object(_services_urlBuilderService__WEBPACK_IMPORTED_MODULE_4__["buildSearchUrl"])({
+          placeId: item.placeObject._id,
+          subCategoryId: item.subCategoryObject._id
+        }),
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 45
+        },
+        __self: this
+      }, __jsx("a", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 51
+        },
+        __self: this
+      }, item.title)), !item.isHighlighted && item.placeObject && !item.subCategoryObject && __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
+        href: Object(_services_urlBuilderService__WEBPACK_IMPORTED_MODULE_4__["buildPlaceUrl"])(item.placeObject),
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 55
+        },
+        __self: this
+      }, item.title), (item.isHighlighted || !item.placeObject && !item.subCategoryObject) && __jsx("span", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 58
+        },
+        __self: this
+      }, item.title));
+    }));
+  }
+
+}
+
+/***/ }),
+
+/***/ "./src/components/Breadcrumbs/index.scss":
+/*!***********************************************!*\
+  !*** ./src/components/Breadcrumbs/index.scss ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
 /***/ "./src/components/CardWrap/index.js":
 /*!******************************************!*\
   !*** ./src/components/CardWrap/index.js ***!
@@ -2255,7 +2398,7 @@ UserInfo.defaultProps = {
 /*!*********************************!*\
   !*** ./src/components/index.js ***!
   \*********************************/
-/*! exports provided: FancyTitle, Content, Page, AppSpinner, CardWrap, UserInfo */
+/*! exports provided: FancyTitle, Content, Page, AppSpinner, CardWrap, UserInfo, Breadcrumbs */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2277,6 +2420,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony import */ var _UserInfo__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./UserInfo */ "./src/components/UserInfo/index.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "UserInfo", function() { return _UserInfo__WEBPACK_IMPORTED_MODULE_5__["default"]; });
+
+/* harmony import */ var _Breadcrumbs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Breadcrumbs */ "./src/components/Breadcrumbs/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Breadcrumbs", function() { return _Breadcrumbs__WEBPACK_IMPORTED_MODULE_6__["default"]; });
+
 
 
 
@@ -2939,7 +3086,7 @@ const buildBusinessUrl = business => {
 
 /***/ }),
 
-/***/ 5:
+/***/ 4:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

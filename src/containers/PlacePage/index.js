@@ -9,6 +9,8 @@ import { CountryHeader, CitiesPicker, InfoCards } from './Components';
 import SubCategoryPicker from '../../components/SubCategoryPicker';
 import Content from '../../components/Content';
 import FancyTitle from '../../components/FancyTitle';
+import Breadcrumbs from '../../components/Breadcrumbs';
+import { buildPlaceUrl } from '../../services/urlBuilderService';
 
 class PlacePage extends Component {
   // componentDidMount() {
@@ -25,6 +27,25 @@ class PlacePage extends Component {
       if (!placeId) return this.props.push('/');
       this.props.getPlaceDetails(placeId);
     }
+  }
+  getBreadcrumbsData() {
+    const { selectedPlace } = this.props;
+    let items = [];
+    console.log(selectedPlace);
+    if (selectedPlace && selectedPlace.country) {
+      items.push({
+        title: selectedPlace.country.heName,
+        link: buildPlaceUrl(selectedPlace.country),
+        placeObject: selectedPlace.country
+      });
+    }
+
+    items.push({
+      title: selectedPlace.heName,
+      isHighlighted: true
+    });
+
+    return items;
   }
 
   render() {
@@ -43,10 +64,13 @@ class PlacePage extends Component {
         {!isLoading && (
           <Content>
             {selectedPlace && (
-              <FancyTitle
-                highlightedTitle={`${highlightedTitle}.`}
-                regularTitle="כל מה שרציתם לדעת על"
-              />
+              <React.Fragment>
+                <FancyTitle
+                  highlightedTitle={`${highlightedTitle}.`}
+                  regularTitle="כל מה שרציתם לדעת על"
+                />
+                <Breadcrumbs items={this.getBreadcrumbsData()} />
+              </React.Fragment>
             )}
             <SubCategoryPicker {...this.props} />
             <InfoCards {...this.props} />
