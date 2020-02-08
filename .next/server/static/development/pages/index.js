@@ -1915,6 +1915,61 @@ class BulletsSection extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
 /***/ }),
 
+/***/ "./src/components/About/Components/GetTheAppSection/index.js":
+/*!*******************************************************************!*\
+  !*** ./src/components/About/Components/GetTheAppSection/index.js ***!
+  \*******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return GetTheAppSection; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Section__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../Section */ "./src/components/Section/index.js");
+/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index.scss */ "./src/components/About/Components/GetTheAppSection/index.scss");
+/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_2__);
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+class GetTheAppSection extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  render() {
+    return __jsx(_Section__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      className: "get-the-app-section"
+    }, __jsx("div", {
+      className: "right"
+    }, __jsx("h2", null, "\u05D4\u05E6\u05D8\u05E8\u05E4\u05D5 \u05E2\u05DB\u05E9\u05D9\u05D5"), __jsx("p", null, "\u05D2\u05DC\u05D5 \u05D0\u05EA \u05D4\u05D4\u05DE\u05DC\u05E6\u05D5\u05EA \u05E9\u05D9\u05D4\u05E4\u05DB\u05D5 \u05D0\u05EA \u05D4\u05D8\u05D9\u05D5\u05DC \u05D4\u05D1\u05D0 \u05E9\u05DC\u05DB\u05DD \u05DC\u05D1\u05DC\u05EA\u05D9 \u05E0\u05E9\u05DB\u05D7")), __jsx("div", {
+      className: "left"
+    }, __jsx("a", {
+      href: ""
+    }, __jsx("img", {
+      className: "app-store",
+      src: "/static/img/download/app-store-download.svg"
+    })), __jsx("a", {
+      href: ""
+    }, __jsx("img", {
+      className: "play-store",
+      src: "/static/img/download/google-play-download.svg"
+    }))));
+  }
+
+}
+
+/***/ }),
+
+/***/ "./src/components/About/Components/GetTheAppSection/index.scss":
+/*!*********************************************************************!*\
+  !*** ./src/components/About/Components/GetTheAppSection/index.scss ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
 /***/ "./src/components/About/Components/SingleImageSection/index.js":
 /*!*********************************************************************!*\
   !*** ./src/components/About/Components/SingleImageSection/index.js ***!
@@ -1986,7 +2041,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./index.scss */ "./src/components/About/index.scss");
 /* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _Components_SingleImageSection__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Components/SingleImageSection */ "./src/components/About/Components/SingleImageSection/index.js");
+/* harmony import */ var _Components_GetTheAppSection__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Components/GetTheAppSection */ "./src/components/About/Components/GetTheAppSection/index.js");
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 
@@ -1997,7 +2054,7 @@ class About extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   render() {
     return __jsx(___WEBPACK_IMPORTED_MODULE_1__["Page"], {
       className: "about-page"
-    }, __jsx(___WEBPACK_IMPORTED_MODULE_1__["Content"], null, __jsx(_Components_AppPreviewSection__WEBPACK_IMPORTED_MODULE_2__["default"], null), __jsx(_Components_BulletsSection__WEBPACK_IMPORTED_MODULE_3__["default"], null)));
+    }, __jsx(___WEBPACK_IMPORTED_MODULE_1__["Content"], null, __jsx(_Components_AppPreviewSection__WEBPACK_IMPORTED_MODULE_2__["default"], null), __jsx(_Components_BulletsSection__WEBPACK_IMPORTED_MODULE_3__["default"], null), __jsx(_Components_GetTheAppSection__WEBPACK_IMPORTED_MODULE_6__["default"], null)));
   }
 
 }

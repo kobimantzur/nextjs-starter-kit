@@ -5087,5 +5087,19 @@ body {
           font-size: 82px;
           color: #5e97c9; }
 
+.get-the-app-section {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center; }
+  @media (max-width: 767px) {
+    .get-the-app-section {
+      flex-direction: column; } }
+  .get-the-app-section > p {
+    padding: 0 12%; }
+  .get-the-app-section .app-store, .get-the-app-section .play-store {
+    width: 60%;
+    margin-bottom: 20px; }
+
 
 /*# sourceMappingURL=styles.chunk.css.map*/

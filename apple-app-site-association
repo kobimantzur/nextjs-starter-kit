@@ -1,0 +1,11 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "MUN7657BUQ.com.avartii",
+                "paths": [ "/business/*"]
+            }
+        ]
+    }
+}

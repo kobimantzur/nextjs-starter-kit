@@ -1,0 +1,19 @@
+@import "../../../../constants/common.scss";
+.get-the-app-section {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    @include mobile {
+       flex-direction: column;
+    }
+    
+      > p {
+        padding: 0 12%;
+     }
+     .app-store, .play-store {
+        width: 60%;
+        margin-bottom: 20px;
+     }
+
+}

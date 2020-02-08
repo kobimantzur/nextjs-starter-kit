@@ -5,7 +5,7 @@ const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
 const LRUCache = require('lru-cache');
-
+const path = require('path')
 // This is where we cache our rendered HTML pages
 const ssrCache = new LRUCache({
   max: 100 * 1024 * 1024, /* cache size will be 100 MB using `return n.length` as length() function */
@@ -20,7 +20,16 @@ app
   .prepare()
   .then(() => {
     const server = express();
-
+    server.get('/apple-app-site-association', (req, res) => {
+      res.setHeader('Content-Type', 'application/pkcs7-mime');
+  
+      return res.sendFile(path.join(__dirname, '/apple-app-site-association'));
+    });
+    server.get('/.well-known/apple-app-site-association', (req, res) => {
+      res.setHeader('Content-Type', 'application/pkcs7-mime');
+  
+      return res.sendFile(path.join(__dirname, '/apple-app-site-association'));
+    });
     server.get('*', (req, res) => {
       return handle(req, res);
     });
@@ -34,6 +43,10 @@ app
         maxAge: '365d'
       })
     );
+
+  
+
+  
     const port = process.env.PORT || 3000;
     server.listen(port, err => {
       if (err) throw err;
