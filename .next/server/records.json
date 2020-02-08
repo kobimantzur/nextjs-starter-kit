@@ -38,22 +38,32 @@
       "static/VW1XcvDa3M2a0gbf3RHqO/pages/place/[placeId]/[friendlyUrl].js": 8,
       "static/VW1XcvDa3M2a0gbf3RHqO/pages/privacy.js": 9,
       "static/VW1XcvDa3M2a0gbf3RHqO/pages/search.js": 10,
-      "static/VW1XcvDa3M2a0gbf3RHqO/pages/search/[placeId]/[subCategoryId].js": 11
+      "static/VW1XcvDa3M2a0gbf3RHqO/pages/search/[placeId]/[subCategoryId].js": 11,
+      "static/tw4NUMAlpm3ZcWEDY9GfT/pages/_app.js": 12,
+      "static/tw4NUMAlpm3ZcWEDY9GfT/pages/_document.js": 13,
+      "static/tw4NUMAlpm3ZcWEDY9GfT/pages/_error.js": 14,
+      "static/tw4NUMAlpm3ZcWEDY9GfT/pages/business/[businessId]/[friendlyUrl].js": 15,
+      "static/tw4NUMAlpm3ZcWEDY9GfT/pages/download.js": 16,
+      "static/tw4NUMAlpm3ZcWEDY9GfT/pages/index.js": 17,
+      "static/tw4NUMAlpm3ZcWEDY9GfT/pages/place/[placeId]/[friendlyUrl].js": 18,
+      "static/tw4NUMAlpm3ZcWEDY9GfT/pages/privacy.js": 19,
+      "static/tw4NUMAlpm3ZcWEDY9GfT/pages/search.js": 20,
+      "static/tw4NUMAlpm3ZcWEDY9GfT/pages/search/[placeId]/[subCategoryId].js": 21
     },
     "bySource": {},
     "usedIds": [
       0,
       1,
-      10,
-      11,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
     ]
   }
 }
