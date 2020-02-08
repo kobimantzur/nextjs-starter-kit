@@ -6,7 +6,7 @@ export default class ShareButtons extends Component {
     const { business } = this.props;
     // const { friendlyUrl } = business;
     const shareTitle = 'המלצה על אטרקציות בברלין - אלכסנדרפלץ';
-    const sharableUrl = `https://app.mymapo.com${buildBusinessUrl(business)}`;
+    const sharableUrl = `https://www.mymapo.com${buildBusinessUrl(business)}`;
 
     switch (type) {
       case 'facebook':

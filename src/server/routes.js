@@ -56,7 +56,7 @@ module.exports = server => {
           );
           resultHtml = resultHtml.replace(
             /\{{og_url}}/g,
-            `'https://app.mymapo.com/business/${friendlyUrl}'`
+            `'https://www.mymapo.com/business/${friendlyUrl}'`
           );
 
           return res.send(resultHtml);
