@@ -2,8 +2,6 @@ import { Layout as AntLayout, Drawer, Button } from 'antd';
 
 import { connect } from 'react-redux';
 import React, { Component } from 'react';
-import AppstoreLogo from '../../../../img/apple-app.png';
-import GooglestoreLogo from '../../../../img/google-app.png';
 import SearchBar from '../../../../containers/SearchPage/Components/SearchBar';
 import { setSearchModalState } from '../../../../reducers/Search/actions';
 import './index.scss';
@@ -59,20 +57,6 @@ class AppHeader extends Component {
             <img alt="Mapo" className="logo" src={'/static/img/logo-white.png'} />
           </a>
         </div>
-        {isMobile() && (
-          <div className="store-icons">
-            <a
-              target="_blank"
-              rel="noopener noreferer"
-              href="https://itunes.apple.com/us/app/avartii-%D7%99%D7%A9%D7%A8%D7%90%D7%9C%D7%99%D7%9D-%D7%91%D7%9C%D7%95%D7%A1-%D7%90%D7%A0%D7%92-%D7%9C%D7%A1/id1329505993?mt=8"
-            >
-              <img className="appstore" alt="AppStore" src={AppstoreLogo} />
-            </a>
-            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.avartii.app">
-              <img className="google" alt="Google Play Store" src={GooglestoreLogo} />
-            </a>
-          </div>
-        )}
       </Header>
     );
   }
