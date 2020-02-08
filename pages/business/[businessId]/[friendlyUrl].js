@@ -10,13 +10,16 @@ import Head from 'next/head';
 import { DEFAULT_PAGE_TITLE } from '../../../src/constants';
 
 class Business extends Component {
-  static async getInitialProps({ store, isServer, pathname, query, ctx }) {
+  static async getInitialProps({ store, isServer, pathname, query, ctx, res }) {
     const { businessId } = query;
+    
     try {
       const res = await store.dispatch(getBusinessByFriendlyUrl(businessId));
 
       return { ...res };
-    } catch (e) {}
+    } catch (e) {
+      res.redirect('/')
+    }
     return {};
   }
   getPageTitle() {
