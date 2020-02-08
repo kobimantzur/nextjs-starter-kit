@@ -2055,8 +2055,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(antd__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _styles_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles.scss */ "./src/components/Layout/Components/AppFooter/styles.scss");
 /* harmony import */ var _styles_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_styles_scss__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "/Users/kobimantzur/mapo/hello-next/src/components/Layout/Components/AppFooter/index.js";
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_4__);
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 
@@ -2074,27 +2076,16 @@ class AppFooter extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
 
   render() {
     return __jsx(Footer, {
-      className: "footer",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 18
-      },
-      __self: this
+      className: "footer"
     }, __jsx("div", {
-      className: "text",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 19
-      },
-      __self: this
-    }, "Copyright \xA9 2018 Mapo. All rights reserved |", ' ', __jsx("a", {
-      href: "mailto:contact@mymapo.com",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 22
-      },
-      __self: this
-    }, "contact@mymapo.com")));
+      className: "links"
+    }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_4___default.a, {
+      href: "/privacy"
+    }, __jsx("a", null, "Privacy Policy")), __jsx("span", null, " | "), __jsx("a", {
+      href: "mailto:contact@mymapo.com"
+    }, "contact@mymapo.com")), __jsx("div", {
+      className: "text"
+    }, "Copyright \xA9 2018 Mapo. All rights reserved "));
   }
 
 }
@@ -2350,11 +2341,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _containers_SearchPage_Components_SearchBar__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../containers/SearchPage/Components/SearchBar */ "./src/containers/SearchPage/Components/SearchBar/index.js");
 /* harmony import */ var _reducers_Search_actions__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../reducers/Search/actions */ "./src/reducers/Search/actions.js");
 /* harmony import */ var _containers_shared_SearchModal__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../containers/shared/SearchModal */ "./src/containers/shared/SearchModal/index.js");
-var _jsxFileName = "/Users/kobimantzur/mapo/hello-next/src/components/Layout/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
 
 
 
@@ -2381,49 +2368,15 @@ class Layout extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
   }
 
   render() {
-    return __jsx(antd__WEBPACK_IMPORTED_MODULE_1__["Layout"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 30
-      },
-      __self: this
-    }, __jsx("style", {
+    return __jsx(antd__WEBPACK_IMPORTED_MODULE_1__["Layout"], null, __jsx("style", {
       dangerouslySetInnerHTML: {
         __html: antd_dist_antd_min_css__WEBPACK_IMPORTED_MODULE_8___default.a
-      },
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 31
-      },
-      __self: this
+      }
     }), __jsx("style", {
       dangerouslySetInnerHTML: {
         __html: _fortawesome_fontawesome_free_css_all_css__WEBPACK_IMPORTED_MODULE_7___default.a
-      },
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 32
-      },
-      __self: this
-    }), __jsx(_Components_AppHeader__WEBPACK_IMPORTED_MODULE_3__["default"], _extends({}, this.props, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 33
-      },
-      __self: this
-    })), this.props.children, __jsx(_Components_AppFooter__WEBPACK_IMPORTED_MODULE_4__["default"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 35
-      },
-      __self: this
-    }), __jsx(_containers_shared_SearchModal__WEBPACK_IMPORTED_MODULE_11__["default"], _extends({}, this.props, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 36
-      },
-      __self: this
-    })));
+      }
+    }), __jsx(_Components_AppHeader__WEBPACK_IMPORTED_MODULE_3__["default"], this.props), this.props.children, __jsx(_Components_AppFooter__WEBPACK_IMPORTED_MODULE_4__["default"], null), __jsx(_containers_shared_SearchModal__WEBPACK_IMPORTED_MODULE_11__["default"], this.props));
   }
 
 }
@@ -3190,12 +3143,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "reportScreen", function() { return reportScreen; });
 /* harmony import */ var react_ga__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-ga */ "react-ga");
 /* harmony import */ var react_ga__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_ga__WEBPACK_IMPORTED_MODULE_0__);
+ // ReactGA.initialize('912341008826-mdvp869k8s8orq80sklbp8o64r26soc9.apps.googleusercontent.com');
 
-react_ga__WEBPACK_IMPORTED_MODULE_0___default.a.initialize('912341008826-mdvp869k8s8orq80sklbp8o64r26soc9.apps.googleusercontent.com');
-const initAnalytics = () => {// console.log('init')
-  // ReactGA.initialize('UA-129440192-1')
-  // history.listen(location => ReactGA.pageview(location.pathname));
-  // Crashlytics.crash();
+const initAnalytics = () => {
+  react_ga__WEBPACK_IMPORTED_MODULE_0___default.a.initialize('UA-157971736-1');
 };
 const reportEvent = params => {
   // if (env !== 'prod') return;

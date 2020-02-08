@@ -5,7 +5,6 @@ export default class CustomDocument extends Document {
   }
 
   render() {
-    console.log('__document');
     return (
       <html dir="rtl">
         <Head>
@@ -15,8 +14,8 @@ export default class CustomDocument extends Document {
         <body>
           <Main />
           <NextScript />
-          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157971736-1"></script>
-          <script
+          {/* <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157971736-1"></script> */}
+          {/* <script
             async
             dangerouslySetInnerHTML={{
               __html: `window.dataLayer = window.dataLayer || [];
@@ -25,7 +24,7 @@ export default class CustomDocument extends Document {
             
               gtag('config', 'UA-157971736-1');`
             }}
-          />
+          /> */}
 
           {/* <script async src="https://www.google-analytics.com/analytics.js"></script> */}
           <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>

@@ -41,7 +41,7 @@ class SearchResultsPage extends Component {
     let items = [];
 
     if (!selectedSubCategory || !selectedPlace) return items;
-    console.log(selectedPlace);
+
     if (selectedPlace.country && typeof selectedPlace.country === 'object') {
       items.push({
         title: selectedPlace.country.heName,
@@ -60,8 +60,6 @@ class SearchResultsPage extends Component {
       isHighlighted: true
     });
 
-    console.log(items);
-    // return [];
     return items;
   }
 

@@ -1067,7 +1067,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_document__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/document */ "./node_modules/next/document.js");
 /* harmony import */ var next_document__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_document__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/kobimantzur/mapo/hello-next/pages/_document.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -1077,75 +1076,13 @@ class CustomDocument extends next_document__WEBPACK_IMPORTED_MODULE_1___default.
   }
 
   render() {
-    console.log('__document');
     return __jsx("html", {
-      dir: "rtl",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 10
-      },
-      __self: this
-    }, __jsx(next_document__WEBPACK_IMPORTED_MODULE_1__["Head"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 11
-      },
-      __self: this
-    }, __jsx("link", {
+      dir: "rtl"
+    }, __jsx(next_document__WEBPACK_IMPORTED_MODULE_1__["Head"], null, __jsx("link", {
       href: "https://use.fontawesome.com/releases/v5.0.2/css/all.css",
-      rel: "stylesheet",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 13
-      },
-      __self: this
-    })), __jsx("body", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 15
-      },
-      __self: this
-    }, __jsx(next_document__WEBPACK_IMPORTED_MODULE_1__["Main"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 16
-      },
-      __self: this
-    }), __jsx(next_document__WEBPACK_IMPORTED_MODULE_1__["NextScript"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 17
-      },
-      __self: this
-    }), __jsx("script", {
-      async: true,
-      src: "https://www.googletagmanager.com/gtag/js?id=UA-157971736-1",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 18
-      },
-      __self: this
-    }), __jsx("script", {
-      async: true,
-      dangerouslySetInnerHTML: {
-        __html: `window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-            
-              gtag('config', 'UA-157971736-1');`
-      },
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 19
-      },
-      __self: this
-    }), __jsx("script", {
-      src: "https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 31
-      },
-      __self: this
+      rel: "stylesheet"
+    })), __jsx("body", null, __jsx(next_document__WEBPACK_IMPORTED_MODULE_1__["Main"], null), __jsx(next_document__WEBPACK_IMPORTED_MODULE_1__["NextScript"], null), __jsx("script", {
+      src: "https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"
     }), __jsx("script", {
       dangerouslySetInnerHTML: {
         __html: `
@@ -1154,12 +1091,7 @@ class CustomDocument extends next_document__WEBPACK_IMPORTED_MODULE_1___default.
                       families: ['Alef']
                     }
                   });`
-      },
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 32
-      },
-      __self: this
+      }
     })));
   }
 

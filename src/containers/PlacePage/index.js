@@ -31,7 +31,7 @@ class PlacePage extends Component {
   getBreadcrumbsData() {
     const { selectedPlace } = this.props;
     let items = [];
-    console.log(selectedPlace);
+
     if (selectedPlace && selectedPlace.country) {
       items.push({
         title: selectedPlace.country.heName,

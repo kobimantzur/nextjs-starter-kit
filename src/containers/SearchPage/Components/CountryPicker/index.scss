@@ -19,6 +19,7 @@
     align-items: flex-end;
     cursor: pointer;
     position: relative;
+    max-width: 313px;
     @include mobile {
       flex: 1;
       width: 100%;
