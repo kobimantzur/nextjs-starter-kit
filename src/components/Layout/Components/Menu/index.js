@@ -49,7 +49,8 @@ export default class NavigationMenu extends Component {
           onClose={this.onClose}
           visible={this.state.visible}
           getContainer={false}
-          style={{ position: 'fixed' }}
+          className="drawer"
+          style={{ position: 'fixed',}}
         >
           {MENU_LINKS.map(link => (
             <a key={link.href} className="link" href={link.href} onClick={() => this.setState({visible: false})}>

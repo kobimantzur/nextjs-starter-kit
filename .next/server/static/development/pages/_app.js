@@ -2099,19 +2099,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _img_apple_app_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../img/apple-app.png */ "./src/img/apple-app.png");
-/* harmony import */ var _img_apple_app_png__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_img_apple_app_png__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _img_google_app_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../img/google-app.png */ "./src/img/google-app.png");
-/* harmony import */ var _img_google_app_png__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_img_google_app_png__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _containers_SearchPage_Components_SearchBar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../containers/SearchPage/Components/SearchBar */ "./src/containers/SearchPage/Components/SearchBar/index.js");
-/* harmony import */ var _reducers_Search_actions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../reducers/Search/actions */ "./src/reducers/Search/actions.js");
-/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./index.scss */ "./src/components/Layout/Components/AppHeader/index.scss");
-/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _services_commonService__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../services/commonService */ "./src/services/commonService.js");
-/* harmony import */ var _Menu__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../Menu */ "./src/components/Layout/Components/Menu/index.js");
+/* harmony import */ var _containers_SearchPage_Components_SearchBar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../containers/SearchPage/Components/SearchBar */ "./src/containers/SearchPage/Components/SearchBar/index.js");
+/* harmony import */ var _reducers_Search_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../reducers/Search/actions */ "./src/reducers/Search/actions.js");
+/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./index.scss */ "./src/components/Layout/Components/AppHeader/index.scss");
+/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _services_commonService__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../services/commonService */ "./src/services/commonService.js");
+/* harmony import */ var _Menu__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Menu */ "./src/components/Layout/Components/Menu/index.js");
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
-
-
 
 
 
@@ -2167,10 +2161,10 @@ class AppHeader extends react__WEBPACK_IMPORTED_MODULE_2__["Component"] {
       className: `header ${isFocused ? 'on-focus' : ''} ${activeClass}`
     }, __jsx("div", {
       className: "right"
-    }, __jsx(_Menu__WEBPACK_IMPORTED_MODULE_9__["default"], this.props), __jsx("div", {
+    }, __jsx(_Menu__WEBPACK_IMPORTED_MODULE_7__["default"], this.props), __jsx("div", {
       className: "search-bar-preview",
       onClick: () => this.props.setSearchModalState(true)
-    }, !Object(_services_commonService__WEBPACK_IMPORTED_MODULE_8__["isMobile"])() && __jsx("span", null, PLACEHOLDER_TEXT), __jsx("i", {
+    }, !Object(_services_commonService__WEBPACK_IMPORTED_MODULE_6__["isMobile"])() && __jsx("span", null, PLACEHOLDER_TEXT), __jsx("i", {
       className: "fa fa-search"
     }))), __jsx("div", {
       className: "left"
@@ -2180,23 +2174,6 @@ class AppHeader extends react__WEBPACK_IMPORTED_MODULE_2__["Component"] {
       alt: "Mapo",
       className: "logo",
       src: '/static/img/logo-white.png'
-    }))), Object(_services_commonService__WEBPACK_IMPORTED_MODULE_8__["isMobile"])() && __jsx("div", {
-      className: "store-icons"
-    }, __jsx("a", {
-      target: "_blank",
-      rel: "noopener noreferer",
-      href: "https://itunes.apple.com/us/app/avartii-%D7%99%D7%A9%D7%A8%D7%90%D7%9C%D7%99%D7%9D-%D7%91%D7%9C%D7%95%D7%A1-%D7%90%D7%A0%D7%92-%D7%9C%D7%A1/id1329505993?mt=8"
-    }, __jsx("img", {
-      className: "appstore",
-      alt: "AppStore",
-      src: _img_apple_app_png__WEBPACK_IMPORTED_MODULE_3___default.a
-    })), __jsx("a", {
-      target: "_blank",
-      href: "https://play.google.com/store/apps/details?id=com.avartii.app"
-    }, __jsx("img", {
-      className: "google",
-      alt: "Google Play Store",
-      src: _img_google_app_png__WEBPACK_IMPORTED_MODULE_4___default.a
     }))));
   }
 
@@ -2218,7 +2195,7 @@ const mapStateToProps = ({
 };
 
 const mapDispatchToProps = {
-  setSearchModalState: _reducers_Search_actions__WEBPACK_IMPORTED_MODULE_6__["setSearchModalState"]
+  setSearchModalState: _reducers_Search_actions__WEBPACK_IMPORTED_MODULE_4__["setSearchModalState"]
 };
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(AppHeader));
 
@@ -2339,6 +2316,7 @@ class NavigationMenu extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       onClose: this.onClose,
       visible: this.state.visible,
       getContainer: false,
+      className: "drawer",
       style: {
         position: 'fixed'
       }
@@ -2780,28 +2758,6 @@ const mapDispatchToProps = {
 /***/ (function(module, exports) {
 
 
-
-/***/ }),
-
-/***/ "./src/img/apple-app.png":
-/*!*******************************!*\
-  !*** ./src/img/apple-app.png ***!
-  \*******************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/apple-app-1e82320299f2a47d929fa5a925a02753.png";
-
-/***/ }),
-
-/***/ "./src/img/google-app.png":
-/*!********************************!*\
-  !*** ./src/img/google-app.png ***!
-  \********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/google-app-e85f96de3c6d1dca5358c9f068b58dbe.png";
 
 /***/ }),
 
