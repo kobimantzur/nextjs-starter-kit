@@ -1833,7 +1833,7 @@ class AppPreviewSection extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] 
     }), __jsx("h1", null, "\u05DE\u05D8\u05D9\u05D9\u05DC\u05D9\u05DD \u05DE\u05DE\u05DC\u05D9\u05E6\u05D9\u05DD."), __jsx("h2", null, "\u05D0\u05E4\u05DC\u05D9\u05E7\u05E6\u05D9\u05D4 \u05DC\u05D9\u05E9\u05E8\u05D0\u05DC\u05D9\u05DD \u05D1\u05D7\u05D5\u05F4\u05DC")), __jsx("div", {
       className: "left"
     }, __jsx("img", {
-      src: "/static/img/about/section-1.webp"
+      src: "/static/img/about/section-1.png"
     })));
   }
 
