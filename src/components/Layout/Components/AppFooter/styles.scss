@@ -1,3 +1,5 @@
+@import "../../../../constants/common.scss";
+
 .footer {
   display: flex;
   justify-content: center;
@@ -8,6 +10,11 @@
     // position: absolute;
     // bottom: 0;
     // display: none;
+  }
+  .links {
+    @include mobile {
+      white-space: nowrap;
+    }
   }
   a {
     color: rgba(0, 0, 0, 0.65);

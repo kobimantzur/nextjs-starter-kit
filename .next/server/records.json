@@ -1,0 +1,59 @@
+{
+  "modules": {
+    "byIdentifier": {
+      "multi private-next-pages/_app.js": 0,
+      "multi private-next-pages/_document.js": 1,
+      "multi private-next-pages/business/[businessId]/[friendlyUrl].js": 2,
+      "multi private-next-pages/download/index.js": 3,
+      "multi private-next-pages/index.js": 4,
+      "multi private-next-pages/place/[placeId]/[friendlyUrl].js": 5,
+      "multi private-next-pages/privacy/index.js": 6,
+      "multi private-next-pages/search/[placeId]/[subCategoryId].js": 7,
+      "multi private-next-pages/search/index.js": 8,
+      "multi next/dist/pages/_error": 9
+    },
+    "usedIds": {
+      "0": 0,
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5,
+      "6": 6,
+      "7": 7,
+      "8": 8,
+      "9": 9
+    }
+  },
+  "chunks": {
+    "byName": {
+      "init-server.js": 0,
+      "on-error-server.js": 1,
+      "static/DKU9VpytVly5wq6pSn2kD/pages/_app.js": 2,
+      "static/DKU9VpytVly5wq6pSn2kD/pages/_document.js": 3,
+      "static/DKU9VpytVly5wq6pSn2kD/pages/_error.js": 4,
+      "static/DKU9VpytVly5wq6pSn2kD/pages/business/[businessId]/[friendlyUrl].js": 5,
+      "static/DKU9VpytVly5wq6pSn2kD/pages/download.js": 6,
+      "static/DKU9VpytVly5wq6pSn2kD/pages/index.js": 7,
+      "static/DKU9VpytVly5wq6pSn2kD/pages/place/[placeId]/[friendlyUrl].js": 8,
+      "static/DKU9VpytVly5wq6pSn2kD/pages/privacy.js": 9,
+      "static/DKU9VpytVly5wq6pSn2kD/pages/search.js": 10,
+      "static/DKU9VpytVly5wq6pSn2kD/pages/search/[placeId]/[subCategoryId].js": 11
+    },
+    "bySource": {},
+    "usedIds": [
+      0,
+      1,
+      10,
+      11,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  }
+}
