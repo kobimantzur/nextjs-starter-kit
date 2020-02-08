@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1792,7 +1792,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 class Page extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   render() {
-    return __jsx("div", null, __jsx(next_head__WEBPACK_IMPORTED_MODULE_4___default.a, null, __jsx("title", {
+    return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(next_head__WEBPACK_IMPORTED_MODULE_4___default.a, null, __jsx("title", {
       key: "title"
     }, "Mapo | \u05D9\u05E9\u05E8\u05D0\u05DC\u05D9\u05DD \u05DE\u05D8\u05D9\u05D9\u05DC\u05D9\u05DD \u05D1\u05D7\u05D5\u05F4\u05DC")), __jsx(_src_components_About__WEBPACK_IMPORTED_MODULE_5__["default"], null));
   }
@@ -3100,7 +3100,7 @@ const buildBusinessUrl = business => {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

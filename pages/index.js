@@ -7,13 +7,13 @@ import About from '../src/components/About';
 class Page extends Component {
   render() {
     return (
-      <div>
+      <React.Fragment>
         <Head>
           <title key="title">Mapo | ישראלים מטיילים בחו״ל</title>
         </Head>
         <About />
         
-      </div>
+      </React.Fragment>
     );
   }
 }

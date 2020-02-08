@@ -2340,7 +2340,7 @@ class NavigationMenu extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       visible: this.state.visible,
       getContainer: false,
       style: {
-        position: 'absolute'
+        position: 'fixed'
       }
     }, _constants__WEBPACK_IMPORTED_MODULE_1__["MENU_LINKS"].map(link => __jsx("a", {
       key: link.href,
