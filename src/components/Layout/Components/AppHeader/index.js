@@ -1,4 +1,5 @@
-import { Layout as AntLayout } from 'antd';
+import { Layout as AntLayout, Drawer, Button } from 'antd';
+
 import { connect } from 'react-redux';
 import React, { Component } from 'react';
 import AppstoreLogo from '../../../../img/apple-app.png';
@@ -7,6 +8,7 @@ import SearchBar from '../../../../containers/SearchPage/Components/SearchBar';
 import { setSearchModalState } from '../../../../reducers/Search/actions';
 import './index.scss';
 import { isMobile } from '../../../../services/commonService';
+import Menu from '../Menu';
 
 const PLACEHOLDER_TEXT = 'חפשו במאפו';
 const { Header } = AntLayout;
@@ -44,18 +46,18 @@ class AppHeader extends Component {
     return (
       <Header className={`header ${isFocused ? 'on-focus' : ''} ${activeClass}`}>
         <div className="right">
-          <a href="/">
+        <Menu {...this.props} />
+        <div className="search-bar-preview" onClick={() => this.props.setSearchModalState(true)}>
+            {!isMobile() && <span>{PLACEHOLDER_TEXT}</span>}
+            <i className="fa fa-search" />
+          </div>
+
+          
+        </div>
+        <div className="left">
+        <a href="/">
             <img alt="Mapo" className="logo" src={'/static/img/logo-white.png'} />
           </a>
-          {!isLoading && (
-            <div
-              className="search-bar-preview"
-              onClick={() => this.props.setSearchModalState(true)}
-            >
-              {!isMobile() && <span>{searchTerm || PLACEHOLDER_TEXT}</span>}
-              <i className="fa fa-search" />
-            </div>
-          )}
         </div>
         {isMobile() && (
           <div className="store-icons">

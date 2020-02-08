@@ -1956,11 +1956,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _src_components_Layout__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../src/components/Layout */ "./src/components/Layout/index.js");
 /* harmony import */ var connected_react_router__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! connected-react-router */ "connected-react-router");
 /* harmony import */ var connected_react_router__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(connected_react_router__WEBPACK_IMPORTED_MODULE_8__);
-var _jsxFileName = "/Users/kobimantzur/mapo/hello-next/pages/_app.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
 // pages/_app.js
 
 
@@ -2010,25 +2006,8 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_3___default.a {
       store
     } = this.props;
     return __jsx(react_redux__WEBPACK_IMPORTED_MODULE_2__["Provider"], {
-      store: store,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 41
-      },
-      __self: this
-    }, __jsx(_src_components_Layout__WEBPACK_IMPORTED_MODULE_7__["default"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 43
-      },
-      __self: this
-    }, __jsx(Component, _extends({}, pageProps, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 44
-      },
-      __self: this
-    }))));
+      store: store
+    }, __jsx(_src_components_Layout__WEBPACK_IMPORTED_MODULE_7__["default"], null, __jsx(Component, pageProps)));
   }
 
 }
@@ -2129,8 +2108,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./index.scss */ "./src/components/Layout/Components/AppHeader/index.scss");
 /* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _services_commonService__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../services/commonService */ "./src/services/commonService.js");
-var _jsxFileName = "/Users/kobimantzur/mapo/hello-next/src/components/Layout/Components/AppHeader/index.js";
+/* harmony import */ var _Menu__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../Menu */ "./src/components/Layout/Components/Menu/index.js");
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
+
 
 
 
@@ -2184,98 +2164,39 @@ class AppHeader extends react__WEBPACK_IMPORTED_MODULE_2__["Component"] {
     } = this.props;
     const searchTerm = selectedPlace && selectedSubCategory ? `${selectedSubCategory.title} ב${selectedPlace.heName}` : '';
     return __jsx(Header, {
-      className: `header ${isFocused ? 'on-focus' : ''} ${activeClass}`,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 45
-      },
-      __self: this
+      className: `header ${isFocused ? 'on-focus' : ''} ${activeClass}`
     }, __jsx("div", {
-      className: "right",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 46
-      },
-      __self: this
+      className: "right"
+    }, __jsx(_Menu__WEBPACK_IMPORTED_MODULE_9__["default"], this.props), __jsx("div", {
+      className: "search-bar-preview",
+      onClick: () => this.props.setSearchModalState(true)
+    }, !Object(_services_commonService__WEBPACK_IMPORTED_MODULE_8__["isMobile"])() && __jsx("span", null, PLACEHOLDER_TEXT), __jsx("i", {
+      className: "fa fa-search"
+    }))), __jsx("div", {
+      className: "left"
     }, __jsx("a", {
-      href: "/",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 47
-      },
-      __self: this
+      href: "/"
     }, __jsx("img", {
       alt: "Mapo",
       className: "logo",
-      src: '/static/img/logo-white.png',
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 48
-      },
-      __self: this
-    })), !isLoading && __jsx("div", {
-      className: "search-bar-preview",
-      onClick: () => this.props.setSearchModalState(true),
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 51
-      },
-      __self: this
-    }, !Object(_services_commonService__WEBPACK_IMPORTED_MODULE_8__["isMobile"])() && __jsx("span", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 55
-      },
-      __self: this
-    }, searchTerm || PLACEHOLDER_TEXT), __jsx("i", {
-      className: "fa fa-search",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 56
-      },
-      __self: this
+      src: '/static/img/logo-white.png'
     }))), Object(_services_commonService__WEBPACK_IMPORTED_MODULE_8__["isMobile"])() && __jsx("div", {
-      className: "store-icons",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 61
-      },
-      __self: this
+      className: "store-icons"
     }, __jsx("a", {
       target: "_blank",
       rel: "noopener noreferer",
-      href: "https://itunes.apple.com/us/app/avartii-%D7%99%D7%A9%D7%A8%D7%90%D7%9C%D7%99%D7%9D-%D7%91%D7%9C%D7%95%D7%A1-%D7%90%D7%A0%D7%92-%D7%9C%D7%A1/id1329505993?mt=8",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 62
-      },
-      __self: this
+      href: "https://itunes.apple.com/us/app/avartii-%D7%99%D7%A9%D7%A8%D7%90%D7%9C%D7%99%D7%9D-%D7%91%D7%9C%D7%95%D7%A1-%D7%90%D7%A0%D7%92-%D7%9C%D7%A1/id1329505993?mt=8"
     }, __jsx("img", {
       className: "appstore",
       alt: "AppStore",
-      src: _img_apple_app_png__WEBPACK_IMPORTED_MODULE_3___default.a,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 67
-      },
-      __self: this
+      src: _img_apple_app_png__WEBPACK_IMPORTED_MODULE_3___default.a
     })), __jsx("a", {
       target: "_blank",
-      href: "https://play.google.com/store/apps/details?id=com.avartii.app",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 69
-      },
-      __self: this
+      href: "https://play.google.com/store/apps/details?id=com.avartii.app"
     }, __jsx("img", {
       className: "google",
       alt: "Google Play Store",
-      src: _img_google_app_png__WEBPACK_IMPORTED_MODULE_4___default.a,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 70
-      },
-      __self: this
+      src: _img_google_app_png__WEBPACK_IMPORTED_MODULE_4___default.a
     }))));
   }
 
@@ -2314,6 +2235,138 @@ const mapDispatchToProps = {
 
 /***/ }),
 
+/***/ "./src/components/Layout/Components/Menu/constants.js":
+/*!************************************************************!*\
+  !*** ./src/components/Layout/Components/Menu/constants.js ***!
+  \************************************************************/
+/*! exports provided: MENU_LINKS */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MENU_LINKS", function() { return MENU_LINKS; });
+const MENU_LINKS = [{
+  title: 'מה זה Mapo?',
+  href: '/'
+}, {
+  title: 'גלו מקומות חדשים',
+  href: '/search'
+}];
+
+/***/ }),
+
+/***/ "./src/components/Layout/Components/Menu/index.js":
+/*!********************************************************!*\
+  !*** ./src/components/Layout/Components/Menu/index.js ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return NavigationMenu; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./constants */ "./src/components/Layout/Components/Menu/constants.js");
+/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index.scss */ "./src/components/Layout/Components/Menu/index.scss");
+/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! antd */ "antd");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(antd__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _services_commonService__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../services/commonService */ "./src/services/commonService.js");
+/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "@fortawesome/react-fontawesome");
+/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "@fortawesome/free-solid-svg-icons");
+/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_7__);
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+
+
+
+
+class NavigationMenu extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  constructor(...args) {
+    super(...args);
+
+    _defineProperty(this, "state", {
+      visible: false
+    });
+
+    _defineProperty(this, "showDrawer", () => {
+      this.setState({
+        visible: true
+      });
+    });
+
+    _defineProperty(this, "onClose", () => {
+      this.setState({
+        visible: false
+      });
+    });
+  }
+
+  renderMobile() {
+    return __jsx("div", {
+      type: "primary",
+      onClick: this.showDrawer,
+      className: "drawer-button"
+    }, __jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_6__["FontAwesomeIcon"], {
+      icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_7__["faBars"]
+    }));
+  }
+
+  renderDesktop() {
+    return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, _constants__WEBPACK_IMPORTED_MODULE_1__["MENU_LINKS"].map((link, index) => __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
+      href: link.href,
+      key: index
+    }, __jsx("a", null, link.title))));
+  }
+
+  render() {
+    return __jsx("div", {
+      className: "navigation-menu"
+    }, Object(_services_commonService__WEBPACK_IMPORTED_MODULE_5__["isMobile"])() ? this.renderMobile() : this.renderDesktop(), __jsx(antd__WEBPACK_IMPORTED_MODULE_4__["Drawer"], {
+      title: ` `,
+      placement: "right",
+      closable: false,
+      onClose: this.onClose,
+      visible: this.state.visible,
+      getContainer: false,
+      style: {
+        position: 'absolute'
+      }
+    }, _constants__WEBPACK_IMPORTED_MODULE_1__["MENU_LINKS"].map(link => __jsx("a", {
+      key: link.href,
+      className: "link",
+      href: link.href,
+      onClick: () => this.setState({
+        visible: false
+      })
+    }, link.title))));
+  }
+
+}
+
+/***/ }),
+
+/***/ "./src/components/Layout/Components/Menu/index.scss":
+/*!**********************************************************!*\
+  !*** ./src/components/Layout/Components/Menu/index.scss ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
 /***/ "./src/components/Layout/index.js":
 /*!****************************************!*\
   !*** ./src/components/Layout/index.js ***!
@@ -2331,13 +2384,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _Components_AppHeader__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Components/AppHeader */ "./src/components/Layout/Components/AppHeader/index.js");
 /* harmony import */ var _Components_AppFooter__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Components/AppFooter */ "./src/components/Layout/Components/AppFooter/index.js");
-/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./index.scss */ "./src/components/Layout/index.scss");
-/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _services_analyticsService__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../services/analyticsService */ "./src/services/analyticsService.js");
-/* harmony import */ var _fortawesome_fontawesome_free_css_all_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @fortawesome/fontawesome-free/css/all.css */ "./node_modules/@fortawesome/fontawesome-free/css/all.css");
-/* harmony import */ var _fortawesome_fontawesome_free_css_all_css__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_css_all_css__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var antd_dist_antd_min_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! antd/dist/antd.min.css */ "./node_modules/antd/dist/antd.min.css");
-/* harmony import */ var antd_dist_antd_min_css__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(antd_dist_antd_min_css__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _services_analyticsService__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../services/analyticsService */ "./src/services/analyticsService.js");
+/* harmony import */ var _fortawesome_fontawesome_free_css_all_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @fortawesome/fontawesome-free/css/all.css */ "./node_modules/@fortawesome/fontawesome-free/css/all.css");
+/* harmony import */ var _fortawesome_fontawesome_free_css_all_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_css_all_css__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var antd_dist_antd_min_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! antd/dist/antd.min.css */ "./node_modules/antd/dist/antd.min.css");
+/* harmony import */ var antd_dist_antd_min_css__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(antd_dist_antd_min_css__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./index.scss */ "./src/components/Layout/index.scss");
+/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var _containers_SearchPage_Components_SearchBar__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../containers/SearchPage/Components/SearchBar */ "./src/containers/SearchPage/Components/SearchBar/index.js");
 /* harmony import */ var _reducers_Search_actions__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../reducers/Search/actions */ "./src/reducers/Search/actions.js");
 /* harmony import */ var _containers_shared_SearchModal__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../containers/shared/SearchModal */ "./src/containers/shared/SearchModal/index.js");
@@ -2364,17 +2417,17 @@ class Layout extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
   }
 
   componentDidMount() {
-    Object(_services_analyticsService__WEBPACK_IMPORTED_MODULE_6__["initAnalytics"])();
+    Object(_services_analyticsService__WEBPACK_IMPORTED_MODULE_5__["initAnalytics"])();
   }
 
   render() {
     return __jsx(antd__WEBPACK_IMPORTED_MODULE_1__["Layout"], null, __jsx("style", {
       dangerouslySetInnerHTML: {
-        __html: antd_dist_antd_min_css__WEBPACK_IMPORTED_MODULE_8___default.a
+        __html: antd_dist_antd_min_css__WEBPACK_IMPORTED_MODULE_7___default.a
       }
     }), __jsx("style", {
       dangerouslySetInnerHTML: {
-        __html: _fortawesome_fontawesome_free_css_all_css__WEBPACK_IMPORTED_MODULE_7___default.a
+        __html: _fortawesome_fontawesome_free_css_all_css__WEBPACK_IMPORTED_MODULE_6___default.a
       }
     }), __jsx(_Components_AppHeader__WEBPACK_IMPORTED_MODULE_3__["default"], this.props), this.props.children, __jsx(_Components_AppFooter__WEBPACK_IMPORTED_MODULE_4__["default"], null), __jsx(_containers_shared_SearchModal__WEBPACK_IMPORTED_MODULE_11__["default"], this.props));
   }
@@ -2472,7 +2525,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_urlBuilderService__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../services/urlBuilderService */ "./src/services/urlBuilderService.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "/Users/kobimantzur/mapo/hello-next/src/containers/shared/SearchModal/Components/AutocompleteOptions/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -2504,47 +2556,22 @@ class AutocompleteOptions extends react__WEBPACK_IMPORTED_MODULE_0__["Component"
     } = this.props;
     if (!placementsList) return null;
     return __jsx("div", {
-      className: "placements-list",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 26
-      },
-      __self: this
+      className: "placements-list"
     }, placementsList.map(placement => {
       const placementText = `${placement.heName} ${placement.country ? `, ${placement.country.heName}` : ''}`;
       return __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
         key: placement._id,
-        href: Object(_services_urlBuilderService__WEBPACK_IMPORTED_MODULE_2__["buildPlaceUrl"])(placement),
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 33
-        },
-        __self: this
+        href: Object(_services_urlBuilderService__WEBPACK_IMPORTED_MODULE_2__["buildPlaceUrl"])(placement)
       }, __jsx("a", {
         className: "placement",
-        onClick: () => this.onPlaceClick(placement),
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 34
-        },
-        __self: this
+        onClick: () => this.onPlaceClick(placement)
       }, __jsx("i", {
-        className: "fas fa-map-marker-alt",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 35
-        },
-        __self: this
+        className: "fas fa-map-marker-alt"
       }), __jsx("span", {
         className: "name",
         dangerouslySetInnerHTML: {
           __html: this.getBoldedText(query, placementText)
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 36
-        },
-        __self: this
+        }
       })));
     }));
   }
@@ -2558,12 +2585,7 @@ class AutocompleteOptions extends react__WEBPACK_IMPORTED_MODULE_0__["Component"
       placementsList
     } = autocompleteList;
     return __jsx("div", {
-      className: "autocomplete-options",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 53
-      },
-      __self: this
+      className: "autocomplete-options"
     }, this.renderPlacements(placementsList));
   }
 
@@ -2598,7 +2620,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index.scss */ "./src/containers/shared/SearchModal/Components/SearchBar/index.scss");
 /* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/kobimantzur/mapo/hello-next/src/containers/shared/SearchModal/Components/SearchBar/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -2645,34 +2666,19 @@ class SearchBar extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       isSearchLoading
     } = this.props;
     return __jsx("div", {
-      className: "search-bar",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 37
-      },
-      __self: this
+      className: "search-bar"
     }, isSearchLoading && __jsx(antd__WEBPACK_IMPORTED_MODULE_1__["Icon"], {
       type: "loading",
       style: {
         fontSize: 24
       },
-      spin: true,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 38
-      },
-      __self: this
+      spin: true
     }), __jsx(Search, {
       ref: r => this.inputRef = r,
       prefixCls: "search-input",
       placeholder: "\u05D7\u05E4\u05E9\u05D5 \u05DE\u05E7\u05D5\u05DE\u05D5\u05EA \u05D0\u05D5 \u05E2\u05E8\u05D9\u05DD",
       onChange: e => this.onSearch(e),
-      enterButton: true,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 39
-      },
-      __self: this
+      enterButton: true
     }));
   }
 
@@ -2713,11 +2719,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./index.scss */ "./src/containers/shared/SearchModal/index.scss");
 /* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _Components_AutocompleteOptions__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Components/AutocompleteOptions */ "./src/containers/shared/SearchModal/Components/AutocompleteOptions/index.js");
-var _jsxFileName = "/Users/kobimantzur/mapo/hello-next/src/containers/shared/SearchModal/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
 
 
 
@@ -2738,25 +2740,8 @@ class SearchModal extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       id: "searchModal",
       isOpen: isSearchOpen,
       onRequestClose: () => this.props.setSearchModalState(false),
-      contentLabel: "Example Modal",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 18
-      },
-      __self: this
-    }, __jsx(_Components_SearchBar__WEBPACK_IMPORTED_MODULE_5__["default"], _extends({}, this.props, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 24
-      },
-      __self: this
-    })), __jsx(_Components_AutocompleteOptions__WEBPACK_IMPORTED_MODULE_7__["default"], _extends({}, this.props, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 25
-      },
-      __self: this
-    })));
+      contentLabel: "Example Modal"
+    }, __jsx(_Components_SearchBar__WEBPACK_IMPORTED_MODULE_5__["default"], this.props), __jsx(_Components_AutocompleteOptions__WEBPACK_IMPORTED_MODULE_7__["default"], this.props));
   }
 
 }
@@ -3366,6 +3351,28 @@ const buildBusinessUrl = business => {
 
 module.exports = __webpack_require__(/*! private-next-pages/_app.js */"./pages/_app.js");
 
+
+/***/ }),
+
+/***/ "@fortawesome/free-solid-svg-icons":
+/*!****************************************************!*\
+  !*** external "@fortawesome/free-solid-svg-icons" ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("@fortawesome/free-solid-svg-icons");
+
+/***/ }),
+
+/***/ "@fortawesome/react-fontawesome":
+/*!*************************************************!*\
+  !*** external "@fortawesome/react-fontawesome" ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("@fortawesome/react-fontawesome");
 
 /***/ }),
 

@@ -2,12 +2,14 @@
 
 .header {
   height: 110px !important;
-  position: fixed;
+  // position: relative;
   width: 100%;
   z-index: 10;
   display: flex;
   justify-content: space-between;
   background: transparent !important;
+  margin-bottom: -110px;
+  
   @include mobile {
     height: initial !important;
     display: flex;
@@ -19,10 +21,16 @@
     width: 100%;
     background-color: #f2f2f2 !important;
     background: linear-gradient(to right, #5881d0, #b8cbea, #9fc4f5) !important;
+    position: fixed;
   }
   &.scrolled {
-    background-color: #f2f2f2 !important;
-    background: linear-gradient(to right, #5881d0, #b8cbea, #9fc4f5) !important;
+    @include desktop {
+      background-color: #f2f2f2 !important;
+      background: linear-gradient(to right, #5881d0, #b8cbea, #9fc4f5) !important;
+      position: fixed;
+      margin-bottom: initial;
+    }
+
   }
 
   .right {
@@ -31,14 +39,13 @@
     @include mobile {
       width: 100%;
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-start;
     }
     .search-bar-preview {
-      height: 72px;
+      font-weight: 600;
       border: none;
       width: 400px;
       line-height: 75px;
-      margin-top: 15px;
       outline-style: none;
       box-shadow: none;
       border-color: transparent;
@@ -47,14 +54,24 @@
       line-height: 75px;
       font-size: 21px;
       font-weight: 100;
-      color: #8d8d8d;
+      color: #545353;
       padding-right: 15px;
+
+      margin-left: 10px;
+      font-size: 18px;
+      padding-top: 12px;
+      font-size: 18px;
+    padding-top: 12px;
+    color: rgba(0, 0, 0, 0.65);
+
       @include mobile {
         height: initial;
         margin: initial;
         width: 50px;
-        color: #fff;
+        color: #333;
         margin-left: 20px;
+        margin-top: -10px;
+
       }
       .fa {
         padding-right: 7px;
@@ -68,6 +85,9 @@
         color: #333;
       }
     }
+  }
+  .left {
+
   }
 
   .logo {

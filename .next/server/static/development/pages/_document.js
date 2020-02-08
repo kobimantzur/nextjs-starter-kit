@@ -1088,7 +1088,7 @@ class CustomDocument extends next_document__WEBPACK_IMPORTED_MODULE_1___default.
         __html: `
                 WebFont.load({
                     google: {
-                      families: ['Alef']
+                      families: ['Varela Round']
                     }
                   });`
       }

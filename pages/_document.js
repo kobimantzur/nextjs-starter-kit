@@ -33,7 +33,7 @@ export default class CustomDocument extends Document {
               __html: `
                 WebFont.load({
                     google: {
-                      families: ['Alef']
+                      families: ['Varela Round']
                     }
                   });`
             }}

@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { toast } from 'react-toastify';\nexport var showErrorToast = function showErrorToast(errorMessage) {\n  toast.error(errorMessage);\n};\nexport var showSuccessToast = function showSuccessToast(msg) {\n  toast.success(msg);\n};","map":null,"metadata":{},"sourceType":"module"}

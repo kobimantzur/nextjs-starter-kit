@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import DownloadPage from '../../src/components/Download';
 import Head from 'next/head';
 import PrivacyPolicyComponent from '../../src/components/PrivacyPolicy';
 class PrivacyPolicy extends Component {

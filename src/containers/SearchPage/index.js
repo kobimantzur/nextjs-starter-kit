@@ -7,13 +7,9 @@ import { CountryPicker } from './Components';
 import { FancyTitle, Content, Page, AppSpinner } from '../../components';
 
 class SearchPage extends Component {
-  // componentDidMount() {
-  //   this.props.getCountries();
-  // }
-
   render() {
     const { isLoading } = this.props;
-    // const isLoading = true;
+    
     return (
       <Page className="search-page" {...this.props} isLoading>
         {isLoading && <AppSpinner />}

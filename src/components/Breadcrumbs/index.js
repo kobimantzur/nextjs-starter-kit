@@ -52,7 +52,7 @@ export default class Breadcrumbs extends Component {
                 </Link>
               )}
               {!item.isHighlighted && item.placeObject && !item.subCategoryObject && (
-                <Link href={buildPlaceUrl(item.placeObject)}>{item.title}</Link>
+                <Link href={buildPlaceUrl(item.placeObject)}><a>{item.title}</a></Link>
               )}
               {(item.isHighlighted || (!item.placeObject && !item.subCategoryObject)) && (
                 <span>{item.title}</span>

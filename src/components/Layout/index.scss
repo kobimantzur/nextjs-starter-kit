@@ -7,14 +7,24 @@ h6,
 div,
 a,
 p {
-  font-family: 'Arimo, serif, sans-serif';
+  font-family: 'Varela Round', sans-serif;
 }
 p {
-  font-size: 16px;
+  font-size: 22px;
+  color: #07081F;
+}
+h1 {
+  color: #5E97C9;
+  font-size: 44px;
+}
+h2 {
+  color: #5E97C9;
+  font-size: 38px;
+}
+h3 {
+  font-size: 33px;
 }
 body {
-  // font-family: 'Open Sans';
-  font-family: 'Arimo, serif, sans-serif';
   font-style: normal;
   font-weight: 600;
   .ant-layout {
