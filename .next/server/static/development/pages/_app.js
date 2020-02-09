@@ -3156,7 +3156,9 @@ __webpack_require__.r(__webpack_exports__);
  // ReactGA.initialize('912341008826-mdvp869k8s8orq80sklbp8o64r26soc9.apps.googleusercontent.com');
 
 const initAnalytics = () => {
+  debugger;
   react_ga__WEBPACK_IMPORTED_MODULE_0___default.a.initialize('UA-157971736-1');
+  react_ga__WEBPACK_IMPORTED_MODULE_0___default.a.pageview(window.location.pathname + window.location.search);
 };
 const reportEvent = params => {
   // if (env !== 'prod') return;
