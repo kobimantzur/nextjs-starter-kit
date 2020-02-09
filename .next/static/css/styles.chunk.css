@@ -4729,207 +4729,6 @@ body {
         .autocomplete-options .placements-list .placement .name strong {
           font-weight: 600; }
 
-.business-page.loader {
-  display: flex;
-  justify-content: center; }
-
-.business-page .info-and-share {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin: 20px 0 20px 0;
-  width: 100%; }
-  @media (max-width: 767px) {
-    .business-page .info-and-share {
-      margin: initial;
-      align-items: center;
-      width: 100%;
-      padding: 30px 0 0 0;
-      margin: initial;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center; } }
-
-.business-page .cubes-row {
-  display: flex;
-  justify-content: space-between;
-  width: 100%; }
-  @media (max-width: 767px) {
-    .business-page .cubes-row {
-      flex-direction: column; }
-      .business-page .cubes-row .card-wrap {
-        margin-bottom: 20px; } }
-
-.business-page .address-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 10px;
-  padding: 10px 20px; }
-  .business-page .address-wrapper .address-icon {
-    font-size: 20px;
-    margin-top: -2px; }
-  .business-page .address-wrapper .address {
-    padding-left: 5px;
-    text-align: left;
-    color: #3b3b3b;
-    font-size: 24px;
-    padding-right: 10px;
-    font-weight: 400;
-    line-height: 24px;
-    margin: 0; }
-
-.business-page .download-button {
-  height: 138px;
-  font-size: 45px;
-  padding: 25px 129px;
-  background-color: #6eceed;
-  color: #333;
-  font-weight: 600;
-  margin-top: 64%; }
-
-.business-page .general-title {
-  color: #333;
-  height: 50px; }
-
-.business-page .ant-card {
-  border-radius: 15px; }
-
-.business-page .anticon-spin {
-  font-size: 45px; }
-
-.business-page .business-header {
-  margin: 0 auto 50px;
-  background: #f2f2f2;
-  border-radius: 5px;
-  width: 100%; }
-  @media (max-width: 767px) {
-    .business-page .business-header .row {
-      display: flex;
-      flex-direction: column-reverse;
-      justify-content: center;
-      align-items: center;
-      width: 100%; } }
-  .business-page .business-header .right {
-    text-align: right; }
-    @media (max-width: 767px) {
-      .business-page .business-header .right {
-        text-align: center; } }
-    .business-page .business-header .right .description {
-      padding-left: 25%;
-      color: #333;
-      font-size: 17px;
-      font-weight: normal;
-      line-height: 20px;
-      margin-top: 20px;
-      margin-bottom: 10px; }
-      @media (max-width: 767px) {
-        .business-page .business-header .right .description {
-          padding-left: initial;
-          text-align: right;
-          letter-spacing: 0.2px;
-          font-size: 16px; } }
-    .business-page .business-header .right .share-button {
-      margin: 16px 0;
-      border-radius: 33px;
-      height: 40px;
-      padding: 0 25px;
-      font-size: 18px; }
-  .business-page .business-header .left .title {
-    color: #424242;
-    margin-bottom: 0;
-    font-size: 36px;
-    text-align: left;
-    line-height: 39px; }
-  .business-page .business-header .left .sub-category {
-    color: #8a8a8a;
-    font-size: 20px;
-    text-align: left; }
-
-.business-page .business-body {
-  margin: 3% auto; }
-  .business-page .business-body .left .address {
-    padding-left: 5px; }
-  .business-page .business-body .left .address-icon {
-    font-size: 18px;
-    margin-top: -2px; }
-  .business-page .business-body .left .address,
-  .business-page .business-body .left .phone-number {
-    text-align: left;
-    color: #3b3b3b;
-    font-size: 19px;
-    padding-right: 106px;
-    font-weight: 400; }
-  .business-page .business-body .left .phone-number {
-    margin-top: 15px; }
-  .business-page .business-body .left .social {
-    text-align: left; }
-    .business-page .business-body .left .social .facebook,
-    .business-page .business-body .left .social .instagram,
-    .business-page .business-body .left .social .mail {
-      margin-right: 15px; }
-  .business-page .business-body .right {
-    text-align: right; }
-    .business-page .business-body .right .business-hours {
-      flex-direction: column; }
-      .business-page .business-body .right .business-hours h1 {
-        line-height: 24px; }
-      .business-page .business-body .right .business-hours .hour-row {
-        display: flex;
-        flex-direction: row;
-        padding-bottom: 3; }
-        .business-page .business-body .right .business-hours .hour-row .hour {
-          align-self: stretch;
-          text-align: center;
-          margin-right: 0;
-          color: #7e7e7e; }
-        .business-page .business-body .right .business-hours .hour-row .day {
-          padding-left: 10;
-          padding-top: 1;
-          text-align: right;
-          align-self: stretch;
-          color: #7e7e7e;
-          flex: 1; }
-
-.business-page .info-wrapper {
-  max-width: 850px;
-  margin: 80px auto; }
-  .business-page .info-wrapper .info-item {
-    height: 180px;
-    margin: 10px 30px;
-    background: #f9f9f9;
-    border-radius: 10px;
-    padding: 10px;
-    direction: rtl; }
-    .business-page .info-wrapper .info-item h1 {
-      color: #888888; }
-    .business-page .info-wrapper .info-item p {
-      color: #888888;
-      font-size: 16px; }
-
-@media (max-width: 767px) {
-  .share-buttons {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 8px;
-    margin-left: 5px; } }
-
-.share-buttons .fab {
-  font-size: 24px;
-  margin-right: 15px;
-  cursor: pointer;
-  color: rgba(0, 0, 0, 0.8); }
-  .share-buttons .fab:hover {
-    opacity: 0.9; }
-  .share-buttons .fab.fb:hover {
-    color: #3b5998; }
-  .share-buttons .fab.ig:hover {
-    color: #3f729b; }
-  .share-buttons .fab.wa:hover {
-    color: #25d366; }
-  .share-buttons .fab.tw:hover {
-    color: #00acee; }
 
 
 .country-picker {
@@ -5025,46 +4824,6 @@ body {
       min-height: initial;
       max-width: 100%; } }
 
-.card-wrap {
-  background: #f2f2f2;
-  flex: 1 0 45%;
-  width: 500px;
-  margin: 0;
-  width: 100%;
-  height: auto;
-  position: relative;
-  overflow: hidden;
-  flex: 1;
-  border: 1px solid #e8e8e8; }
-  @media (max-width: 767px) {
-    .card-wrap {
-      margin-bottom: 20px;
-      width: initial;
-      flex: 1; } }
-  .card-wrap:first-child {
-    margin-left: 1%; }
-    @media (max-width: 767px) {
-      .card-wrap:first-child {
-        margin: initial; } }
-  .card-wrap:last-child {
-    margin-right: 1%; }
-    @media (max-width: 767px) {
-      .card-wrap:last-child {
-        margin: initial; } }
-
-.ReactGridGallery {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  flex-wrap: wrap; }
-  .ReactGridGallery .ReactGridGallery_tile {
-    background: transparent !important; }
-  .ReactGridGallery .ReactGridGallery_tile-icon-bar {
-    display: none; }
-  .ReactGridGallery img {
-    border-radius: 5px; }
-
 .page {
   text-align: center;
   background: #f0f2f5;
@@ -5117,6 +4876,33 @@ body {
     font-size: 50px;
     margin: 30px 0;
     color: #5e97c7; }
+
+.card-wrap {
+  background: #f2f2f2;
+  flex: 1 0 45%;
+  width: 500px;
+  margin: 0;
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  flex: 1;
+  border: 1px solid #e8e8e8; }
+  @media (max-width: 767px) {
+    .card-wrap {
+      margin-bottom: 20px;
+      width: initial;
+      flex: 1; } }
+  .card-wrap:first-child {
+    margin-left: 1%; }
+    @media (max-width: 767px) {
+      .card-wrap:first-child {
+        margin: initial; } }
+  .card-wrap:last-child {
+    margin-right: 1%; }
+    @media (max-width: 767px) {
+      .card-wrap:last-child {
+        margin: initial; } }
 
 .user-info {
   display: flex; }
@@ -5198,16 +4984,11 @@ body {
   .breadcrumbs .anticon {
     padding-left: 5px; }
 
-.tags {
-  display: flex;
-  margin: 30px 0 0 0;
-  width: 100%; }
-  .tags .ant-tag {
-    font-weight: 100;
-    height: 28px;
-    line-height: 28px;
-    font-size: 17px;
-    padding: 0 15px; }
+.primary-button {
+  background: #5e97c7;
+  color: #fff;
+  padding: 11px 36px;
+  border-radius: 46px; }
 
 .section {
   padding: 50px 0; }

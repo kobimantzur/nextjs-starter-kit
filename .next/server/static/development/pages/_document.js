@@ -1075,12 +1075,20 @@ class CustomDocument extends next_document__WEBPACK_IMPORTED_MODULE_1___default.
     return await next_document__WEBPACK_IMPORTED_MODULE_1___default.a.getInitialProps(ctx);
   }
 
+  getPageDescription() {
+    return `גלו את ההמלצות שיהפכו את הטיול הבא שלכם לבלתי נשכח.`;
+  }
+
+  getPageTitle() {
+    return "Mapo | המלצות ממטיילים ישראלים";
+  }
+
   render() {
     return __jsx("html", {
       dir: "rtl"
     }, __jsx(next_document__WEBPACK_IMPORTED_MODULE_1__["Head"], null, __jsx("title", {
       key: "title"
-    }, "Mapo | \u05D9\u05E9\u05E8\u05D0\u05DC\u05D9\u05DD \u05DE\u05D8\u05D9\u05D9\u05DC\u05D9\u05DD \u05D1\u05D7\u05D5\u05F4\u05DC"), __jsx("link", {
+    }, this.getPageTitle()), __jsx("link", {
       href: "https://use.fontawesome.com/releases/v5.0.2/css/all.css",
       rel: "stylesheet"
     }), __jsx("link", {
@@ -1151,6 +1159,46 @@ class CustomDocument extends next_document__WEBPACK_IMPORTED_MODULE_1___default.
     }), __jsx("meta", {
       name: "theme-color",
       content: "#ffffff"
+    }), __jsx("meta", {
+      key: "title",
+      property: "title",
+      content: this.getPageTitle()
+    }), __jsx("meta", {
+      key: "description",
+      property: "description",
+      content: this.getPageDescription()
+    }), __jsx("meta", {
+      key: "og:title",
+      property: "og:title",
+      content: this.getPageTitle()
+    }), __jsx("meta", {
+      key: "og:image",
+      property: "og:image",
+      content: "/static/img/meta/wide-share.jpg"
+    }), __jsx("meta", {
+      key: "og:description",
+      property: "og:description",
+      content: this.getPageDescription()
+    }), __jsx("meta", {
+      key: "fb:app_id",
+      name: "fb:app_id",
+      content: "291124068055220"
+    }), __jsx("meta", {
+      key: "twitter:image:src",
+      property: "twitter:image:src",
+      content: "/static/img/meta/wide-share.jpg"
+    }), __jsx("meta", {
+      key: "twitter:card",
+      name: "twitter:card",
+      content: "summary_large_image"
+    }), __jsx("meta", {
+      key: "twitter:description",
+      name: "twitter:description",
+      content: this.getPageDescription()
+    }), __jsx("meta", {
+      key: "keywords",
+      name: "keywords",
+      content: `mapo, מאפו, מטיילים, ויזה לארצות הברית, המלצות, חול`
     })), __jsx("body", null, __jsx(next_document__WEBPACK_IMPORTED_MODULE_1__["Main"], null), __jsx(next_document__WEBPACK_IMPORTED_MODULE_1__["NextScript"], null), __jsx("script", {
       src: "https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"
     }), __jsx("script", {
