@@ -5,10 +5,10 @@ export default class CustomDocument extends Document {
   }
 
   getPageDescription() {
-    return `גלו את ההמלצות שיהפכו את הטיול הבא שלכם לבלתי נשכח.`;
+    return `גלו את ההמלצות הכי חמות שיהפכו את הטיול הבא שלכם לבלתי נשכח`;
   }
   getPageTitle() {
-    return "Mapo | המלצות ממטיילים ישראלים";
+    return `Mapo | מטיילים ממליצים בחו״ל`;
   }
 
   render() {
