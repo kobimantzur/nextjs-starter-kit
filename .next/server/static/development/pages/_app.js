@@ -1956,6 +1956,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _src_components_Layout__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../src/components/Layout */ "./src/components/Layout/index.js");
 /* harmony import */ var connected_react_router__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! connected-react-router */ "connected-react-router");
 /* harmony import */ var connected_react_router__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(connected_react_router__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! next/head */ "next/head");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_9__);
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 // pages/_app.js
 
@@ -1966,6 +1968,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 const composeEnhancer = redux__WEBPACK_IMPORTED_MODULE_1__["compose"];
+
 
  // import { createBrowserHistory } from 'history';
 // const history = createBrowserHistory();
@@ -1999,6 +2002,14 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_3___default.a {
     };
   }
 
+  getPageDescription() {
+    return `גלו את ההמלצות הכי חמות שיהפכו את הטיול הבא שלכם לבלתי נשכח`;
+  }
+
+  getPageTitle() {
+    return `Mapo | מטיילים ממליצים בחו״ל`;
+  }
+
   render() {
     const {
       Component,
@@ -2007,7 +2018,65 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_3___default.a {
     } = this.props;
     return __jsx(react_redux__WEBPACK_IMPORTED_MODULE_2__["Provider"], {
       store: store
-    }, __jsx(_src_components_Layout__WEBPACK_IMPORTED_MODULE_7__["default"], null, __jsx(Component, pageProps)));
+    }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_9___default.a, null, __jsx("meta", {
+      key: "title",
+      property: "title",
+      content: this.getPageTitle()
+    }), __jsx("meta", {
+      key: "description",
+      property: "description",
+      content: this.getPageDescription()
+    }), __jsx("meta", {
+      key: "og:title",
+      property: "og:title",
+      content: this.getPageTitle()
+    }), __jsx("meta", {
+      key: "og:image",
+      property: "og:image",
+      content: "https://www.mymapo.com/static/img/meta/wide-share.jpg"
+    }), __jsx("meta", {
+      key: "og:description",
+      property: "og:description",
+      content: this.getPageDescription()
+    }), __jsx("meta", {
+      key: "fb:app_id",
+      property: "fb:app_id",
+      content: "291124068055220"
+    }), __jsx("meta", {
+      key: "twitter:image:src",
+      property: "twitter:image:src",
+      content: "https://www.mymapo.com/static/img/meta/wide-share.jpg"
+    }), __jsx("meta", {
+      key: "twitter:card",
+      name: "twitter:card",
+      content: "summary_large_image"
+    }), __jsx("meta", {
+      key: "twitter:description",
+      name: "twitter:description",
+      content: this.getPageDescription()
+    }), __jsx("meta", {
+      key: "keywords",
+      name: "keywords",
+      content: `mapo, מאפו, מטיילים, ויזה לארצות הברית, המלצות, חול`
+    }), __jsx("meta", {
+      name: "apple-itunes-app",
+      content: "app-id=1329505993"
+    }), __jsx("link", {
+      href: "ios-app://1329505993",
+      rel: "alternate"
+    }), __jsx("meta", {
+      property: "al:ios:app_name",
+      content: "Mapo"
+    }), __jsx("meta", {
+      property: "al:ios:app_store_id",
+      content: "1329505993"
+    }), __jsx("meta", {
+      property: "al:ios:url",
+      content: "https://www.mymapo.com/"
+    }), __jsx("link", {
+      href: "android-app://com.avartii.app",
+      rel: "alternate"
+    })), __jsx(_src_components_Layout__WEBPACK_IMPORTED_MODULE_7__["default"], null, __jsx(Component, pageProps)));
   }
 
 }
@@ -3439,6 +3508,17 @@ module.exports = require("moment");
 /***/ (function(module, exports) {
 
 module.exports = require("next-redux-wrapper");
+
+/***/ }),
+
+/***/ "next/head":
+/*!****************************!*\
+  !*** external "next/head" ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("next/head");
 
 /***/ }),
 
