@@ -4730,7 +4730,6 @@ body {
           font-weight: 600; }
 
 
-
 .country-picker {
   display: flex;
   flex-wrap: wrap; }
@@ -4983,12 +4982,6 @@ body {
       text-decoration: none; }
   .breadcrumbs .anticon {
     padding-left: 5px; }
-
-.primary-button {
-  background: #5e97c7;
-  color: #fff;
-  padding: 11px 36px;
-  border-radius: 46px; }
 
 .section {
   padding: 50px 0; }

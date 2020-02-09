@@ -1174,7 +1174,7 @@ class CustomDocument extends next_document__WEBPACK_IMPORTED_MODULE_1___default.
     }), __jsx("meta", {
       key: "og:image",
       property: "og:image",
-      content: "/static/img/meta/wide-share.jpg"
+      content: "https://www.mymapo.com/static/img/meta/wide-share.jpg"
     }), __jsx("meta", {
       key: "og:description",
       property: "og:description",
@@ -1186,7 +1186,7 @@ class CustomDocument extends next_document__WEBPACK_IMPORTED_MODULE_1___default.
     }), __jsx("meta", {
       key: "twitter:image:src",
       property: "twitter:image:src",
-      content: "/static/img/meta/wide-share.jpg"
+      content: "https://www.mymapo.com/static/img/meta/wide-share.jpg"
     }), __jsx("meta", {
       key: "twitter:card",
       name: "twitter:card",
@@ -1199,6 +1199,24 @@ class CustomDocument extends next_document__WEBPACK_IMPORTED_MODULE_1___default.
       key: "keywords",
       name: "keywords",
       content: `mapo, מאפו, מטיילים, ויזה לארצות הברית, המלצות, חול`
+    }), __jsx("meta", {
+      name: "apple-itunes-app",
+      content: "app-id=1329505993"
+    }), __jsx("link", {
+      href: "ios-app://1329505993",
+      rel: "alternate"
+    }), __jsx("meta", {
+      property: "al:ios:app_name",
+      content: "Mapo"
+    }), __jsx("meta", {
+      property: "al:ios:app_store_id",
+      content: "1329505993"
+    }), __jsx("meta", {
+      property: "al:ios:url",
+      content: "https://www.mymapo.com/"
+    }), __jsx("link", {
+      href: "android-app://com.avartii.app",
+      rel: "alternate"
     })), __jsx("body", null, __jsx(next_document__WEBPACK_IMPORTED_MODULE_1__["Main"], null), __jsx(next_document__WEBPACK_IMPORTED_MODULE_1__["NextScript"], null), __jsx("script", {
       src: "https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"
     }), __jsx("script", {
