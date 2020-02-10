@@ -46,13 +46,15 @@ class SearchResultsPage extends Component {
       items.push({
         title: selectedPlace.country.heName,
         link: buildPlaceUrl(selectedPlace.country),
-        placeObject: selectedPlace.country
+        placeObject: selectedPlace.country,
+        pageName: 'CountryPage'
       });
     }
     items.push({
       title: selectedPlace.heName,
       link: buildPlaceUrl(selectedPlace),
-      placeObject: selectedPlace
+      placeObject: selectedPlace,
+      pageName: 'CityPage',
     });
 
     items.push({

@@ -305,18 +305,21 @@ class BusinessPage extends React.Component {
               {
                 link: '',
                 title: business.placements[0].country.heName,
-                placeObject: business.placements[0].country
+                placeObject: business.placements[0].country,
+                pageName: 'CountryPage'
               },
               {
                 link: '',
                 title: business.placements[0].heName,
-                placeObject: business.placements[0]
+                placeObject: business.placements[0],
+                pageName: 'CityPage'
               },
               {
                 link: '',
                 title: business.subCategories[0].title,
                 subCategoryObject: business.subCategories[0],
-                placeObject: business.placements[0]
+                placeObject: business.placements[0],
+                pageName: 'SearchResults'
               },
               {
                 link: '',

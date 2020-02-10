@@ -36,7 +36,8 @@ class PlacePage extends Component {
       items.push({
         title: selectedPlace.country.heName,
         link: buildPlaceUrl(selectedPlace.country),
-        placeObject: selectedPlace.country
+        placeObject: selectedPlace.country,
+        pageName: 'CountryPage'
       });
     }
 

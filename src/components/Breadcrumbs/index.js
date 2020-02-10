@@ -4,11 +4,17 @@ import { Breadcrumb, Icon } from 'antd';
 // import { Link } from 'react-router-dom';
 import Link from 'next/link';
 import { buildPlaceUrl, buildSearchUrl } from '../../services/urlBuilderService';
+import {reportEvent} from '../../services/analyticsService'
 
 export default class Breadcrumbs extends Component {
   onClick = link => {
     // link && this.props.push(link);
     // TODO: report GA
+    // if (!link) return;
+    // const {pageName} = link;
+    // debugger;
+    // reportEvent('Search', pageName)
+
   };
 
   render() {
@@ -26,6 +32,7 @@ export default class Breadcrumbs extends Component {
             additionalProps.onClick = () => {
               // this.props.push(item.link);
               // TODO: report GA
+              reportEvent
             };
           } else {
             additionalProps.className = 'disabled';
@@ -38,7 +45,7 @@ export default class Breadcrumbs extends Component {
           return (
             <Breadcrumb.Item
               {...additionalProps}
-              onClick={() => this.onClick(item.link)}
+              onClick={() => this.onClick(item)}
               key={index}
             >
               {!item.isHighlighted && item.placeObject && item.subCategoryObject && (
@@ -55,7 +62,7 @@ export default class Breadcrumbs extends Component {
                 <Link href={buildPlaceUrl(item.placeObject)}><a>{item.title}</a></Link>
               )}
               {(item.isHighlighted || (!item.placeObject && !item.subCategoryObject)) && (
-                <span>{item.title}</span>
+                <span> {item.title}</span>
               )}
             </Breadcrumb.Item>
           );

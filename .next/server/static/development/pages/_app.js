@@ -3153,19 +3153,31 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "reportScreen", function() { return reportScreen; });
 /* harmony import */ var react_ga__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-ga */ "react-ga");
 /* harmony import */ var react_ga__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_ga__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _commonService__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./commonService */ "./src/services/commonService.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
  // ReactGA.initialize('912341008826-mdvp869k8s8orq80sklbp8o64r26soc9.apps.googleusercontent.com');
 
 const initAnalytics = () => {
-  debugger;
   react_ga__WEBPACK_IMPORTED_MODULE_0___default.a.initialize('UA-157971736-1');
   react_ga__WEBPACK_IMPORTED_MODULE_0___default.a.pageview(window.location.pathname + window.location.search);
 };
-const reportEvent = params => {
-  // if (env !== 'prod') return;
-  react_ga__WEBPACK_IMPORTED_MODULE_0___default.a.event(params);
+const reportEvent = (category, action, additionalParams) => {
+  if (Object(_commonService__WEBPACK_IMPORTED_MODULE_1__["isDev"])()) return;
+  react_ga__WEBPACK_IMPORTED_MODULE_0___default.a.event(_objectSpread({
+    category,
+    action
+  }, additionalParams, {
+    currentUrl: window.location.href
+  }));
 };
 const reportScreen = screenName => {
-  // if (env !== 'prod') return;
+  if (Object(_commonService__WEBPACK_IMPORTED_MODULE_1__["isDev"])()) return;
   react_ga__WEBPACK_IMPORTED_MODULE_0___default.a.pageview(screenName);
 };
 
@@ -3175,7 +3187,7 @@ const reportScreen = screenName => {
 /*!***************************************!*\
   !*** ./src/services/commonService.js ***!
   \***************************************/
-/*! exports provided: isMobile, setCookie, getCookie, getFriendlyTime */
+/*! exports provided: isMobile, setCookie, getCookie, getFriendlyTime, isDev */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3184,6 +3196,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setCookie", function() { return setCookie; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getCookie", function() { return getCookie; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getFriendlyTime", function() { return getFriendlyTime; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isDev", function() { return isDev; });
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! moment */ "moment");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_0__);
 
@@ -3252,6 +3265,7 @@ const getFriendlyTime = date => {
 
   return fuzzy;
 };
+const isDev = () => true;
 
 /***/ }),
 
@@ -3365,7 +3379,11 @@ const buildBusinessUrl = business => {
     englishName
   } = business;
   return `/business/${_id}/${friendlyUrl || englishName || ''}`;
-};
+}; // export const getPageNameByUrl = (url) => {
+//   if (url.includes('/place/')) return 'placePage';
+//   if (url.includes('/business/')) return 'businessPage';
+//   if (url.endsWith('/search')) return 'countriesPage'
+// }
 
 /***/ }),
 

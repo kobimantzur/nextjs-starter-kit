@@ -62,3 +62,5 @@ export const getFriendlyTime = date => {
   }
   return fuzzy;
 };
+
+export const isDev = () => process.env.NODE_ENV !== 'production';

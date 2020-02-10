@@ -41,10 +41,7 @@ export const submitBusinessReview = data => dispatch => {
   axios
     .post(types.SUBMIT_BUSINESS_REVIEW_URL, data)
     .then(response => {
-      reportEvent({
-        category: 'ReviewModal',
-        action: 'Complete'
-      });
+
       dispatch({
         type: types.SET_REVIEWS,
         payload: { reviewsList: response.data.reviewsList, userReview: response.data.userReview }
@@ -58,10 +55,7 @@ export const submitBusinessReview = data => dispatch => {
 };
 
 export function setReviewModalState(isReviewModalOpen) {
-  reportEvent({
-    category: 'ReviewModal',
-    action: isReviewModalOpen ? 'ModalOpen' : 'ModalClose'
-  });
+
   return {
     type: types.SET_REVIEW_MODAL_STATE,
     payload: { isReviewModalOpen }

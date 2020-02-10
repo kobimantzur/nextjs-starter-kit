@@ -18,3 +18,10 @@ export const buildBusinessUrl = business => {
 
   return `/business/${_id}/${friendlyUrl || englishName || ''}`;
 };
+
+// export const getPageNameByUrl = (url) => {
+//   if (url.includes('/place/')) return 'placePage';
+//   if (url.includes('/business/')) return 'businessPage';
+//   if (url.endsWith('/search')) return 'countriesPage'
+
+// }
