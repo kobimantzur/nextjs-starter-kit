@@ -33,21 +33,25 @@ app
     server.get('/_next/*', (req, res) => {
       /* serving _next static content using next.js handler */
       handle(req, res);
-  });
-  server.use(
-    '/static',
-    express.static(__dirname + '/static', {
-      maxAge: '365d'
-    })
-  );
-  server.get('/sitemap.xml', (req, res) => {
-    res.status(301).redirect('/static/sitemap.xml');
-  })
-  server.get('*', (req, res) => {
-      /* serving page */
-      return renderAndCache(req, res)
-  });
+    });
+    server.use(
+      '/static',
+      express.static(__dirname + '/static', {
+        maxAge: '365d'
+      })
+    );
+    server.get('/sitemap.xml', (req, res) => {
+      res.status(301).redirect('/static/sitemap.xml');
+    });
 
+    server.get('*', (req, res) => {
+      if (!dev) {
+        /* serving page */
+        return renderAndCache(req, res);
+      } else {
+        return handle(req, res);
+      }
+    });
 
     const port = process.env.PORT || 3000;
     server.listen(port, err => {
@@ -65,7 +69,7 @@ app
 //  * an immediate page change (e.g a locale stored in req.session)
 //  */
 function getCacheKey(req) {
-  console.log(`Cache key: ${req.path}`)
+  console.log(`Cache key: ${req.path}`);
   return `${req.path}`;
 }
 
@@ -74,7 +78,7 @@ async function renderAndCache(req, res) {
 
   // If we have a page in the cache, let's serve it
   if (ssrCache.has(key)) {
-    console.log(`Serving cached version of ${key}`)
+    console.log(`Serving cached version of ${key}`);
     //console.log(`serving from cache ${key}`);
     res.setHeader('x-cache', 'HIT');
     res.send(ssrCache.get(key));

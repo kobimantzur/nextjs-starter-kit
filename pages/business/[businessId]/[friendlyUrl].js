@@ -12,13 +12,13 @@ import { DEFAULT_PAGE_TITLE } from '../../../src/constants';
 class Business extends Component {
   static async getInitialProps({ store, isServer, pathname, query, ctx, res }) {
     const { businessId } = query;
-    
+
     try {
       const res = await store.dispatch(getBusinessByFriendlyUrl(businessId));
 
       return { ...res };
     } catch (e) {
-      res.redirect('/')
+      res.redirect('/');
     }
     return {};
   }

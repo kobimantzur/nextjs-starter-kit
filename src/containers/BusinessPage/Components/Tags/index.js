@@ -7,10 +7,10 @@ export default class Tags extends Component {
     const { subCategoryFilters, subCategories } = business;
     const tags = [];
     if (subCategories && subCategories.length > 0) {
-      subCategories.map((subCategory) => {
+      subCategories.map(subCategory => {
         tags.push({
           key: subCategory._id,
-          value: subCategory.title,
+          value: subCategory.title
         });
 
         return subCategory;
@@ -18,11 +18,14 @@ export default class Tags extends Component {
     }
 
     if (subCategoryFilters && subCategoryFilters.length > 0) {
-      subCategoryFilters.map((subCategoryFilter) => {
-        tags.push({
-          key: subCategoryFilter._id,
-          value: subCategoryFilter.title,
-        });
+      subCategoryFilters.map(subCategoryFilter => {
+        if (subCategoryFilter) {
+          tags.push({
+            key: subCategoryFilter._id,
+            value: subCategoryFilter.title
+          });
+        }
+
         return subCategoryFilter;
       });
     }

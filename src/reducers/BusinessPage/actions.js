@@ -22,26 +22,30 @@ export const fetchBusinessByFriendlyUrl = friendlyUrl => {
 };
 
 export const getBusinessByFriendlyUrl = friendlyUrl => async dispatch => {
-  const response = await fetchBusinessByFriendlyUrl(friendlyUrl);
-  if (!response || !response.data) {
-    // TODO: notify error
-    // TODO: redirect
-  }
-  dispatch({
-    type: types.SET_BUSINESS,
-    payload: { business: response.data }
-  });
+  try {
+    const response = await fetchBusinessByFriendlyUrl(friendlyUrl);
+    if (!response || !response.data) {
+      // TODO: notify error
+      // TODO: redirect
+    }
+    dispatch({
+      type: types.SET_BUSINESS,
+      payload: { business: response.data }
+    });
 
-  return {
-    business: response.data
-  };
+    return {
+      business: response.data
+    };
+  } catch (e) {
+    console.log(e);
+    return null;
+  }
 };
 
 export const submitBusinessReview = data => dispatch => {
   axios
     .post(types.SUBMIT_BUSINESS_REVIEW_URL, data)
     .then(response => {
-
       dispatch({
         type: types.SET_REVIEWS,
         payload: { reviewsList: response.data.reviewsList, userReview: response.data.userReview }
@@ -55,7 +59,6 @@ export const submitBusinessReview = data => dispatch => {
 };
 
 export function setReviewModalState(isReviewModalOpen) {
-
   return {
     type: types.SET_REVIEW_MODAL_STATE,
     payload: { isReviewModalOpen }
