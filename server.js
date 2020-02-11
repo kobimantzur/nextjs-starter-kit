@@ -40,6 +40,9 @@ app
       maxAge: '365d'
     })
   );
+  server.get('/sitemap.xml', (req, res) => {
+    res.status(301).redirect('/static/sitemap.xml');
+  })
   server.get('*', (req, res) => {
       /* serving page */
       return renderAndCache(req, res)
