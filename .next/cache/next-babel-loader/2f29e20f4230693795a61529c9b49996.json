@@ -1,1 +1,0 @@
-{"ast":null,"code":"import React, { Component } from 'react';\nimport { Input } from 'antd';\nimport Modal from 'react-modal';\nconst {\n  Search\n} = Input;\nexport default class SearchBar extends Component {\n  render() {\n    const {\n      isOpen\n    } = this.props;\n    return null;\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}

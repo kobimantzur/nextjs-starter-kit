@@ -38,10 +38,10 @@ app
       return res.sendFile(path.join(__dirname, '/apple-app-site-association'));
     });
 
-    // server.get('/_next/*', (req, res) => {
-    //   /* serving _next static content using next.js handler */
-    //   handle(req, res);
-    // });
+    server.get('/_next/*', (req, res) => {
+      /* serving _next static content using next.js handler */
+      handle(req, res);
+    });
     server.use(
       '/public',
       express.static(__dirname + '/public', {
