@@ -52,7 +52,7 @@ class AppHeader extends Component {
         </div>
         <div className="left">
           <a href="/">
-            <img alt="Mapo" className="logo" src={'/public/img/logo-white.png'} />
+            <img alt="Mapo" className="logo" src={'/public/img/logos/logo-white.svg'} />
           </a>
         </div>
       </Header>

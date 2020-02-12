@@ -12,7 +12,11 @@ export default class AppPreviewSection extends Component {
           <h2>אפליקציה לישראלים בחו״ל</h2>
         </div>
         <div className="left">
-          <img src="/public/img/about/section-1.png" />
+          <picture>
+            <source srcset="/public/img/about/section-1.webp" type="image/webp" />
+            <source srcset="/public/img/about/section-1.png" type="image/png" />
+            <img src="/public/img/about/section-1.png" alt="Your image" />
+          </picture>
         </div>
       </Section>
     );

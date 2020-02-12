@@ -2,13 +2,11 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './index.scss';
 
-const defaultAvatar = require('../../img/user-avatar.png');
-
 export default class UserInfo extends Component {
   render() {
     const { userDetails, additionalSecondaryTitle } = this.props;
     if (!userDetails || !userDetails.firstName) return null;
-    const userImage = userDetails.profilePictureUrl || defaultAvatar;
+    const userImage = userDetails.profilePictureUrl || '/public/img/user-avatar.png';
     const userName = `${userDetails.firstName} ${userDetails.lastName}`;
     let secondaryTitle = userDetails.headline || '';
     secondaryTitle += secondaryTitle && additionalSecondaryTitle ? ' | ' : '';
@@ -29,9 +27,9 @@ export default class UserInfo extends Component {
 
 UserInfo.propTypes = {
   // userDetails: PropTypes.object,
-  additionalSecondaryTitle: PropTypes.string,
+  additionalSecondaryTitle: PropTypes.string
 };
 UserInfo.defaultProps = {
   // userDetails: undefined,
-  additionalSecondaryTitle: '',
+  additionalSecondaryTitle: ''
 };

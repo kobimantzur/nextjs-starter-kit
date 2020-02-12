@@ -17,7 +17,7 @@ import {
 } from '../../reducers/BusinessPage/actions';
 import './index.scss';
 
-import mailIcon from '../../img/mail-icon.png';
+// import mailIcon from '../../img/mail-icon.png';
 import { ShareButtons } from './Components';
 
 import Map, { DEF_PROPS } from './Components/Map';
@@ -189,11 +189,11 @@ class BusinessPage extends React.Component {
                   <img src="/public/img/instagram-icon.png" alt={instagramName} />
                 </a>
               )}
-              {email && (
+              {/* {email && (
                 <a className="mail" href={`mailto:${email}`}>
                   <img src={mailIcon} alt={email} />
                 </a>
-              )}
+              )} */}
             </Row>
           </Col>
         </Row>

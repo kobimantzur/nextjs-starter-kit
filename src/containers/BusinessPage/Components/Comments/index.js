@@ -1,21 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  Row, Col, Card, Button,
-} from 'antd';
+import { Row, Col, Card, Button } from 'antd';
 import './index.scss';
 import classnames from 'classnames';
-import UserAvatar from '../../../../img/user-avatar.png';
+// import UserAvatar from '../../../../img/user-avatar.png';
 import { getFriendlyTime } from '../../../../services/commonService';
 
 const propTypes = {
-  business: PropTypes.object,
+  business: PropTypes.object
 };
 
 const defaultProps = {
   business: {
-    reviewsList: [],
-  },
+    reviewsList: []
+  }
 };
 
 export default class Comments extends React.Component {
@@ -24,7 +22,7 @@ export default class Comments extends React.Component {
     this.state = {};
   }
 
-  renderCommentHeader = (comment) => {
+  renderCommentHeader = comment => {
     const { userId, createdAt } = comment;
     const userFullName = `${userId.firstName} ${userId.lastName}`;
     return (
@@ -33,14 +31,14 @@ export default class Comments extends React.Component {
           <span className="time">{getFriendlyTime(createdAt)}</span>
         </div>
         <div className="left">
-          <img src={userId.profilePictureUrl || UserAvatar} alt={userFullName} />
+          <img src={userId.profilePictureUrl || '/public/img/user-avatar.png'} alt={userFullName} />
           <h4>{userFullName}</h4>
         </div>
       </Row>
     );
   };
 
-  renderCommentBody = (review) => {
+  renderCommentBody = review => {
     const { comment } = review;
     return (
       <Row>
@@ -77,7 +75,7 @@ export default class Comments extends React.Component {
           <Card
             key={comment._id}
             className={classnames('comment', {
-              user: comment._id === (userReview ? userReview._id : ''),
+              user: comment._id === (userReview ? userReview._id : '')
             })}
           >
             {this.renderCommentHeader(comment)}
