@@ -1,1 +1,0 @@
-{"ast":null,"code":"var __jsx = React.createElement;\nimport React, { Component } from 'react';\nimport './index.scss';\nexport default class Content extends Component {\n  render() {\n    return __jsx(\"div\", {\n      className: \"content\"\n    }, this.props.children);\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}

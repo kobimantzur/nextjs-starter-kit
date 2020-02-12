@@ -1,1 +1,0 @@
-{"ast":null,"code":"export var MENU_LINKS = [{\n  title: 'מה זה Mapo?',\n  href: '/'\n}, {\n  title: 'גלו מקומות חדשים',\n  href: '/search'\n}];","map":null,"metadata":{},"sourceType":"module"}
