@@ -4,11 +4,15 @@ import * as types from './types';
 import { buildSearchUrl } from '../../services/urlBuilderService';
 
 export const getCountries = () => async dispatch => {
-  const res = await getRequest('/placements/getPlacementsData');
-  const payload = { isLoading: false, ...res.data };
-  dispatch({ type: types.SET_COUNTRIES, payload });
+  try {
+    const res = await getRequest('/placements/getPlacementsData');
+    const payload = { isLoading: false, ...res.data };
+    dispatch({ type: types.SET_COUNTRIES, payload });
 
-  return payload;
+    return payload;
+  } catch (e) {
+    throw new Error(e);
+  }
 };
 
 export const getPlaceDetails = placeId => async dispatch => {

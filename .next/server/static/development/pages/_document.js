@@ -1082,77 +1082,71 @@ class CustomDocument extends next_document__WEBPACK_IMPORTED_MODULE_1___default.
     return `גלו את ההמלצות הכי חמות שיהפכו את הטיול הבא שלכם לבלתי נשכח`;
   }
 
-  getPageTitle() {
-    return `Mapo | מטיילים ממליצים בחו״ל`;
-  }
-
   render() {
     return __jsx("html", {
       dir: "rtl"
-    }, __jsx(next_document__WEBPACK_IMPORTED_MODULE_1__["Head"], null, __jsx("title", {
-      key: "title"
-    }, this.getPageTitle()), __jsx("link", {
+    }, __jsx(next_document__WEBPACK_IMPORTED_MODULE_1__["Head"], null, __jsx("link", {
       href: "https://use.fontawesome.com/releases/v5.0.2/css/all.css",
       rel: "stylesheet"
     }), __jsx("link", {
       rel: "apple-touch-icon",
       sizes: "57x57",
-      href: "/static/img/favicons.ico/apple-icon-57x57.png"
+      href: "/public/img/favicons.ico/apple-icon-57x57.png"
     }), __jsx("link", {
       rel: "apple-touch-icon",
       sizes: "60x60",
-      href: "/static/img/favicons.ico/apple-icon-60x60.png"
+      href: "/public/img/favicons.ico/apple-icon-60x60.png"
     }), __jsx("link", {
       rel: "apple-touch-icon",
       sizes: "72x72",
-      href: "/static/img/favicons.ico/apple-icon-72x72.png"
+      href: "/public/img/favicons.ico/apple-icon-72x72.png"
     }), __jsx("link", {
       rel: "apple-touch-icon",
       sizes: "76x76",
-      href: "/static/img/favicons.ico/apple-icon-76x76.png"
+      href: "/public/img/favicons.ico/apple-icon-76x76.png"
     }), __jsx("link", {
       rel: "apple-touch-icon",
       sizes: "114x114",
-      href: "/static/img/favicons.ico/apple-icon-114x114.png"
+      href: "/public/img/favicons.ico/apple-icon-114x114.png"
     }), __jsx("link", {
       rel: "apple-touch-icon",
       sizes: "120x120",
-      href: "/static/img/favicons.ico/apple-icon-120x120.png"
+      href: "/public/img/favicons.ico/apple-icon-120x120.png"
     }), __jsx("link", {
       rel: "apple-touch-icon",
       sizes: "144x144",
-      href: "/static/img/favicons.ico/apple-icon-144x144.png"
+      href: "/public/img/favicons.ico/apple-icon-144x144.png"
     }), __jsx("link", {
       rel: "apple-touch-icon",
       sizes: "152x152",
-      href: "/static/img/favicons.ico/apple-icon-152x152.png"
+      href: "/public/img/favicons.ico/apple-icon-152x152.png"
     }), __jsx("link", {
       rel: "apple-touch-icon",
       sizes: "180x180",
-      href: "/static/img/favicons.ico/apple-icon-180x180.png"
+      href: "/public/img/favicons.ico/apple-icon-180x180.png"
     }), __jsx("link", {
       rel: "icon",
       type: "image/png",
       sizes: "192x192",
-      href: "/static/img/favicons.ico/android-icon-192x192.png"
+      href: "/public/img/favicons.ico/android-icon-192x192.png"
     }), __jsx("link", {
       rel: "icon",
       type: "image/png",
       sizes: "32x32",
-      href: "/static/img/favicons.ico/favicon-32x32.png"
+      href: "/public/img/favicons.ico/favicon-32x32.png"
     }), __jsx("link", {
       rel: "icon",
       type: "image/png",
       sizes: "96x96",
-      href: "/static/img/favicons.ico/favicon-96x96.png"
+      href: "/public/img/favicons.ico/favicon-96x96.png"
     }), __jsx("link", {
       rel: "icon",
       type: "image/png",
       sizes: "16x16",
-      href: "/static/img/favicons.ico/favicon-16x16.png"
+      href: "/public/img/favicons.ico/favicon-16x16.png"
     }), __jsx("link", {
       rel: "manifest",
-      href: "/static/img/favicons.ico/manifest.json"
+      href: "/public/img/favicons.ico/manifest.json"
     }), __jsx("meta", {
       name: "msapplication-TileColor",
       content: "#ffffff"

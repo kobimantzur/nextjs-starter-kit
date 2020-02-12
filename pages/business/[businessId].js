@@ -8,10 +8,12 @@ import {
 } from '../../src/reducers/BusinessPage/actions';
 import Head from 'next/head';
 import { DEFAULT_PAGE_TITLE } from '../../src/constants';
+import { reportError } from '../../src/services/logService';
 
 class Business extends Component {
   static async getInitialProps({ store, isServer, pathname, query, ctx, res }) {
-    res.redirect('/')
+    reportError('Reached invalid URL');
+    // res.redirect('/404');
   }
   getPageTitle() {
     const { business } = this.props;

@@ -46,18 +46,39 @@ class MyApp extends App {
     return (
       <Provider store={store}>
         <Head>
-        <meta key="title" property="title" content={this.getPageTitle()} />
+          <title key="title">{this.getPageTitle()}</title>
+          <meta key="title" property="title" content={this.getPageTitle()} />
           <meta key="description" property="description" content={this.getPageDescription()} />
 
           <meta key="og:title" property="og:title" content={this.getPageTitle()} />
-          <meta key="og:image" property="og:image" content="https://www.mymapo.com/static/img/meta/wide-share.jpg" />
-          <meta key="og:description" property="og:description" content={this.getPageDescription()} />
+          <meta
+            key="og:image"
+            property="og:image"
+            content="https://www.mymapo.com/public/img/meta/wide-share.jpg"
+          />
+          <meta
+            key="og:description"
+            property="og:description"
+            content={this.getPageDescription()}
+          />
           <meta key="fb:app_id" property="fb:app_id" content="291124068055220" />
 
-          <meta key="twitter:image:src" property="twitter:image:src" content="https://www.mymapo.com/static/img/meta/wide-share.jpg" />
+          <meta
+            key="twitter:image:src"
+            property="twitter:image:src"
+            content="https://www.mymapo.com/public/img/meta/wide-share.jpg"
+          />
           <meta key="twitter:card" name="twitter:card" content="summary_large_image" />
-          <meta key="twitter:description" name="twitter:description" content={this.getPageDescription()} />
-          <meta key="keywords" name="keywords" content={`mapo, מאפו, מטיילים, ויזה לארצות הברית, המלצות, חול`} />
+          <meta
+            key="twitter:description"
+            name="twitter:description"
+            content={this.getPageDescription()}
+          />
+          <meta
+            key="keywords"
+            name="keywords"
+            content={`mapo, מאפו, מטיילים, ויזה לארצות הברית, המלצות, חול`}
+          />
 
           <meta name="apple-itunes-app" content="app-id=1329505993" />
           <link href="ios-app://1329505993" rel="alternate" />

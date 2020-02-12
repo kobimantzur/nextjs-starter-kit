@@ -7,12 +7,12 @@ export default class AppPreviewSection extends Component {
     return (
       <Section className="app-preview-section">
         <div className="right">
-            <img src="/static/img/logos/logo-blue.svg" />
+          <img src="/public/img/logos/logo-blue.svg" />
           <h1>מטיילים ממליצים.</h1>
           <h2>אפליקציה לישראלים בחו״ל</h2>
         </div>
         <div className="left">
-          <img src="/static/img/about/section-1.png" />
+          <img src="/public/img/about/section-1.png" />
         </div>
       </Section>
     );

@@ -44,17 +44,15 @@ class AppHeader extends Component {
     return (
       <Header className={`header ${isFocused ? 'on-focus' : ''} ${activeClass}`}>
         <div className="right">
-        <Menu {...this.props} />
-        <div className="search-bar-preview" onClick={() => this.props.setSearchModalState(true)}>
+          <Menu {...this.props} />
+          <div className="search-bar-preview" onClick={() => this.props.setSearchModalState(true)}>
             {!isMobile() && <span>{PLACEHOLDER_TEXT}</span>}
             <i className="fa fa-search" />
           </div>
-
-          
         </div>
         <div className="left">
-        <a href="/">
-            <img alt="Mapo" className="logo" src={'/static/img/logo-white.png'} />
+          <a href="/">
+            <img alt="Mapo" className="logo" src={'/public/img/logo-white.png'} />
           </a>
         </div>
       </Header>

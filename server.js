@@ -6,6 +6,12 @@ const app = next({ dev });
 const handle = app.getRequestHandler();
 const LRUCache = require('lru-cache');
 const path = require('path');
+
+const Sentry = require('@sentry/node');
+if (!dev) {
+  Sentry.init({ dsn: 'https://dbbf675d40cc408f94a60528a7e2315b@sentry.io/2468767' });
+}
+
 // This is where we cache our rendered HTML pages
 const ssrCache = new LRUCache({
   max:
@@ -20,6 +26,7 @@ app
   .prepare()
   .then(() => {
     const server = express();
+    server.use(Sentry.Handlers.requestHandler());
     server.get('/apple-app-site-association', (req, res) => {
       res.setHeader('Content-Type', 'application/pkcs7-mime');
 
@@ -30,20 +37,17 @@ app
 
       return res.sendFile(path.join(__dirname, '/apple-app-site-association'));
     });
-    server.get('/_next/*', (req, res) => {
-      /* serving _next static content using next.js handler */
-      handle(req, res);
-    });
+
+    // server.get('/_next/*', (req, res) => {
+    //   /* serving _next static content using next.js handler */
+    //   handle(req, res);
+    // });
     server.use(
-      '/static',
-      express.static(__dirname + '/static', {
+      '/public',
+      express.static(__dirname + '/public', {
         maxAge: '365d'
       })
     );
-    server.get('/sitemap.xml', (req, res) => {
-      res.status(301).redirect('/static/sitemap.xml');
-    });
-
     server.get('*', (req, res) => {
       if (!dev) {
         /* serving page */
@@ -53,6 +57,20 @@ app
       }
     });
 
+    server.get('/sitemap.xml', (req, res) => {
+      res.status(301).redirect('/static/sitemap.xml');
+    });
+    if (!dev) {
+      server.use(Sentry.Handlers.errorHandler());
+      // Optional fallthrough error handler
+      server.use(function onError(err, req, res, next) {
+        // The error id is attached to `res.sentry` to be returned
+        // and optionally displayed to the user for support.
+        res.statusCode = 500;
+        res.end(res.sentry + '\n');
+      });
+    }
+
     const port = process.env.PORT || 3000;
     server.listen(port, err => {
       if (err) throw err;
@@ -60,7 +78,7 @@ app
     });
   })
   .catch(ex => {
-    console.error(ex.stack);
+    console.log(ex);
     process.exit(1);
   });
 

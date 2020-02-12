@@ -10,7 +10,9 @@ class Place extends Component {
     try {
       await store.dispatch(getPlaceDetails(placeId));
       return {};
-    } catch (e) {}
+    } catch (e) {
+      console.log(e);
+    }
     return {};
   }
   render() {

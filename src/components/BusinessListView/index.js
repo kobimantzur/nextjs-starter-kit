@@ -38,7 +38,7 @@ export default class BusinessListView extends Component {
       <div className="business-list-view no-results">
         <h2>לא נמצאו תוצאות</h2>
 
-        <img src="/static/img/noresults.svg" alt="לא נמצאו תוצאות" />
+        <img src="/public/img/noresults.svg" alt="לא נמצאו תוצאות" />
         {/* No Results */}
         {/* sdlkasld */}
       </div>

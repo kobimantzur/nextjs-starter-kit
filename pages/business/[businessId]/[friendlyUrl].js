@@ -8,6 +8,7 @@ import {
 } from '../../../src/reducers/BusinessPage/actions';
 import Head from 'next/head';
 import { DEFAULT_PAGE_TITLE } from '../../../src/constants';
+import { reportError } from '../../../src/services/logService';
 
 class Business extends Component {
   static async getInitialProps({ store, isServer, pathname, query, ctx, res }) {
@@ -18,7 +19,8 @@ class Business extends Component {
 
       return { ...res };
     } catch (e) {
-      res.redirect('/');
+      reportError(e);
+      // res.redirect('/404');
     }
     return {};
   }

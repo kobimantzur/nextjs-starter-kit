@@ -2018,7 +2018,9 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_3___default.a {
     } = this.props;
     return __jsx(react_redux__WEBPACK_IMPORTED_MODULE_2__["Provider"], {
       store: store
-    }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_9___default.a, null, __jsx("meta", {
+    }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_9___default.a, null, __jsx("title", {
+      key: "title"
+    }, this.getPageTitle()), __jsx("meta", {
       key: "title",
       property: "title",
       content: this.getPageTitle()
@@ -2033,7 +2035,7 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_3___default.a {
     }), __jsx("meta", {
       key: "og:image",
       property: "og:image",
-      content: "https://www.mymapo.com/static/img/meta/wide-share.jpg"
+      content: "https://www.mymapo.com/public/img/meta/wide-share.jpg"
     }), __jsx("meta", {
       key: "og:description",
       property: "og:description",
@@ -2045,7 +2047,7 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_3___default.a {
     }), __jsx("meta", {
       key: "twitter:image:src",
       property: "twitter:image:src",
-      content: "https://www.mymapo.com/static/img/meta/wide-share.jpg"
+      content: "https://www.mymapo.com/public/img/meta/wide-share.jpg"
     }), __jsx("meta", {
       key: "twitter:card",
       name: "twitter:card",
@@ -2242,7 +2244,7 @@ class AppHeader extends react__WEBPACK_IMPORTED_MODULE_2__["Component"] {
     }, __jsx("img", {
       alt: "Mapo",
       className: "logo",
-      src: '/static/img/logo-white.png'
+      src: '/public/img/logo-white.png'
     }))));
   }
 
@@ -2955,17 +2957,21 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 const getCountries = () => async dispatch => {
-  const res = await Object(_services_requestService__WEBPACK_IMPORTED_MODULE_1__["getRequest"])('/placements/getPlacementsData');
+  try {
+    const res = await Object(_services_requestService__WEBPACK_IMPORTED_MODULE_1__["getRequest"])('/placements/getPlacementsData');
 
-  const payload = _objectSpread({
-    isLoading: false
-  }, res.data);
+    const payload = _objectSpread({
+      isLoading: false
+    }, res.data);
 
-  dispatch({
-    type: _types__WEBPACK_IMPORTED_MODULE_2__["SET_COUNTRIES"],
-    payload
-  });
-  return payload;
+    dispatch({
+      type: _types__WEBPACK_IMPORTED_MODULE_2__["SET_COUNTRIES"],
+      payload
+    });
+    return payload;
+  } catch (e) {
+    throw new Error(e);
+  }
 };
 const getPlaceDetails = placeId => async dispatch => {
   const res = await Object(_services_requestService__WEBPACK_IMPORTED_MODULE_1__["getRequest"])(`/placements/getPlaceDetails?placeId=${placeId}`);

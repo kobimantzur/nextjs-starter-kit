@@ -4,13 +4,16 @@ import { searchBySubCategory } from '../../../src/reducers/Search/actions';
 import SearchResultsContainer from '../../../src/containers/SearchResultsPage';
 import { DEFAULT_PAGE_TITLE } from '../../../src/constants';
 import Head from 'next/head';
+import { reportError } from '../../../src/services/logService';
 class SearchResults extends Component {
   static async getInitialProps({ store, isServer, pathname, query, ctx }) {
     const { placeId, subCategoryId } = query;
     try {
       const res = await store.dispatch(searchBySubCategory(placeId, subCategoryId));
       return { ...res };
-    } catch (e) {}
+    } catch (e) {
+      reportError(e);
+    }
     return {};
   }
   getPageTitle() {

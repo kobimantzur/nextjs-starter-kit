@@ -177,7 +177,7 @@ class BusinessPage extends React.Component {
                   href={`https://facebook.com/${facebookName}`}
                 >
                   {/* <img src={facebookIcon} /> */}
-                  <img src="/static/img/facebook-icon.png" alt={facebookName} />
+                  <img src="/public/img/facebook-icon.png" alt={facebookName} />
                 </a>
               )}
               {instagramName && (
@@ -186,7 +186,7 @@ class BusinessPage extends React.Component {
                   className="instagram"
                   href={`https://instagram.com/${instagramName}`}
                 >
-                  <img src="/static/img/instagram-icon.png" alt={instagramName} />
+                  <img src="/public/img/instagram-icon.png" alt={instagramName} />
                 </a>
               )}
               {email && (
