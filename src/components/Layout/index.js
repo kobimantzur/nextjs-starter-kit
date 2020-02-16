@@ -3,11 +3,9 @@ import { Layout as AntLayout, Icon } from 'antd';
 import { connect } from 'react-redux';
 import AppHeader from './Components/AppHeader';
 import AppFooter from './Components/AppFooter';
-
 import { initAnalytics } from '../../services/analyticsService';
 import fontAwesomeCss from '@fortawesome/fontawesome-free/css/all.css';
 
-// import antdCss from 'antd/dist/antd.min.css';
 import './index.scss';
 
 const propTypes = {};
