@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
 import Head from 'next/head';
-import ErrorPage from '../src/components/ErrorPage';
-class PrivacyPolicy extends Component {
+
+import { DEFAULT_META_DESCRIPTION } from '../src/constants';
+import { DEFAULT_META_IMAGE } from '../src/constants';
+import { DEFAULT_META_TITLE } from '../src/constants';
+class PageNotFound extends Component {
   getPageTitle() {
-    return `Not Found | Mapo`;
+    return `${DEFAULT_META_TITLE} | Page Not Found`;
   }
   getMetaImage() {
-    return '';
+    return DEFAULT_META_IMAGE;
   }
   getMetaDescription() {
-    return `הורידו את האפליקציה וגלו את ההמלצות על המקומות הכי חמים ברחבי העולם.`;
+    return DEFAULT_META_DESCRIPTION;
   }
   render() {
     return (
@@ -24,10 +27,9 @@ class PrivacyPolicy extends Component {
             content={this.getMetaDescription()}
           />
         </Head>
-        <ErrorPage />
       </div>
     );
   }
 }
 
-export default PrivacyPolicy;
+export default PageNotFound;

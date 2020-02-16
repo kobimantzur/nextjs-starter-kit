@@ -22,9 +22,9 @@ export default class AppFooter extends React.Component {
             <a>Privacy Policy</a>
           </Link>
           <span> | </span>
-          <a href="mailto:contact@mymapo.com">contact@mymapo.com</a>
+          <a href="mailto:contact@myapp.com">contact@myapp.com</a>
         </div>
-        <div className="text">Copyright © 2018 Mapo. All rights reserved </div>
+        <div className="text">Copyright © 2018 AppName. All rights reserved </div>
       </Footer>
     );
   }

@@ -32,35 +32,4 @@ export const getCookie = name => {
   return null;
 };
 
-export const getFriendlyTime = date => {
-  if (!date) {
-    return '';
-  }
-  const parsedDate = new Date(JSON.parse(JSON.stringify(new Date(date))));
-  const delta = Math.round((+new Date() - parsedDate) / 1000);
-  const minute = 60;
-  const hour = minute * 60;
-  const day = hour * 24;
-  let fuzzy;
-
-  if (delta < 30) {
-    fuzzy = 'הרגע';
-  } else if (delta < minute) {
-    fuzzy = `לפני ${delta} שניות`;
-  } else if (delta < 2 * minute) {
-    fuzzy = 'לפני כדקה';
-  } else if (delta < hour) {
-    fuzzy = `לפני ${Math.floor(delta / minute)} דקות`;
-  } else if (Math.floor(delta / hour) === 1) {
-    fuzzy = 'לפני כשעה';
-  } else if (delta < day) {
-    fuzzy = `לפני ${Math.floor(delta / hour)} שעות`;
-  } else if (delta < day * 2) {
-    fuzzy = 'אתמול';
-  } else {
-    fuzzy = moment(parsedDate).format('DD/MM/YYYY');
-  }
-  return fuzzy;
-};
-
 export const isDev = () => process.env.NODE_ENV !== 'production';

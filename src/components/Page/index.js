@@ -8,7 +8,6 @@ export default class Page extends Component {
     const { className } = this.props;
     return (
       <Content className={`page ${className || ''}`}>
-        <div className="header-opacity" />
         {this.props.children}
       </Content>
     );

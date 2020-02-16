@@ -7,20 +7,14 @@ import AppFooter from './Components/AppFooter';
 import { initAnalytics } from '../../services/analyticsService';
 import fontAwesomeCss from '@fortawesome/fontawesome-free/css/all.css';
 
-import antdCss from 'antd/dist/antd.min.css';
+// import antdCss from 'antd/dist/antd.min.css';
 import './index.scss';
-import SearchBar from '../../containers/SearchPage/Components/SearchBar';
-import { setSearchModalState } from '../../reducers/Search/actions';
-import SearchModal from '../../containers/shared/SearchModal';
 
 const propTypes = {};
 const defaultProps = {};
 
 class Layout extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+
   componentDidMount() {
     initAnalytics();
   }
@@ -28,12 +22,12 @@ class Layout extends React.Component {
   render() {
     return (
       <AntLayout>
-        <style dangerouslySetInnerHTML={{ __html: antdCss }} />
+        <style dangerouslySetInnerHTML={{ __html: require('antd/dist/antd.min.css') }} />
         <style dangerouslySetInnerHTML={{ __html: fontAwesomeCss }} />
         <AppHeader {...this.props} />
         {this.props.children}
         <AppFooter />
-        <SearchModal {...this.props} />
+        
       </AntLayout>
     );
   }
